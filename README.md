@@ -30,7 +30,8 @@ Studio17-Website/
 │       ├── routes/         # Definição de rotas
 │       ├── services/       # Lógica de negócio
 │       └── utils/          # Validações e helpers
-├── vercel.json             # Config deploy Vercel (entry: server/src/server.js)
+├── api/index.js            # Entry point Vercel (re-exporta server; Vercel exige api/)
+├── vercel.json             # Config deploy Vercel (rewrites + functions)
 ├── package.json            # Scripts raiz (build, start)
 └── README.md
 ```
@@ -130,9 +131,9 @@ Para dados sensíveis (API keys, etc.), criar ficheiros `.env` **localmente**. E
 1. Conectar o repositório em [vercel.com](https://vercel.com) → New Project
 2. Root Directory: `./` (raiz do projeto)
 3. Framework Preset: **Other**
-4. O `vercel.json` define: `buildCommand`, `installCommand` e `functions` (entry: `server/src/server.js`)
+4. O `vercel.json` define: `buildCommand`, `installCommand`, `rewrites` e `functions` (entry: `api/index.js`)
 
-O Express corre como função serverless e serve o React, previews e lab.
+O Vercel exige funções serverless em `api/`. O `api/index.js` re-exporta o Express; os `rewrites` encaminham todo o tráfego para ele.
 
 ## Segurança
 

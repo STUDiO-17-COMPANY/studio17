@@ -3,8 +3,11 @@
   "buildCommand": "npm run build",
   "installCommand": "cd client && npm install && cd ../server && npm install",
   "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api" }
+  ],
   "functions": {
-    "server/src/server.js": {
+    "api/index.js": {
       "memory": 1024,
       "maxDuration": 10
     }
