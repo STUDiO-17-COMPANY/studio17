@@ -1,0 +1,120 @@
+{
+  "nav": {
+    "about": "About",
+    "ecosystem": "Ecosystem",
+    "results": "Results",
+    "news": "News",
+    "langLabel": "EN",
+    "langOptions": {
+      "pt": "Português",
+      "es": "Español",
+      "el": "Ελληνικά"
+    }
+  },
+  "ecosystem": {
+    "badge": "Connected Ecosystem",
+    "h2": "A competitive edge",
+    "h2Line2": "across every dimension",
+    "paragraph": "Our connected capabilities give brands a measurable advantage in the modern world of marketing and sales.",
+    "buttonLine1": "Connected",
+    "buttonLine2": "Ecosystem",
+    "marquee": {
+      "advertising": "Advertising",
+      "branding": "Branding",
+      "websites": "Websites",
+      "sales": "Sales",
+      "media": "Media",
+      "precisionMarketing": "Precision Marketing",
+      "production": "Production",
+      "gamification": "Gamification",
+      "softwareForMarketing": "Software for Marketing"
+    }
+  },
+  "partners": {
+    "heading": "Trusted by innovative teams"
+  },
+  "hero": {
+    "h1Line1": "The conversion-first",
+    "h1Highlight1": "marketing",
+    "h1Line2": "and",
+    "h1Highlight2": "sales",
+    "h1Line3": "studio for the AI era.",
+    "subtitle": "Built for intelligent growth",
+    "subtitleLine2": "in the AI era.",
+    "paragraph": "We help the brands solve their most critical growth challenges by giving them access to industry-leading insights, breakthrough technology, and the most creative talent in the business."
+  },
+  "results": {
+    "badge": "Results",
+    "h2": "A record of",
+    "h2Line2": "sustained growth",
+    "paragraph": "Studio 17 sets the standard for conversion-first marketing by consistently building stronger brands and delivering superior outcomes.",
+    "button": "Results"
+  },
+  "news": {
+    "h2": "What's new",
+    "h2Line2": "across Studio 17",
+    "viewAll": "View All",
+    "items": {
+      "0": { "title": "Studio 17 Launches New AI-Driven Marketing Framework", "date": "March 1, 2026" },
+      "1": { "title": "Why Conversion-First Design is the Future of Sales", "date": "February 24, 2026" },
+      "2": { "title": "How Predictive Intelligence is Changing Media Buying", "date": "February 15, 2026" },
+      "3": { "title": "The End of the Traditional B2B Agency Retainer", "date": "February 2, 2026" },
+      "4": { "title": "Building a Growth Engine: A Step-by-Step Guide", "date": "January 18, 2026" }
+    }
+  },
+  "contact": {
+    "badge": "Let's Talk",
+    "h2": "Ready to build your",
+    "h2Line2": "growth engine?",
+    "paragraph": "Book a discovery call. We'll review your current setup and map out the highest-leverage changes you can make right now.",
+    "dropLine": "Drop us a line",
+    "emailPlaceholder": "Your email address",
+    "messagePlaceholder": "Tell us about your current setup and goals...",
+    "sendMessage": "Send Message",
+    "or": "OR",
+    "scheduleMeeting": "Schedule a meeting",
+    "bookCall": "Book a Growth Call",
+    "directInquiry": "Direct inquiry"
+  },
+  "footer": {
+    "tagline": "The conversion-first marketing and sales studio for the AI era.",
+    "copyright": "© 2026 Studio 17. All rights reserved.",
+    "about": "About",
+    "ecosystem": "Ecosystem",
+    "results": "Results",
+    "news": "News",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "world": {
+    "badge": "World",
+    "h2": "Studio 17's AI-driven marketing intelligence service",
+    "paragraph": "World unites creativity, media, data, and AI to drive measurable outcomes.",
+    "cards": {
+      "orchestration": {
+        "title": "Central Orchestration",
+        "desc": "One unified workflow."
+      },
+      "production": {
+        "title": "AI-Native Production",
+        "desc": "Content at an unmatched scale."
+      },
+      "intelligence": {
+        "title": "Predictive Intelligence",
+        "desc": "Helping you see what's next."
+      },
+      "data": {
+        "title": "Intelligence-Infused Data",
+        "desc": "A single source of truth.\nInfinite clarity."
+      },
+      "mediaBuying": {
+        "title": "Outcome-Based Media Buying",
+        "desc": "ROI you can prove, not just promise."
+      },
+      "geo": {
+        "title": "Geo Optimization",
+        "desc": "Global scale. Local precision."
+      }
+    }
+  }
+}

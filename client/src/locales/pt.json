@@ -1,0 +1,120 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "ecosystem": "Ecossistema",
+    "results": "Resultados",
+    "news": "Novidades",
+    "langLabel": "PT",
+    "langOptions": {
+      "en": "English",
+      "es": "Español",
+      "el": "Ελληνικά"
+    }
+  },
+  "ecosystem": {
+    "badge": "Ecossistema Conectado",
+    "h2": "Uma vantagem competitiva",
+    "h2Line2": "em todas as dimensões",
+    "paragraph": "As nossas capacidades conectadas dão às marcas uma vantagem mensurável no marketing e nas vendas de hoje.",
+    "buttonLine1": "Ecossistema",
+    "buttonLine2": "Conectado",
+    "marquee": {
+      "advertising": "Publicidade",
+      "branding": "Branding",
+      "websites": "Websites",
+      "sales": "Vendas",
+      "media": "Media",
+      "precisionMarketing": "Marketing de Precisão",
+      "production": "Produção",
+      "gamification": "Gamificação",
+      "softwareForMarketing": "Software para Marketing"
+    }
+  },
+  "partners": {
+    "heading": "Confiado por equipas inovadoras"
+  },
+  "hero": {
+    "h1Line1": "O estúdio de",
+    "h1Highlight1": "marketing",
+    "h1Line2": "e",
+    "h1Highlight2": "vendas",
+    "h1Line3": "orientado à conversão para a era da IA.",
+    "subtitle": "Construído para crescimento inteligente",
+    "subtitleLine2": "na era da IA.",
+    "paragraph": "Ajudamos as marcas a resolver os seus desafios de crescimento mais críticos, dando-lhes acesso a insights de referência, tecnologia inovadora e o talento criativo mais destacado do setor."
+  },
+  "results": {
+    "badge": "Resultados",
+    "h2": "Um histórico de",
+    "h2Line2": "crescimento sustentado",
+    "paragraph": "A Studio 17 define o padrão em marketing orientado à conversão, construindo marcas mais fortes e entregando resultados superiores de forma consistente.",
+    "button": "Resultados"
+  },
+  "news": {
+    "h2": "O que há de novo",
+    "h2Line2": "na Studio 17",
+    "viewAll": "Ver Tudo",
+    "items": {
+      "0": { "title": "Studio 17 Lança Novo Framework de Marketing com IA", "date": "1 de março de 2026" },
+      "1": { "title": "Por que o Design Orientado à Conversão é o Futuro das Vendas", "date": "24 de fevereiro de 2026" },
+      "2": { "title": "Como a Inteligência Preditiva está a Mudar o Media Buying", "date": "15 de fevereiro de 2026" },
+      "3": { "title": "O Fim do Retainer Tradicional de Agências B2B", "date": "2 de fevereiro de 2026" },
+      "4": { "title": "Construir um Motor de Crescimento: Um Guia Passo a Passo", "date": "18 de janeiro de 2026" }
+    }
+  },
+  "contact": {
+    "badge": "Vamos Falar",
+    "h2": "Pronto para construir o teu",
+    "h2Line2": "motor de crescimento?",
+    "paragraph": "Marca uma chamada de descoberta. Analisamos a tua configuração atual e mapeamos as mudanças de maior impacto que podes fazer agora.",
+    "dropLine": "Envia-nos uma mensagem",
+    "emailPlaceholder": "O teu email",
+    "messagePlaceholder": "Conta-nos sobre a tua configuração atual e objetivos...",
+    "sendMessage": "Enviar Mensagem",
+    "or": "OU",
+    "scheduleMeeting": "Agendar reunião",
+    "bookCall": "Marcar Chamada de Crescimento",
+    "directInquiry": "Contacto direto"
+  },
+  "footer": {
+    "tagline": "O estúdio de marketing e vendas orientado à conversão para a era da IA.",
+    "copyright": "© 2026 Studio 17. Todos os direitos reservados.",
+    "about": "Sobre",
+    "ecosystem": "Ecossistema",
+    "results": "Resultados",
+    "news": "Novidades",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço"
+  },
+  "world": {
+    "badge": "World",
+    "h2": "O serviço de inteligência de marketing com IA da Studio 17",
+    "paragraph": "O World junta criatividade, media, dados e IA para gerar resultados mensuráveis.",
+    "cards": {
+      "orchestration": {
+        "title": "Orquestração Central",
+        "desc": "Um workflow unificado."
+      },
+      "production": {
+        "title": "Produção AI-Native",
+        "desc": "Conteúdo numa escala sem igual."
+      },
+      "intelligence": {
+        "title": "Inteligência Preditiva",
+        "desc": "Para antecipares o que vem a seguir."
+      },
+      "data": {
+        "title": "Dados com Inteligência",
+        "desc": "Uma única fonte de verdade. Clareza infinita."
+      },
+      "mediaBuying": {
+        "title": "Media Buying por Resultados",
+        "desc": "ROI que consegues provar, não só prometer."
+      },
+      "geo": {
+        "title": "Otimização Geográfica",
+        "desc": "Escala global. Precisão local."
+      }
+    }
+  }
+}
