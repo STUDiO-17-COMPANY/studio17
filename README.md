@@ -30,8 +30,7 @@ Studio17-Website/
 │       ├── routes/         # Definição de rotas
 │       ├── services/       # Lógica de negócio
 │       └── utils/          # Validações e helpers
-├── src/server.js          # Entry point Vercel (re-exporta server)
-├── vercel.json             # Config deploy Vercel
+├── vercel.json             # Config deploy Vercel (entry: server/src/server.js)
 ├── package.json            # Scripts raiz (build, start)
 └── README.md
 ```
@@ -131,9 +130,9 @@ Para dados sensíveis (API keys, etc.), criar ficheiros `.env` **localmente**. E
 1. Conectar o repositório em [vercel.com](https://vercel.com) → New Project
 2. Root Directory: `./` (raiz do projeto)
 3. Framework Preset: **Other**
-4. O `vercel.json` define: `buildCommand`, `installCommand` e `functions` (entry: `src/server.js`)
+4. O `vercel.json` define: `buildCommand`, `installCommand` e `functions` (entry: `server/src/server.js`)
 
-O `src/server.js` na raiz re-exporta `server/src/server.js`. O Express corre como função serverless e serve o React, previews e lab.
+O Express corre como função serverless e serve o React, previews e lab.
 
 ## Segurança
 
@@ -142,4 +141,3 @@ O `src/server.js` na raiz re-exporta `server/src/server.js`. O Express corre com
 - O servidor valida nomes de pastas (`isValidName`) para prevenir path traversal
 - Erros HTML escapados com `escapeHtml()` para prevenir XSS
 - Script Phosphor Icons carregado com SRI e `crossorigin`
-# studio17
