@@ -1,0 +1,11 @@
+# Dados sensíveis na raiz (nunca commitar)
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.history
