@@ -1,11 +1,13 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState, useMemo } from 'react';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import CaseStudyModal from '../components/CaseStudyModal';
 import { useLocale } from '../context/LocaleContext';
+import { pickLocalizedCaseStudy } from '../utils/localizeCaseStudy';
 
 const PARTNER_LOGOS = [
   'https://res.cloudinary.com/dnxoz9alm/image/upload/v1769355058/ChatGPT_Image_Sep_17_2025_03_37_53_PM_wdzcud.avif',
-  'https://res.cloudinary.com/dnxoz9alm/image/upload/v1771146262/3CX_logo_d2gykr.svg',
   'https://res.cloudinary.com/dnxoz9alm/image/upload/v1769719783/FareHarborLogo_tb2mfj.png',
   'https://res.cloudinary.com/dnxoz9alm/image/upload/v1769620957/Lodgify_Logo_cliemn.png',
   'https://res.cloudinary.com/dnxoz9alm/image/upload/v1770807357/LOGOPHOS_a2sbkp.svg',
@@ -15,10 +17,7 @@ const PARTNER_LOGOS = [
   'https://res.cloudinary.com/dnxoz9alm/image/upload/v1772645531/RG_Automotive_Logo_yhs1uc.png',
 ];
 
-const ECOSYSTEM_MARQUEE_KEYS = [
-  'advertising', 'branding', 'websites', 'sales', 'media',
-  'precisionMarketing', 'production', 'gamification', 'softwareForMarketing',
-];
+const SERVICES_TAB_KEYS = ['websitesFunnels', 'branding', 'contentSocial', 'adsGrowth', 'systemsCrm'];
 
 const WORLD_CARD_KEYS = [
   { key: 'orchestration', icon: 'ph-duotone ph-magic-wand' },
@@ -31,78 +30,92 @@ const WORLD_CARD_KEYS = [
 
 const NEWS_ITEM_KEYS = ['0', '1', '2', '3', '4'];
 
+const REVIEW_ITEM_KEYS = ['0', '1', '2', '3', '4', '5', '6', '7'];
+
+/** Maps case study URL slug → review card index (avatars + locale names). */
+const CASE_STUDY_SLUG_TO_INDEX = {
+  'optics-clinic-cyprus': 0,
+  'strategic-journey-giulia': 1,
+  'brand-presence-joao': 2,
+  'clarity-mariana': 3,
+  'growth-andreas': 4,
+  'execution-elena': 5,
+  'focus-lukas': 6,
+  'credible-modern-hannah': 7,
+};
+
+const HERO_METHODOLOGY_IMAGE =
+  'https://res.cloudinary.com/dwvhqhtts/image/upload/v1775824087/Group_30_jbetfw.png';
+
+const HERO_SERVICE_CARDS = [
+  { serviceKey: 'websites', icon: 'ph-duotone ph-desktop' },
+  { serviceKey: 'brandVisuals', icon: 'ph-duotone ph-camera' },
+  { serviceKey: 'adsFunnels', icon: 'ph-duotone ph-trend-up' },
+];
+
+/** ui-avatars.com params per review card (order matches locale keys). */
+const REVIEW_AVATARS = [
+  { name: 'Marco+B', bg: '0F172A' },
+  { name: 'Giulia+M', bg: '2563EB' },
+  { name: 'Joao+F', bg: '0456FE' },
+  { name: 'Mariana+C', bg: '0F172A' },
+  { name: 'Andreas+N', bg: '2563EB' },
+  { name: 'Elena+P', bg: '0456FE' },
+  { name: 'Lukas+S', bg: '0F172A' },
+  { name: 'Hannah+W', bg: '2563EB' },
+];
+
 export default function Home() {
-  const { t } = useLocale();
-  const verticalMarqueeRef = useRef(null);
-  const verticalMarqueeTrackRef = useRef(null);
+  const { t, locale } = useLocale();
+  const { slug: caseSlugParam } = useParams();
+  const navigate = useNavigate();
+  const [caseCatalog, setCaseCatalog] = useState(null);
+  const [activeServiceTab, setActiveServiceTab] = useState('websitesFunnels');
+  const reviewsCarouselRef = useRef(null);
   const cardsCarouselRef = useRef(null);
   const newsCarouselRef = useRef(null);
 
-  // Vertical marquee focus/blur effect
+  const activeService = t(`servicesSection.tabs.${activeServiceTab}`);
+  const includedList = Array.isArray(activeService?.included) ? activeService.included : [];
+
   useEffect(() => {
-    const container = verticalMarqueeRef.current;
-    const track = verticalMarqueeTrackRef.current;
-    const items = container?.querySelectorAll('.marquee-item');
-
-    if (!container || !track || !items?.length) return;
-
-    const updateFilters = () => {
-      const rect = container.getBoundingClientRect();
-      const centerY = rect.top + rect.height / 2;
-      const maxDist = rect.height / 2;
-
-      items.forEach((item) => {
-        const itemRect = item.getBoundingClientRect();
-        const itemCenterY = itemRect.top + itemRect.height / 2;
-        const dist = Math.abs(itemCenterY - centerY);
-        let normalized = Math.min(dist / maxDist, 1);
-        const curve = Math.pow(normalized, 2.5);
-        const opacity = 1 - curve * 0.95;
-        const blurAmount = curve * 8;
-        const scale = 1 - curve * 0.1;
-
-        item.style.opacity = opacity.toFixed(3);
-        item.style.filter = `blur(${blurAmount.toFixed(2)}px)`;
-        item.style.transform = `scale(${scale.toFixed(3)})`;
+    let cancelled = false;
+    fetch('/case-studies.json', { cache: 'no-store' })
+      .then((res) => (res.ok ? res.json() : Promise.reject()))
+      .then((data) => {
+        if (!cancelled) setCaseCatalog(data);
+      })
+      .catch(() => {
+        if (!cancelled) setCaseCatalog({ studies: {}, defaultOg: {} });
       });
-      requestAnimationFrame(updateFilters);
-    };
-
-    const raf = requestAnimationFrame(updateFilters);
-
-    const handleMouseMove = (e) => {
-      const target = e.target.closest('.marquee-item');
-      if (target && parseFloat(target.style.opacity) > 0.9) {
-        track.style.animationPlayState = 'paused';
-        target.style.cursor = 'pointer';
-      } else {
-        track.style.animationPlayState = 'running';
-        if (target) target.style.cursor = 'default';
-      }
-    };
-
-    const handleMouseLeave = () => {
-      track.style.animationPlayState = 'running';
-    };
-
-    const handleClick = (e) => {
-      const target = e.target.closest('.marquee-item');
-      if (target && parseFloat(target.style.opacity) > 0.9) {
-        window.location.href = 'https://www.studio17.world';
-      }
-    };
-
-    container.addEventListener('mousemove', handleMouseMove);
-    container.addEventListener('mouseleave', handleMouseLeave);
-    container.addEventListener('click', handleClick);
-
     return () => {
-      cancelAnimationFrame(raf);
-      container.removeEventListener('mousemove', handleMouseMove);
-      container.removeEventListener('mouseleave', handleMouseLeave);
-      container.removeEventListener('click', handleClick);
+      cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    if (!caseCatalog?.studies || !caseSlugParam) return;
+    if (!caseCatalog.studies[caseSlugParam]) {
+      navigate('/', { replace: true });
+    }
+  }, [caseCatalog, caseSlugParam, navigate]);
+
+  const caseStudyReviewIndex = caseSlugParam != null ? CASE_STUDY_SLUG_TO_INDEX[caseSlugParam] : undefined;
+  const activeCaseStudy = useMemo(() => {
+    if (!caseSlugParam || !caseCatalog?.studies) return null;
+    return pickLocalizedCaseStudy(caseCatalog, caseSlugParam, locale);
+  }, [caseSlugParam, caseCatalog, locale]);
+
+  const caseReviewItem =
+    caseStudyReviewIndex != null ? t(`reviews.items.${REVIEW_ITEM_KEYS[caseStudyReviewIndex]}`) : null;
+  const caseAvatar =
+    caseStudyReviewIndex != null
+      ? `https://ui-avatars.com/api/?name=${encodeURIComponent(REVIEW_AVATARS[caseStudyReviewIndex].name.replace(/\+/g, ' '))}&background=${REVIEW_AVATARS[caseStudyReviewIndex].bg}&color=fff`
+      : '';
+
+  const handleCaseStudyClose = () => {
+    navigate('/');
+  };
 
   // Carousel scroll handlers
   const scrollCarousel = (ref, amount) => {
@@ -139,21 +152,24 @@ export default function Home() {
   useEffect(() => {
     const cards = cardsCarouselRef.current;
     const news = newsCarouselRef.current;
-    if (!cards || !news) return;
+    const reviews = reviewsCarouselRef.current;
+    if (!cards || !news || !reviews) return;
 
     const unsubCards = setupCarouselDots(cardsCarouselRef, '#carousel-dots .dot');
     const unsubNews = setupCarouselDots(newsCarouselRef, '#news-carousel-dots .dot');
+    const unsubReviews = setupCarouselDots(reviewsCarouselRef, '#reviews-carousel-dots .dot');
 
     return () => {
       unsubCards?.();
       unsubNews?.();
+      unsubReviews?.();
     };
   }, []);
 
   const scrollAmount = typeof window !== 'undefined' && window.innerWidth < 768 ? 300 : 400;
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative overflow-x-hidden">
       {/* Abstract graphic - Hero background */}
       <div
         className="absolute top-0 right-0 w-full md:w-[80%] h-[100svh] overflow-hidden pointer-events-none z-0 flex items-center justify-end graphic-container"
@@ -185,108 +201,245 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <main className="flex-grow flex flex-col justify-center relative z-10 px-6 md:px-12 max-w-[1600px] w-full mx-auto pb-24 md:pb-32 pt-4 md:pt-24 min-h-[90vh]">
-        <div className="mb-6 lg:mb-8 flex items-baseline select-none">
-          <span className="font-extrabold text-[2rem] md:text-4xl lg:text-[2.75rem] text-dark" style={{ letterSpacing: '-0.05em' }}>Studio</span>
-          <span className="font-extrabold text-[2rem] md:text-4xl lg:text-[2.75rem] text-dark ml-1.5 lg:ml-2" style={{ letterSpacing: '-0.12em' }}>17</span>
+      <main className="flex-grow flex flex-col justify-center relative z-10 px-6 md:px-12 max-w-[1600px] w-full mx-auto pb-24 md:pb-32 pt-4 md:pt-24 min-h-[90vh] min-w-0">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-10 w-full mb-16 lg:mb-24 min-w-0">
+          <div className="w-full lg:w-1/2 flex flex-col z-10 min-w-0">
+            <div className="mb-6 lg:mb-10 flex items-baseline select-none">
+              <span className="font-extrabold text-[2rem] md:text-4xl lg:text-[2.75rem] text-dark" style={{ letterSpacing: '-0.05em' }}>
+                Studio
+              </span>
+              <span className="font-extrabold text-[2rem] md:text-4xl lg:text-[2.75rem] text-dark ml-1.5 lg:ml-2" style={{ letterSpacing: '-0.12em' }}>
+                17
+              </span>
+            </div>
+
+            <h1 className="text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5rem] font-light text-dark leading-[1.1] md:leading-[1.05] tracking-tight w-full">
+              <span className="block">
+                {t('hero.h1Line1')}{' '}
+                <span className="font-serif italic font-normal text-primary tracking-normal pr-1">{t('hero.h1Highlight1')}</span>
+              </span>
+              <span className="block">
+                {t('hero.h1Line2')}{' '}
+                <span className="font-serif italic font-normal text-primary tracking-normal pr-1">{t('hero.h1Highlight2')}</span>{' '}
+                {t('hero.h1Line3')}
+              </span>
+            </h1>
+          </div>
+
+          <div className="w-full lg:w-1/2 min-w-0 flex justify-center lg:justify-end relative z-10 mt-10 lg:mt-0">
+            <div className="relative w-full max-w-[min(100%,34rem)] sm:max-w-[min(100%,36rem)] lg:max-w-[min(100%,28rem)] xl:max-w-[min(100%,32rem)] 2xl:max-w-[min(100%,36rem)]">
+              <img
+                src={HERO_METHODOLOGY_IMAGE}
+                alt={t('hero.imageAlt')}
+                width={1100}
+                height={900}
+                decoding="async"
+                fetchPriority="high"
+                className="w-full h-auto max-h-[min(52vh,22rem)] sm:max-h-[min(56vh,28rem)] lg:max-h-none object-contain object-center lg:object-right drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+              />
+            </div>
+          </div>
         </div>
 
-        <h1 className="text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6rem] font-light text-dark leading-[1.1] md:leading-[1.05] tracking-tight mb-10 lg:mb-16 w-full">
-          <span className="block">{t('hero.h1Line1')} <span className="font-serif italic font-normal text-primary tracking-normal pr-1">{t('hero.h1Highlight1')}</span></span>
-          <span className="block">{t('hero.h1Line2')} <span className="font-serif italic font-normal text-primary tracking-normal pr-1">{t('hero.h1Highlight2')}</span> {t('hero.h1Line3')}</span>
-        </h1>
-
-        <div className="flex flex-col md:flex-row gap-8 lg:gap-24 max-w-[100%] lg:max-w-[70%] items-start">
-          <div className="md:w-[35%] flex flex-col pt-1">
-            <h3 className="text-[15px] md:text-base font-bold leading-snug text-dark mb-5 md:mb-6 pr-4">
-              {t('hero.subtitle')} <br className="hidden lg:block" /> {t('hero.subtitleLine2')}
-            </h3>
-            <div className="w-full max-w-[140px] h-[2px] bg-dark"></div>
-          </div>
-
-          <div className="md:w-[65%] relative text-[15px] md:text-base text-slate-800 leading-[1.65] font-normal">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 w-full z-10 min-w-0">
+          {HERO_SERVICE_CARDS.map(({ serviceKey, icon }) => (
             <div
-              className="absolute -inset-6 md:-inset-10 z-[-1] backdrop-blur-md pointer-events-none"
-              style={{
-                maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
-                WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
-              }}
-            />
-            <p>
-              {t('hero.paragraph')}
-            </p>
-          </div>
+              key={serviceKey}
+              className="bg-white/80 backdrop-blur-md border border-slate-200 rounded-[2rem] p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:-translate-y-2 transition-all duration-300 group"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary text-2xl mb-6 group-hover:scale-110 transition-transform">
+                <i className={icon} aria-hidden="true"></i>
+              </div>
+              <h3 className="text-xl font-bold text-dark mb-3">{t(`hero.services.${serviceKey}.title`)}</h3>
+              <p className="text-sm md:text-base text-slate-500 leading-relaxed">{t(`hero.services.${serviceKey}.desc`)}</p>
+            </div>
+          ))}
         </div>
       </main>
 
-      {/* Ecosystem */}
-      <section id="ecosystem" className="relative z-10 w-full bg-white pt-20 md:pt-32 pb-20 md:pb-32 overflow-hidden">
-        <div
-          className="absolute top-1/2 right-0 w-full md:w-[60%] h-[120vh] -translate-y-1/2 overflow-hidden pointer-events-none z-0 flex items-center justify-end graphic-container opacity-20"
-          style={{
-            maskImage: 'linear-gradient(to right, transparent 0%, black 50%)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 50%)',
-          }}
-        >
-          <svg className="h-[120vh] w-auto translate-x-[20%]" viewBox="-200 -200 1400 1400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="ringGrad2" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#2563EB" stopOpacity="0.6" />
-                <stop offset="30%" stopColor="#2563EB" stopOpacity="0.1" />
-                <stop offset="100%" stopColor="#2563EB" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-            <circle cx="500" cy="500" r="400" stroke="url(#ringGrad2)" strokeWidth="80" strokeLinecap="round" className="blur-[10px]" strokeDasharray="1600 2500" transform="rotate(45 500 500)" />
-            <circle cx="500" cy="500" r="400" stroke="url(#ringGrad2)" strokeWidth="40" strokeLinecap="round" className="blur-[3px]" strokeDasharray="1600 2500" transform="rotate(45 500 500)" />
-            <circle cx="500" cy="500" r="490" stroke="#2563EB" strokeWidth="20" strokeDasharray="0 60" strokeLinecap="round" className="opacity-30" />
-            <circle cx="500" cy="500" r="530" stroke="#2563EB" strokeWidth="10" strokeDasharray="0 40" strokeLinecap="round" className="opacity-15" />
-          </svg>
-        </div>
-
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-24 items-center relative z-10">
-          <div className="order-1 lg:order-2 flex flex-col w-full text-left lg:pl-16">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-200/80 to-transparent backdrop-blur-md rounded-full pl-4 pr-16 py-1.5 mb-6 md:mb-8 w-max border-l border-slate-300">
-              <div className="w-1.5 h-1.5 rounded-full bg-dark"></div>
-              <span className="text-sm font-semibold text-dark">{t('ecosystem.badge')}</span>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-dark leading-[1.15] tracking-tight mb-6 md:mb-8">
-              {t('ecosystem.h2')}<br />{t('ecosystem.h2Line2')}
+      {/* Services */}
+      <section id="services" className="relative z-10 w-full bg-white pt-24 pb-20 md:pb-32 border-t border-slate-200">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
+          <div className="flex flex-col items-start text-left mb-12">
+            <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-dark leading-[1.15] tracking-tight">
+              {t('servicesSection.h2')}{' '}
+              <span className="font-serif italic font-normal text-primary">{t('servicesSection.h2Italic')}</span>
             </h2>
-
-            <p className="text-lg md:text-xl lg:text-2xl text-slate-400 font-serif italic leading-relaxed max-w-[90%] mb-8 md:mb-12 transition-colors duration-500 hover:text-dark cursor-default">
-              {t('ecosystem.paragraph')}
-            </p>
-
-            <a href="#" className="inline-flex items-center gap-3 w-max group">
-              <div className="bg-dark text-white rounded-full px-6 py-4 font-bold text-sm tracking-wide transition-all group-hover:bg-primary group-hover:shadow-lg shadow-primary/20">
-                {t('ecosystem.buttonLine1')}<br />{t('ecosystem.buttonLine2')}
-              </div>
-              <div className="w-12 h-12 rounded-full bg-dark text-white flex items-center justify-center transition-all group-hover:bg-primary group-hover:scale-105">
-                <i className="ph-bold ph-arrow-up-right text-lg"></i>
-              </div>
-            </a>
           </div>
 
-          <div
-            ref={verticalMarqueeRef}
-            id="vertical-marquee-container"
-            className="order-2 lg:order-1 relative w-full h-[320px] md:h-[550px] flex items-center justify-center overflow-hidden mt-4 lg:mt-0"
-            style={{
-              maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
-            }}
-          >
-            <div ref={verticalMarqueeTrackRef} id="vertical-marquee-track" className="absolute top-0 left-0 flex flex-col items-center w-full animate-scroll-up">
-              {[1, 2].map((set) => (
-                <div key={set} className="flex flex-col items-center gap-10 md:gap-12 pb-10 md:pb-12 w-full">
-                  {ECOSYSTEM_MARQUEE_KEYS.map((key) => (
-                    <span key={`${set}-${key}`} className="marquee-item font-serif italic text-3xl md:text-[3.5rem] text-dark text-center leading-tight tracking-tight">
-                      {t(`ecosystem.marquee.${key}`)}
-                    </span>
+          <div className="flex justify-start overflow-x-auto hide-scrollbar mb-16 pb-4 w-full">
+            <div className="flex items-center gap-3 border-b border-slate-200 min-w-max pr-6 pb-4" role="tablist" aria-label={t('servicesSection.tablistLabel')}>
+              {SERVICES_TAB_KEYS.map((tabKey) => {
+                const isActive = activeServiceTab === tabKey;
+                const tabLabel = t(`servicesSection.tabs.${tabKey}.tabLabel`);
+                return (
+                  <button
+                    key={tabKey}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    onClick={() => setActiveServiceTab(tabKey)}
+                    className={`px-6 py-3 rounded-full text-sm font-bold tracking-wide inline-flex items-center cursor-pointer focus:outline-none transition-all duration-300 relative translate-y-[1px] ${
+                      isActive
+                        ? 'bg-dark text-white shadow-lg shadow-dark/20'
+                        : 'text-slate-500 hover:text-dark hover:bg-slate-50'
+                    }`}
+                  >
+                    {tabLabel}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center">
+            <div className="w-full lg:w-[45%] flex flex-col items-start">
+              <h3 className="text-3xl md:text-4xl font-bold text-dark mb-6 tracking-tight">{activeService?.title}</h3>
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">{activeService?.body}</p>
+
+              <div className="mb-12">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-dark text-white rounded-full font-bold text-sm tracking-wide hover:bg-primary transition-colors shadow-lg shadow-dark/20"
+                >
+                  {t('servicesSection.cta')}
+                  <i className="ph-bold ph-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+
+              <div className="w-full">
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">{t('servicesSection.includedLabel')}</p>
+                <div className="flex flex-wrap gap-2">
+                  {includedList.map((item) => (
+                    <a
+                      key={item}
+                      href="#contact"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-50 border border-slate-200 text-slate-600 hover:text-primary hover:bg-blue-50/50 hover:border-primary/30 text-xs font-bold rounded-full transition-all group"
+                    >
+                      {item}
+                      <i
+                        className="ph-bold ph-arrow-up-right group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
                   ))}
                 </div>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-[55%] relative">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary/10 blur-[80px] rounded-full pointer-events-none" />
+              <img
+                src={activeService?.imageSrc}
+                alt={activeService?.imageAlt || ''}
+                width={1200}
+                height={900}
+                decoding="async"
+                className="w-full h-auto object-contain relative z-10 drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-transform duration-500 rounded-3xl border border-slate-100 bg-white"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews / Testimonials */}
+      <section id="reviews" className="relative z-10 w-full bg-slate-50 pt-20 md:pt-24 pb-20 md:pb-24 border-t border-slate-200">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-200/80 to-transparent backdrop-blur-md rounded-full pl-4 pr-16 py-1.5 mb-6 w-max border-l border-slate-300">
+                <div className="w-1.5 h-1.5 rounded-full bg-dark"></div>
+                <span className="text-sm font-semibold text-dark">{t('reviews.badge')}</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark leading-[1.15] tracking-tight">
+                {t('reviews.h2')}
+              </h2>
+            </div>
+            <div className="flex gap-1.5 text-primary" aria-hidden="true">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <i key={i} className="ph-fill ph-star text-2xl md:text-3xl drop-shadow-sm"></i>
               ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div ref={reviewsCarouselRef} id="reviews-carousel" className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 pt-4">
+              {REVIEW_ITEM_KEYS.map((key, index) => {
+                const item = t(`reviews.items.${key}`);
+                const avatar = REVIEW_AVATARS[index];
+                const langKey = item?.originalLangKey;
+                const langLabel = langKey ? t(`reviews.languages.${langKey}`) : '';
+                const caseSlug = item?.caseStudySlug;
+                const showCaseStudy = typeof caseSlug === 'string' && caseSlug.length > 0;
+                const avatarSrc = `https://ui-avatars.com/api/?name=${avatar.name}&background=${avatar.bg}&color=fff`;
+
+                return (
+                  <article
+                    key={key}
+                    className="snap-start shrink-0 w-[300px] md:w-[380px] lg:w-[420px] bg-white rounded-[2rem] p-8 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.03)] border border-slate-100 hover:-translate-y-2 transition-transform duration-300 group"
+                  >
+                    <div>
+                      <i className="ph-fill ph-quotes text-4xl text-slate-200 mb-6 group-hover:text-primary transition-colors duration-500"></i>
+                      <p className="text-base md:text-lg text-dark leading-relaxed mb-5">
+                        {item?.quote}
+                      </p>
+                      <a
+                        href={item?.originalHref || '#'}
+                        className="inline-flex items-center gap-2 text-[11px] md:text-xs font-semibold uppercase tracking-wide text-slate-400 hover:text-slate-600 transition-colors mb-4"
+                      >
+                        <i className="ph ph-globe text-base text-slate-400" aria-hidden="true"></i>
+                        {t('reviews.readOriginal', { language: langLabel })}
+                      </a>
+                      {showCaseStudy && (
+                        <Link
+                          to={`/case-studies/${caseSlug}`}
+                          className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-blue-700 transition-colors mb-4 group/link"
+                        >
+                          {t('reviews.viewCaseStudy')}
+                          <i className="ph-bold ph-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                        </Link>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-4 pt-6 border-t border-slate-100 mt-auto">
+                      <img src={avatarSrc} alt={item?.name || ''} className="w-12 h-12 rounded-full shadow-sm" width={48} height={48} />
+                      <div>
+                        <h3 className="font-bold text-dark text-sm md:text-base">{item?.name}</h3>
+                        <p className="text-xs md:text-sm text-slate-500">{item?.location}</p>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between mt-4 md:mt-6 gap-6 px-2">
+              <div className="flex gap-4">
+                <button
+                  type="button"
+                  onClick={() => scrollCarousel(reviewsCarouselRef, -scrollAmount)}
+                  className="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-dark hover:bg-slate-50 hover:scale-105 active:scale-95 transition-all shadow-sm focus:outline-none"
+                  aria-label={t('reviews.carouselPrev')}
+                >
+                  <i className="ph-bold ph-arrow-left text-lg"></i>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => scrollCarousel(reviewsCarouselRef, scrollAmount)}
+                  className="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-dark hover:bg-slate-50 hover:scale-105 active:scale-95 transition-all shadow-sm focus:outline-none"
+                  aria-label={t('reviews.carouselNext')}
+                >
+                  <i className="ph-bold ph-arrow-right text-lg"></i>
+                </button>
+              </div>
+              <div className="flex gap-2" id="reviews-carousel-dots" role="tablist" aria-label={t('reviews.carouselDots')}>
+                {REVIEW_ITEM_KEYS.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`dot rounded-full h-1.5 transition-all duration-300 ${i === 0 ? 'w-8 bg-dark' : 'w-2 bg-slate-300'}`}
+                    aria-hidden="true"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -533,7 +686,7 @@ export default function Home() {
                 className="flex flex-col gap-4"
                 onSubmit={(e) => {
                   e.preventDefault();
-                  alert('Message sent successfully!');
+                  alert(t('contact.messageSentSuccess'));
                 }}
               >
                 <input
@@ -598,6 +751,15 @@ export default function Home() {
       </section>
 
       <Footer />
+
+      <CaseStudyModal
+        open={Boolean(caseSlugParam && activeCaseStudy && caseReviewItem)}
+        study={activeCaseStudy}
+        slug={caseSlugParam || ''}
+        reviewName={caseReviewItem?.name || ''}
+        avatarSrc={caseAvatar}
+        onClose={handleCaseStudyClose}
+      />
     </div>
   );
 }
