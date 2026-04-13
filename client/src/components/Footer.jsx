@@ -35,7 +35,8 @@ export default function Footer() {
           <p className="mt-6 md:mt-0">{t('footer.copyright')}</p>
           <div className="flex flex-wrap justify-center gap-8">
             <a href="#" className="hover:text-white transition-colors">{t('footer.about')}</a>
-            <a href="#ecosystem" className="hover:text-white transition-colors">{t('footer.ecosystem')}</a>
+            <a href="#reviews" className="hover:text-white transition-colors">{t('footer.reviews')}</a>
+            <a href="#services" className="hover:text-white transition-colors">{t('footer.services')}</a>
             <a href="#results" className="hover:text-white transition-colors">{t('footer.results')}</a>
             <a href="#news" className="hover:text-white transition-colors">{t('footer.news')}</a>
             <a href="#" className="ml-4 border-l border-white/20 pl-8 hover:text-white transition-colors">{t('footer.privacy')}</a>

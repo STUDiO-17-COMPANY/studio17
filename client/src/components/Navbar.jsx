@@ -3,21 +3,23 @@ import { useLocale } from '../context/LocaleContext';
 import MobileMenu from './MobileMenu';
 
 const NAV_KEYS = [
-  { href: '#', key: 'about', external: true },
-  { href: '#ecosystem', key: 'ecosystem', external: true },
-  { href: '#results', key: 'results', external: true },
-  { href: '#news', key: 'news', external: true },
+  { id: 'about', href: '#', key: 'about', external: true },
+  { id: 'services', href: '#services', key: 'services', external: true },
+  { id: 'reviews', href: '#reviews', key: 'reviews', external: true },
+  { id: 'results', href: '#results', key: 'results', external: true },
+  { id: 'news', href: '#news', key: 'news', external: true },
 ];
 
-export default function Navbar({ ctaHref, ctaLabel }) {
+export default function Navbar({ ctaHref, ctaLabel, links: linksOverride }) {
   const { t, setLocale } = useLocale();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
 
-  const links = NAV_KEYS.map((item) => ({
+  const defaultLinks = NAV_KEYS.map((item) => ({
     ...item,
     label: t(`nav.${item.key}`),
   }));
+  const links = linksOverride ?? defaultLinks;
 
   const langOptions = t('nav.langOptions');
   const langOptionsList =
@@ -42,7 +44,7 @@ export default function Navbar({ ctaHref, ctaLabel }) {
       <nav className="w-full relative z-20 py-6 md:py-8 px-6 md:px-12 flex justify-end items-center">
         <div className="hidden lg:flex items-center gap-10 text-base font-semibold text-dark tracking-wide">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="hover:text-primary transition-colors">
+            <a key={link.id} href={link.href} className="hover:text-primary transition-colors">
               {link.label}
             </a>
           ))}

@@ -34,7 +34,7 @@ export default function MobileMenu({ open, onClose, links, langOptions = [], onS
         {links.map((link) =>
           link.external || link.href.startsWith('#') ? (
             <a
-              key={link.href}
+              key={link.id ?? link.href}
               href={link.href}
               onClick={onClose}
               className="text-3xl font-bold text-dark hover:text-primary transition-colors"
@@ -43,7 +43,7 @@ export default function MobileMenu({ open, onClose, links, langOptions = [], onS
             </a>
           ) : (
             <Link
-              key={link.href}
+              key={link.id ?? link.href}
               to={link.href}
               onClick={onClose}
               className="text-3xl font-bold text-dark hover:text-primary transition-colors"
