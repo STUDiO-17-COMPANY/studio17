@@ -9,6 +9,11 @@ import { escapeHtml } from '../utils/validation.js';
 export function serveClientPreview(req, res, next) {
   const { pais, projeto } = req.params;
 
+  /* React app uses /case-studies/:slug — must not be treated as /:pais/:projeto preview. */
+  if (pais === 'case-studies') {
+    return next();
+  }
+
   const { valid, projectPath, error, statusCode } = resolvePreviewPath(pais, projeto);
 
   if (!valid) {
