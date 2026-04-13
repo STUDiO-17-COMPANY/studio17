@@ -1,7 +1,8 @@
 {
   "nav": {
     "about": "Σχετικά",
-    "ecosystem": "Οικοσύστημα",
+    "services": "Υπηρεσίες",
+    "reviews": "Κριτικές",
     "results": "Αποτελέσματα",
     "news": "Νέα",
     "langLabel": "EL",
@@ -11,23 +12,83 @@
       "es": "Español"
     }
   },
-  "ecosystem": {
-    "badge": "Συνδεδεμένο Οικοσύστημα",
-    "h2": "Ένα ανταγωνιστικό πλεονέκτημα",
-    "h2Line2": "σε κάθε διάσταση",
-    "paragraph": "Οι συνδεδεμένες μας δυνατότητες δίνουν στα brands ένα μετρήσιμο πλεονέκτημα στον σύγχρονο κόσμο του marketing και των πωλήσεων.",
-    "buttonLine1": "Συνδεδεμένο",
-    "buttonLine2": "Οικοσύστημα",
-    "marquee": {
-      "advertising": "Διαφήμιση",
-      "branding": "Branding",
-      "websites": "Ιστοσελίδες",
-      "sales": "Πωλήσεις",
-      "media": "Μέσα",
-      "precisionMarketing": "Μάρκετινγκ Ακριβείας",
-      "production": "Παραγωγή",
-      "gamification": "Gamification",
-      "softwareForMarketing": "Λογισμικό για Μάρκετινγκ"
+  "servicesSection": {
+    "h2": "Οι",
+    "h2Italic": "Υπηρεσίες μας",
+    "tablistLabel": "Κατηγορίες υπηρεσιών",
+    "includedLabel": "Συμπεριλαμβανόμενες υπηρεσίες",
+    "cta": "Συζήτηση για το project",
+    "tabs": {
+      "websitesFunnels": {
+        "tabLabel": "Websites & Funnels",
+        "title": "Ψηφιακές εμπειρίες που μετατρέπουν",
+        "body": "Σχεδιάζουμε και χτίζουμε το ψηφιακό επίπεδο όπου γίνεται το revenue: καθαρή θέση, γρήγορες σελίδες και ροές χωρίς τριβή που μετατρέπουν επισκέψεις σε ποιοτικές συνομιλίες.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775998671/Mokker_zg5kau.png",
+        "imageAlt": "Παρουσίαση website και funnel",
+        "included": [
+          "Landing Pages",
+          "Ολοκληρωμένα Websites",
+          "E-Commerce Καταστήματα",
+          "Online Portfolios",
+          "Sales Funnels"
+        ]
+      },
+      "branding": {
+        "tabLabel": "Branding",
+        "title": "Ταυτότητα που σηματοδοτεί ποιότητα",
+        "body": "Naming, οπτικά συστήματα, οδηγίες και αφήγηση ώστε η μάρκα σου να φαίνεται τόσο σοβαρή όσο τα αποτελέσματα που παραδίδεις—συνεπής παντού.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775824087/Group_30_jbetfw.png",
+        "imageAlt": "Επισκόπηση μάρκας και μεθοδολογίας",
+        "included": [
+          "Στρατηγική Μάρκας",
+          "Οπτική Ταυτότητα",
+          "Design Systems",
+          "Μηνύματα",
+          "Οδηγίες Μάρκας"
+        ]
+      },
+      "contentSocial": {
+        "tabLabel": "Περιεχόμενο & Social",
+        "title": "Δημιουργικοί κινητήρες διανομής",
+        "body": "Ιδέες καμπανιών, συστήματα στα social και assets έτοιμα για δημοσίευση, σχεδιασμένα να κερδίζουν προσοχή χωρίς να θυσιάζουν καθαρότητα ή μετατροπή.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775998671/Mokker_zg5kau.png",
+        "imageAlt": "Περιεχόμενο και social media",
+        "included": [
+          "Στρατηγική Social",
+          "Παραγωγή Περιεχομένου",
+          "Δημιουργικό Καμπάνιας",
+          "Συντακτικά Ημερολόγια",
+          "Playbooks Κοινότητας"
+        ]
+      },
+      "adsGrowth": {
+        "tabLabel": "Διαφημίσεις & Ανάπτυξη",
+        "title": "Paid media με επιχειρηματική ματιά",
+        "body": "Δομημένα τεστ, σωστό tracking και επαναληπτικό δημιουργικό με επίκεντρο τον αντίκτυπο στο pipeline—όχι vanity metrics.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775998671/Mokker_zg5kau.png",
+        "imageAlt": "Διαφημίσεις και growth",
+        "included": [
+          "Paid Social",
+          "Paid Search",
+          "Πειράματα Landing",
+          "Ρύθμιση Attribution",
+          "Αναφορές Ανάπτυξης"
+        ]
+      },
+      "systemsCrm": {
+        "tabLabel": "Συστήματα & CRM",
+        "title": "Λειτουργίες που κλιμακώνουν μαζί σου",
+        "body": "Αυτοματισμοί, υγιεινή CRM και ενοποιήσεις που εμποδίζουν τα leads να χάνονται μεταξύ εργαλείων και ομάδων.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775824087/Group_30_jbetfw.png",
+        "imageAlt": "Ροή συστημάτων και CRM",
+        "included": [
+          "Ρύθμιση CRM",
+          "Αυτοματισμοί",
+          "Ενοποιήσεις",
+          "Δρομολόγηση Leads",
+          "Dashboards Αναφορών"
+        ]
+      }
     }
   },
   "partners": {
@@ -39,9 +100,113 @@
     "h1Line2": "και",
     "h1Highlight2": "πωλήσεων",
     "h1Line3": "με επίκεντρο τη μετατροπή για την εποχή της AI.",
-    "subtitle": "Χτισμένο για έξυπνη ανάπτυξη",
-    "subtitleLine2": "στην εποχή της AI.",
-    "paragraph": "Βοηθάμε τις μάρκες να λύσουν τις πιο κρίσιμες προκλήσεις ανάπτυξής τους, δίνοντάς τους πρόσβαση σε κορυφαία insights, πρωτοποριακή τεχνολογία και το πιο δημιουργικό ταλέντο του κλάδου."
+    "imageAlt": "Επισκόπηση της μεθοδολογίας Studio 17",
+    "services": {
+      "websites": {
+        "title": "Websites & landing pages",
+        "desc": "Websites, landing pages και σελίδες πωλήσεων. Σχεδιασμένα να μετατρέπουν επισκέψεις σε leads, κλήσεις και πωλήσεις."
+      },
+      "brandVisuals": {
+        "title": "Οπτική ταυτότητα εμπορικού επιπέδου",
+        "desc": "Οπτικά καμπανιών, εικόνα προϊόντος και branded assets. Δημιουργικό ρεαλιστικό και premium για απαιτητικές μάρκες."
+      },
+      "adsFunnels": {
+        "title": "Διαφημίσεις, funnels & ανάπτυξη",
+        "desc": "Paid ads, lead generation και συστήματα μετατροπής. Ποιοτική κίνηση και μετρήσιμα επιχειρηματικά αποτελέσματα."
+      }
+    }
+  },
+  "reviews": {
+    "badge": "Ιστορίες Πελατών",
+    "h2": "Μην πάρετε μόνο το λόγο μας.",
+    "readOriginal": "Διαβάστε το πρωτότυπο ({{language}})",
+    "viewCaseStudy": "Δείτε τη μελέτη περίπτωσης",
+    "carouselPrev": "Προηγούμενες κριτικές",
+    "carouselNext": "Επόμενες κριτικές",
+    "carouselDots": "Διαφάνειες κριτικών",
+    "languages": {
+      "italian": "ιταλικά",
+      "portuguese": "πορτογαλικά",
+      "greek": "ελληνικά",
+      "german": "γερμανικά"
+    },
+    "items": {
+      "0": {
+        "quote": "Είχαμε μια αποδεκτή ιστοσελίδα, αλλά δεν εξηγούσε σωστά την αξία μας και οι άνθρωποι έφευγαν πολύ νωρίς. Η Studio 17 μας βοήθησε να απλοποιήσουμε τη δομή, να βελτιώσουμε το μήνυμα και να κάνουμε τη μάρκα να ακούγεται πιο σοβαρή. Το αποτέλεσμα ευθυγραμμίστηκε πολύ καλύτερα με το επίπεδο δουλειάς που θέλουμε να κάνουμε.",
+        "name": "Marco Bellini",
+        "location": "Ιταλία",
+        "originalLangKey": "italian",
+        "originalHref": "#",
+        "caseStudySlug": "optics-clinic-cyprus"
+      },
+      "1": {
+        "quote": "Κατά τη γνώμη μου, αυτό που κάνει τη Studio 17 διαφορετική είναι ότι δεν σκέφτονται μόνο ως designers. Σκέφτονται θέση, σαφήνεια και πώς ο πελάτης κινείται στη σελίδα. Αυτό έκανε όλη τη διαδικασία να φαίνεται πολύ πιο στρατηγική και λιγότερο τυχαία.",
+        "name": "Giulia Moretti",
+        "location": "Ιταλία",
+        "originalLangKey": "italian",
+        "originalHref": "#",
+        "caseStudySlug": "strategic-journey-giulia"
+      },
+      "2": {
+        "quote": "Πριν συνεργαστούμε με τη Studio 17, η online παρουσία μας έμοιαζε ασυνεπής. Η μάρκα δεν έδειχνε αδύναμη, αλλά ούτε δημιουργούσε αμέσως εμπιστοσύνη. Μας βοήθησαν να ενώσουμε τα πάντα και έδωσαν στην επιχείρηση μια πολύ πιο premium και οργανωμένη εικόνα.",
+        "name": "João Ferreira",
+        "location": "Πορτογαλία",
+        "originalLangKey": "portuguese",
+        "originalHref": "#",
+        "caseStudySlug": "brand-presence-joao"
+      },
+      "3": {
+        "quote": "Αυτό που εκτίμησα περισσότερο ήταν η προσοχή στη λεπτομέρεια. Είχαμε πολλές ιδέες, αλλά ήταν διάσπαρτες και κακά παρουσιασμένες. Η Studio 17 βοήθησε να γίνουν κάτι καθαρό, μοντέρνο και πολύ πιο εύκολο για τους πελάτες να καταλάβουν. Ένιωσα πραγματικά σαν ένα βήμα μπροστά.",
+        "name": "Mariana Costa",
+        "location": "Πορτογαλία",
+        "originalLangKey": "portuguese",
+        "originalHref": "#",
+        "caseStudySlug": "clarity-mariana"
+      },
+      "4": {
+        "quote": "Χρειαζόμασταν κάτι που να φαίνεται επαγγελματικό και να έχει και περισσότερο νόημα από επιχειρηματική σκοπιά. Η Studio 17 ήταν πολύ δυνατή στο να εντοπίζει τι έλειπε, τι μπέρδευε και τι έπρεπε να αλλάξει. Το τελικό αποτέλεσμα έμοιαζε πολύ πιο κοφτερό και σκόπιμο.",
+        "name": "Andreas Nicolaou",
+        "location": "Κύπρος",
+        "originalLangKey": "greek",
+        "originalHref": "#",
+        "caseStudySlug": "growth-andreas"
+      },
+      "5": {
+        "quote": "Μου άρεσε που δεν προσπαθούσαν να μας εντυπωσιάσουν με κενά λόγια. Ήταν πρακτικοί, γρήγοροι και σαφείς στο πώς προσέγγισαν τη δουλειά. Φαίνεται ότι τους νοιάζει πώς φαίνεται η μάρκα, αλλά και αν δουλεύει πραγματικά.",
+        "name": "Elena Petrou",
+        "location": "Κύπρος",
+        "originalLangKey": "greek",
+        "originalHref": "#",
+        "caseStudySlug": "execution-elena"
+      },
+      "6": {
+        "quote": "Είχαμε το κοινό πρόβλημα πολλών ιδεών και χωρίς πραγματική δομή. Η Studio 17 βοήθησε να φέρει εστίαση στην επικοινωνία και έδωσε στο project πολύ πιο ισχυρή κατεύθυνση. Για μένα, ήταν από τα πιο πολύτιμα κομμάτια της συνεργασίας.",
+        "name": "Lukas Schneider",
+        "location": "Γερμανία",
+        "originalLangKey": "german",
+        "originalHref": "#",
+        "caseStudySlug": "focus-lukas"
+      },
+      "7": {
+        "quote": "Η εντύπωσή μου ήταν πολύ θετική από την αρχή. Η ομάδα κατάλαβε τον τόνο που θέλαμε, σεβάστηκε την επιχειρηματική πλευρά και παρέδωσε κάτι που ένιωθε καθαρό, μοντέρνο και αξιόπιστο. Δεν ένιωθε γενικό, κάτι σπάνιο.",
+        "name": "Hannah Weber",
+        "location": "Γερμανία",
+        "originalLangKey": "german",
+        "originalHref": "#",
+        "caseStudySlug": "credible-modern-hannah"
+      }
+    }
+  },
+  "caseStudy": {
+    "badge": "Μελέτη περίπτωσης",
+    "share": "Κοινοποίηση",
+    "linkCopied": "Ο σύνδεσμος αντιγράφηκε",
+    "copyFallback": "Αντιγράψτε αυτόν τον σύνδεσμο:",
+    "close": "Κλείσιμο μελέτης περίπτωσης",
+    "closeOverlay": "Κλείσιμο πλαισίου μελέτης περίπτωσης",
+    "challenge": "Η Πρόκληση",
+    "approach": "Προσέγγιση Studio 17",
+    "results": "Τα Αποτελέσματα"
   },
   "results": {
     "badge": "Αποτελέσματα",
@@ -55,11 +220,26 @@
     "h2Line2": "στην Studio 17",
     "viewAll": "Δείτε Όλα",
     "items": {
-      "0": { "title": "Η Studio 17 Εκκινεί Νέο Framework Marketing με AI", "date": "1 Μαρτίου 2026" },
-      "1": { "title": "Γιατί το Design με Επίκεντρο τη Μετατροπή είναι το Μέλλον των Πωλήσεων", "date": "24 Φεβρουαρίου 2026" },
-      "2": { "title": "Πώς η Predictive Intelligence Αλλάζει το Media Buying", "date": "15 Φεβρουαρίου 2026" },
-      "3": { "title": "Το Τέλος του Παραδοσιακού B2B Agency Retainer", "date": "2 Φεβρουαρίου 2026" },
-      "4": { "title": "Χτίζοντας Μηχανή Ανάπτυξης: Οδηγός Βήμα προς Βήμα", "date": "18 Ιανουαρίου 2026" }
+      "0": {
+        "title": "Η Studio 17 Εκκινεί Νέο Framework Marketing με AI",
+        "date": "1 Μαρτίου 2026"
+      },
+      "1": {
+        "title": "Γιατί το Design με Επίκεντρο τη Μετατροπή είναι το Μέλλον των Πωλήσεων",
+        "date": "24 Φεβρουαρίου 2026"
+      },
+      "2": {
+        "title": "Πώς η Predictive Intelligence Αλλάζει το Media Buying",
+        "date": "15 Φεβρουαρίου 2026"
+      },
+      "3": {
+        "title": "Το Τέλος του Παραδοσιακού B2B Agency Retainer",
+        "date": "2 Φεβρουαρίου 2026"
+      },
+      "4": {
+        "title": "Χτίζοντας Μηχανή Ανάπτυξης: Οδηγός Βήμα προς Βήμα",
+        "date": "18 Ιανουαρίου 2026"
+      }
     }
   },
   "contact": {
@@ -74,13 +254,15 @@
     "or": "Ή",
     "scheduleMeeting": "Προγραμματισμός συνάντησης",
     "bookCall": "Κράτησε Κλήση Ανάπτυξης",
-    "directInquiry": "Άμεση επικοινωνία"
+    "directInquiry": "Άμεση επικοινωνία",
+    "messageSentSuccess": "Το μήνυμα στάλθηκε επιτυχώς!"
   },
   "footer": {
     "tagline": "Το στούντιο marketing και πωλήσεων με επίκεντρο τη μετατροπή για την εποχή της AI.",
     "copyright": "© 2026 Studio 17. Με επιφύλαξη παντός δικαιώματος.",
     "about": "Σχετικά",
-    "ecosystem": "Οικοσύστημα",
+    "reviews": "Κριτικές",
+    "services": "Υπηρεσίες",
     "results": "Αποτελέσματα",
     "news": "Νέα",
     "privacy": "Πολιτική Απορρήτου",
@@ -115,6 +297,259 @@
         "title": "Geo Optimization",
         "desc": "Παγκόσμια κλίμακα. Τοπική ακρίβεια."
       }
+    }
+  },
+  "articlesPage": {
+    "nav": {
+      "howItWorks": "Πώς λειτουργεί",
+      "articles": "Άρθρα",
+      "partners": "Συνεργάτες",
+      "testimonials": "Μαρτυρίες",
+      "pricing": "Τιμές",
+      "faq": "FAQ"
+    },
+    "ctaStartNow": "Ξεκίνα τώρα",
+    "ctaFloating": "Ξεκίνα το project σου",
+    "featuredBadge": "Must read",
+    "featuredTitle": "Γιατί ο ιστότοπός σου δεν πουλάει (και πώς να το διορθώσεις).",
+    "featuredDesc": "Οι περισσότεροι ιστότοποι είναι ψηφιακά φυλλάδια. Μάθε το πλαίσιο 3 βημάτων που χρησιμοποιούμε για να μετατρέψουμε την επισκεψιμότητα σε πληρωτές πελάτες σε λιγότερο από 7 ημέρες.",
+    "readArticle": "Διάβασε το άρθρο",
+    "featuredImageAlt": "Εικονογράφηση άρθρου",
+    "articles": [
+      {
+        "tag": "Στρατηγική",
+        "title": "Μοντέλο 50€/μήνα vs. 5000€ προκαταβολή: τα νούμερα",
+        "desc": "Γιατί το subscription κερδίζει στο web design και πώς βελτιώνει τη ρευστότητα."
+      },
+      {
+        "tag": "Design",
+        "title": "5 τάσεις design που σκοτώνουν τη μετατροπή",
+        "desc": "Άσε τα carousels και το parallax αν θέλεις πωλήσεις. Τι δουλεύει το 2024."
+      },
+      {
+        "tag": "Tech",
+        "title": "Πώς χτίζουμε γρήγορους ιστότοπους σε 7 μέρες",
+        "desc": "Η stack μας. Γιατί HTML/Tailwind αντί για Wordpress και Webflow."
+      },
+      {
+        "tag": "SEO",
+        "title": "SEO 2024: τι μετράει ακόμη;",
+        "desc": "Ξέχνα το keyword stuffing. Core Web Vitals και χρήσιμο περιεχόμενο για ranking."
+      },
+      {
+        "tag": "Copy",
+        "title": "Τίτλοι που «πιάνουν»",
+        "desc": "Η ακριβής φόρμουλα για H1 που μειώνουν το bounce ~30%."
+      }
+    ],
+    "readMore": "Διάβασε περισσότερα",
+    "ctaCardTitle": "Θέλεις τέτοια αποτελέσματα;",
+    "ctaCardDesc": "Σταμάτα να διαβάζεις και ξεκίνα ανάπτυξη. Απόκτησε high-converting site αυτή την εβδομάδα.",
+    "ctaCardButton": "Ξεκίνα το project σου",
+    "loadMore": "Περισσότερα άρθρα",
+    "newsletterBadge": "Εβδομαδιαία tips ανάπτυξης",
+    "newsletterTitle": "Μη χάσεις το επόμενο insight.",
+    "newsletterDesc": "Γίνε μέλος με 500+ founders με actionable web design & conversion κάθε Τρίτη. Χωρίς spam, μόνο αξία.",
+    "newsletterEmailPlaceholder": "το email σου...",
+    "newsletterSubscribe": "Εγγραφή",
+    "newsletterUnsubscribe": "Απεγγραφή οποτεδήποτε.",
+    "bottomTitle": "Έτοιμος να εφαρμόσεις αυτά τα insights;",
+    "bottomDesc": "Δεν γράφουμε μόνο — το χτίζουμε για εσένα. Επαγγελματικό design, development και hosting με σταθερό μηνιαίο fee.",
+    "bottomPlans": "Δες πλάνα & τιμές",
+    "bottomProcess": "Δες τη διαδικασία μας"
+  },
+  "partnersPage": {
+    "nav": {
+      "channels": "Κανάλια",
+      "value": "Αξία",
+      "process": "Διαδικασία",
+      "tiers": "Επίπεδα",
+      "apply": "Αίτηση"
+    },
+    "ctaBecomePartner": "Γίνε συνεργάτης",
+    "ctaJoinProgram": "Μπες στο πρόγραμμα",
+    "heroBadge": "Οι ανταμοιβές κλιμακώνονται με την απόδοση και το μέγεθος της συμφωνίας.",
+    "heroTitleLine1": "Εσύ παραπέμπεις. Εμείς εκτελούμε.",
+    "heroTitleGradient": "Εσύ κερδίζεις.",
+    "heroIntro": "Παρουσίασε επιχειρήσεις που χρειάζονται sites, funnels ή αναβάθμιση conversion. Εμείς αναλαμβάνουμε πωλήσεις + delivery. Εσύ κερδίζεις — με πλήρη tracking και καθαρή επικοινωνία.",
+    "heroApply": "Αίτηση συνεργασίας",
+    "heroEmail": "Email partnerships",
+    "heroNote": "Αίτηση 2 λεπτών. Απαντάμε εντός 48 ωρών.",
+    "heroBullets": [
+      "Παρακολουθημένα referrals",
+      "Γρήγορα quotes",
+      "Αξιόπιστη εκτέλεση"
+    ],
+    "youCanTitle": "Μπορείς να έχεις",
+    "youCanList": [
+      "Ανταμοιβές ανά κλειστή συμφωνία που φέρνεις",
+      "Κλιμακούμενες ανταμοιβές καθώς αυξάνεται η απόδοση",
+      "Γρήγορο quoting (scope + range, γρήγορα)",
+      "Partner tracking (κατάσταση κάθε referral)",
+      "Αφιερωμένη επαφή συνεργάτη",
+      "Partner kit (deck, one-pagers, μηνύματα)",
+      "Co-marketing (featured partners, συνεργασίες)",
+      "Προτεραιότητα στο scheduling για leads συνεργατών"
+    ],
+    "soYouCanTitle": "Ώστε να μπορείς να",
+    "soYouCanList": [
+      "Μονετοποιήσεις το δίκτυό σου χωρίς delivery team",
+      "Κινείσαι γρηγορότερα όταν ρωτούν «ποιος το κάνει;»",
+      "Προστατεύεις τη φήμη σου με αξιόπιστη εκτέλεση",
+      "Κλείνεις καλύτερες ευκαιρίες με πραγμαικές λύσεις",
+      "Εξοικονομείς χρόνο (εμείς τρέχουμε πωλήσεις + delivery)",
+      "Αυξάνεις εμπιστοσύνη με διαφάνεια προόδου + αποτελεσμάτων"
+    ],
+    "disclaimer": "Χωρίς white-label. Δουλεύουμε απευθείας με τον πελάτη — εσύ παραμένεις ο introducer και σε ενημερώνουμε.",
+    "ecosystemLabel": "Το οικοσύστημα",
+    "channelsTitle": "Κανάλια συνεργατών",
+    "channelsIntro": "Διάλεξε το κανάλι που ταιριάζει στο πώς δημιουργείς εισαγωγές.",
+    "channels": [
+      {
+        "icon": "ph-duotone ph-briefcase",
+        "title": "Advisor",
+        "desc": "Λογιστές, δικηγόροι & σύμβουλοι που παραπέμπουν trusted πελάτες."
+      },
+      {
+        "icon": "ph-duotone ph-broadcast",
+        "title": "Κοινό",
+        "desc": "Creators, newsletters & podcasts με SME κοινό."
+      },
+      {
+        "icon": "ph-duotone ph-users-three",
+        "title": "Κοινότητα",
+        "desc": "Discord/Slack, coworking & τοπικά δίκτυα."
+      },
+      {
+        "icon": "ph-duotone ph-pencil-circle",
+        "title": "Agency",
+        "desc": "Συμπληρωματικές υπηρεσίες: PPC, SEO, branding & automation."
+      }
+    ],
+    "channelsFooter": "Συνεργαζόμαστε επίσης με SaaS/εργαλεία, δίκτυα διανομής, εκπαίδευση και enterprise οικοσυστήματα.",
+    "howTitle": "Πώς λειτουργεί",
+    "howSteps": [
+      {
+        "step": "1. Αίτηση",
+        "desc": "2 λεπτά. Πες μας κανάλι + αγορά.",
+        "active": true
+      },
+      {
+        "step": "2. Κλήση ευθυγράμμισης",
+        "desc": "Επιβεβαιώνουμε fit, διαδικασία referral και ανταμοιβές."
+      },
+      {
+        "step": "3. Εισαγωγή",
+        "desc": "Υποβάλλεις referral ή κάνεις warm intro με template μας."
+      },
+      {
+        "step": "4. Κλείνουμε + παραδίδουμε",
+        "desc": "Λαμβάνεις updates — και ανταμοιβές όταν κλείνει η συμφωνία."
+      }
+    ],
+    "howFooter": "Δεν θα αναρωτιέσαι τι συμβαίνει — κάθε referral είναι tracked.",
+    "deliverTitle": "Τι παραδίδουμε",
+    "deliverItems": [
+      {
+        "icon": "ph-bold ph-desktop",
+        "title": "High-converting websites",
+        "desc": "Design με business lens, όχι μόνο εικόνες."
+      },
+      {
+        "icon": "ph-bold ph-funnel",
+        "title": "Landings + funnels",
+        "desc": "Για να μετατρέπουν επισκεψιμότητα σε leads (paid-ready)."
+      },
+      {
+        "icon": "ph-bold ph-arrows-clockwise",
+        "title": "Redesigns με focus conversion",
+        "desc": "Διορθώνουμε όπου χάνονται χρήματα."
+      },
+      {
+        "icon": "ph-bold ph-chart-bar",
+        "title": "Analytics setup",
+        "desc": "Events, pixels, funnels. Έτοιμο tracking."
+      }
+    ],
+    "transparencyTitle": "Η διαφάνεια είναι το νόμισμά μας.",
+    "transparencyCards": [
+      {
+        "title": "Ορατότητα pipeline",
+        "desc": "Track κάθε referral: received → qualified → proposal → won/lost."
+      },
+      {
+        "title": "Ρυθμός ενημερώσεων",
+        "desc": "Ενημερώσεις εβδομαδιαίες ή διμηνιαίες — χωρίς κυνήγι."
+      },
+      {
+        "title": "Πρότυπα delivery",
+        "desc": "Σαφές scope, timelines και acceptance criteria."
+      }
+    ],
+    "tiersTitle": "Επίπεδα συνεργατών",
+    "tiersIntro": "Οι ανταμοιβές κλιμακώνονται με την απόδοση.",
+    "tierPopular": "Πιο δημοφιλές",
+    "tierStarter": {
+      "name": "Starter",
+      "desc": "1–2 qualified referrals / τρίμηνο",
+      "bullets": [
+        "Τυπικές ανταμοιβές referral",
+        "Πρόσβαση στο partner kit"
+      ]
+    },
+    "tierGrowth": {
+      "name": "Growth",
+      "desc": "1–2 qualified referrals / μήνα",
+      "bullets": [
+        "Υψηλότερες ανταμοιβές",
+        "Προτεραιότητα scheduling",
+        "Partner review call"
+      ],
+      "bulletHighlight": "Υψηλότερες"
+    },
+    "tierElite": {
+      "name": "Elite",
+      "desc": "3+ qualified referrals / μήνα",
+      "bullets": [
+        "Μέγιστες ανταμοιβές",
+        "Προτεραιότητα response",
+        "Πρώιμη πρόσβαση σε προσφορές"
+      ]
+    },
+    "applyTitle": "Αίτηση συνεργάτη",
+    "form": {
+      "name": "Όνομα",
+      "email": "Email",
+      "namePlaceholder": "Το όνομά σου",
+      "emailPlaceholder": "name@company.com",
+      "channel": "Κανάλι συνεργάτη",
+      "referrals": "Εκτίμ. referrals / μήνα",
+      "link": "Link (site/social)",
+      "linkPlaceholder": "https://",
+      "market": "Αγορά",
+      "collab": "Πώς θέλεις να συνεργαστείς;",
+      "collabPlaceholder": "Πες μας για τους τυπικούς πελάτες σου...",
+      "submit": "Αίτηση τώρα",
+      "applicationReceived": "Λάβαμε την αίτηση. Απαντάμε εντός 48 ωρών.",
+      "channelOptions": [
+        "Advisor (Νομικό/Χρηματοοικονομικά)",
+        "Κοινό (Creator/Media)",
+        "Κοινότητα",
+        "Agency (Υπηρεσία)",
+        "Tech / Πλατφόρμα",
+        "Άλλο"
+      ],
+      "referralOptions": [
+        "0-1",
+        "2-5",
+        "6-10",
+        "10+"
+      ],
+      "marketOptions": [
+        "Κύπρος",
+        "Ευρώπη",
+        "Παγκόσμια"
+      ]
     }
   }
 }

@@ -1,7 +1,8 @@
 {
   "nav": {
     "about": "About",
-    "ecosystem": "Ecosystem",
+    "services": "Services",
+    "reviews": "Reviews",
     "results": "Results",
     "news": "News",
     "langLabel": "EN",
@@ -11,23 +12,83 @@
       "el": "Ελληνικά"
     }
   },
-  "ecosystem": {
-    "badge": "Connected Ecosystem",
-    "h2": "A competitive edge",
-    "h2Line2": "across every dimension",
-    "paragraph": "Our connected capabilities give brands a measurable advantage in the modern world of marketing and sales.",
-    "buttonLine1": "Connected",
-    "buttonLine2": "Ecosystem",
-    "marquee": {
-      "advertising": "Advertising",
-      "branding": "Branding",
-      "websites": "Websites",
-      "sales": "Sales",
-      "media": "Media",
-      "precisionMarketing": "Precision Marketing",
-      "production": "Production",
-      "gamification": "Gamification",
-      "softwareForMarketing": "Software for Marketing"
+  "servicesSection": {
+    "h2": "Our",
+    "h2Italic": "Services",
+    "tablistLabel": "Service categories",
+    "includedLabel": "Included Services",
+    "cta": "Discuss your project",
+    "tabs": {
+      "websitesFunnels": {
+        "tabLabel": "Websites & Funnels",
+        "title": "Digital experiences that convert",
+        "body": "We design and build the digital layer where revenue happens: clear positioning, fast pages, and frictionless flows that turn visits into qualified conversations.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775998671/Mokker_zg5kau.png",
+        "imageAlt": "Website and funnel showcase",
+        "included": [
+          "Landing Pages",
+          "Full Websites",
+          "E-Commerce Stores",
+          "Online Portfolios",
+          "Sales Funnels"
+        ]
+      },
+      "branding": {
+        "tabLabel": "Branding",
+        "title": "Identity that signals quality",
+        "body": "Naming, visual systems, guidelines, and narrative so your brand looks as serious as the outcomes you deliver—consistent everywhere you show up.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775824087/Group_30_jbetfw.png",
+        "imageAlt": "Brand and methodology overview",
+        "included": [
+          "Brand Strategy",
+          "Visual Identity",
+          "Design Systems",
+          "Messaging",
+          "Brand Guidelines"
+        ]
+      },
+      "contentSocial": {
+        "tabLabel": "Content & Social",
+        "title": "Creative engines for distribution",
+        "body": "Campaign concepts, social systems, and production-ready assets engineered to earn attention without sacrificing clarity or conversion.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775998671/Mokker_zg5kau.png",
+        "imageAlt": "Content and social creative",
+        "included": [
+          "Social Strategy",
+          "Content Production",
+          "Campaign Creative",
+          "Editorial Calendars",
+          "Community Playbooks"
+        ]
+      },
+      "adsGrowth": {
+        "tabLabel": "Ads & Growth",
+        "title": "Paid media with a business lens",
+        "body": "Structured testing, tight tracking, and creative iteration focused on pipeline impact—not vanity metrics.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775998671/Mokker_zg5kau.png",
+        "imageAlt": "Ads and growth systems",
+        "included": [
+          "Paid Social",
+          "Paid Search",
+          "Landing Experiments",
+          "Attribution Setup",
+          "Growth Reporting"
+        ]
+      },
+      "systemsCrm": {
+        "tabLabel": "Systems & CRM",
+        "title": "Operations that scale with you",
+        "body": "Automations, CRM hygiene, and integrations that keep leads from leaking between tools and teams.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775824087/Group_30_jbetfw.png",
+        "imageAlt": "Systems and CRM workflow",
+        "included": [
+          "CRM Setup",
+          "Automations",
+          "Integrations",
+          "Lead Routing",
+          "Reporting Dashboards"
+        ]
+      }
     }
   },
   "partners": {
@@ -39,9 +100,113 @@
     "h1Line2": "and",
     "h1Highlight2": "sales",
     "h1Line3": "studio for the AI era.",
-    "subtitle": "Built for intelligent growth",
-    "subtitleLine2": "in the AI era.",
-    "paragraph": "We help the brands solve their most critical growth challenges by giving them access to industry-leading insights, breakthrough technology, and the most creative talent in the business."
+    "imageAlt": "Studio 17 methodology overview",
+    "services": {
+      "websites": {
+        "title": "Websites & Landing Pages",
+        "desc": "Websites, landing pages, sales pages. Built to turn visits into leads, calls and sales."
+      },
+      "brandVisuals": {
+        "title": "Commercial-Grade Brand Visuals",
+        "desc": "Campaign visuals, product imagery, branded assets. Realistic, polished creative built for brands that want premium execution."
+      },
+      "adsFunnels": {
+        "title": "Ads, Funnels & Growth",
+        "desc": "Paid ads, lead generation, conversion systems. Designed to bring qualified traffic and measurable business results."
+      }
+    }
+  },
+  "reviews": {
+    "badge": "Client Stories",
+    "h2": "Don't just take our word for it.",
+    "readOriginal": "Read original ({{language}})",
+    "viewCaseStudy": "View case study",
+    "carouselPrev": "Previous testimonials",
+    "carouselNext": "Next testimonials",
+    "carouselDots": "Testimonial slides",
+    "languages": {
+      "italian": "Italian",
+      "portuguese": "Portuguese",
+      "greek": "Greek",
+      "german": "German"
+    },
+    "items": {
+      "0": {
+        "quote": "We had a website that looked acceptable, but it did not explain our value properly and people were dropping off too early. Studio 17 helped us simplify the structure, improve the message and make the brand feel more serious. The result felt much more aligned with the level of business we want to do.",
+        "name": "Marco Bellini",
+        "location": "Italy",
+        "originalLangKey": "italian",
+        "originalHref": "#",
+        "caseStudySlug": "optics-clinic-cyprus"
+      },
+      "1": {
+        "quote": "My personal opinion is that what makes Studio 17 different is that they do not think only like designers. They think about positioning, clarity and how a client will actually move through the page. That made the whole process feel much more strategic and less random.",
+        "name": "Giulia Moretti",
+        "location": "Italy",
+        "originalLangKey": "italian",
+        "originalHref": "#",
+        "caseStudySlug": "strategic-journey-giulia"
+      },
+      "2": {
+        "quote": "Before working with Studio 17, our online presence felt inconsistent. The brand did not look weak, but it also did not create trust straight away. They helped us bring everything together and gave the business a much more premium and organised image.",
+        "name": "João Ferreira",
+        "location": "Portugal",
+        "originalLangKey": "portuguese",
+        "originalHref": "#",
+        "caseStudySlug": "brand-presence-joao"
+      },
+      "3": {
+        "quote": "What I appreciated most was the attention to detail. We had a lot of ideas, but they were scattered and not very well presented. Studio 17 helped turn that into something clear, modern and much easier for clients to understand. It genuinely felt like a step forward.",
+        "name": "Mariana Costa",
+        "location": "Portugal",
+        "originalLangKey": "portuguese",
+        "originalHref": "#",
+        "caseStudySlug": "clarity-mariana"
+      },
+      "4": {
+        "quote": "We needed something that looked professional but also made more sense from a business point of view. Studio 17 was very strong at identifying what was missing, what was confusing and what needed to change. The final result felt much sharper and much more intentional.",
+        "name": "Andreas Nicolaou",
+        "location": "Cyprus",
+        "originalLangKey": "greek",
+        "originalHref": "#",
+        "caseStudySlug": "growth-andreas"
+      },
+      "5": {
+        "quote": "I liked that they were not trying to impress us with empty talk. They were practical, fast and clear in the way they approached the work. You can tell they care about how the brand looks, but also about whether it actually works.",
+        "name": "Elena Petrou",
+        "location": "Cyprus",
+        "originalLangKey": "greek",
+        "originalHref": "#",
+        "caseStudySlug": "execution-elena"
+      },
+      "6": {
+        "quote": "We had the common problem of having too many ideas and no real structure. Studio 17 helped bring focus to the communication and gave the project a much stronger direction. For me, that was one of the most valuable parts of working with them.",
+        "name": "Lukas Schneider",
+        "location": "Germany",
+        "originalLangKey": "german",
+        "originalHref": "#",
+        "caseStudySlug": "focus-lukas"
+      },
+      "7": {
+        "quote": "My impression was very positive from the beginning. The team understood the tone we wanted, respected the business side of things and delivered something that felt clean, modern and credible. It did not feel generic, which is rare.",
+        "name": "Hannah Weber",
+        "location": "Germany",
+        "originalLangKey": "german",
+        "originalHref": "#",
+        "caseStudySlug": "credible-modern-hannah"
+      }
+    }
+  },
+  "caseStudy": {
+    "badge": "Case Study",
+    "share": "Share",
+    "linkCopied": "Link copied",
+    "copyFallback": "Copy this link:",
+    "close": "Close case study",
+    "closeOverlay": "Close case study overlay",
+    "challenge": "The Challenge",
+    "approach": "Studio 17 Approach",
+    "results": "The Results"
   },
   "results": {
     "badge": "Results",
@@ -55,11 +220,26 @@
     "h2Line2": "across Studio 17",
     "viewAll": "View All",
     "items": {
-      "0": { "title": "Studio 17 Launches New AI-Driven Marketing Framework", "date": "March 1, 2026" },
-      "1": { "title": "Why Conversion-First Design is the Future of Sales", "date": "February 24, 2026" },
-      "2": { "title": "How Predictive Intelligence is Changing Media Buying", "date": "February 15, 2026" },
-      "3": { "title": "The End of the Traditional B2B Agency Retainer", "date": "February 2, 2026" },
-      "4": { "title": "Building a Growth Engine: A Step-by-Step Guide", "date": "January 18, 2026" }
+      "0": {
+        "title": "Studio 17 Launches New AI-Driven Marketing Framework",
+        "date": "March 1, 2026"
+      },
+      "1": {
+        "title": "Why Conversion-First Design is the Future of Sales",
+        "date": "February 24, 2026"
+      },
+      "2": {
+        "title": "How Predictive Intelligence is Changing Media Buying",
+        "date": "February 15, 2026"
+      },
+      "3": {
+        "title": "The End of the Traditional B2B Agency Retainer",
+        "date": "February 2, 2026"
+      },
+      "4": {
+        "title": "Building a Growth Engine: A Step-by-Step Guide",
+        "date": "January 18, 2026"
+      }
     }
   },
   "contact": {
@@ -74,13 +254,15 @@
     "or": "OR",
     "scheduleMeeting": "Schedule a meeting",
     "bookCall": "Book a Growth Call",
-    "directInquiry": "Direct inquiry"
+    "directInquiry": "Direct inquiry",
+    "messageSentSuccess": "Message sent successfully!"
   },
   "footer": {
     "tagline": "The conversion-first marketing and sales studio for the AI era.",
     "copyright": "© 2026 Studio 17. All rights reserved.",
     "about": "About",
-    "ecosystem": "Ecosystem",
+    "reviews": "Reviews",
+    "services": "Services",
     "results": "Results",
     "news": "News",
     "privacy": "Privacy Policy",
@@ -115,6 +297,259 @@
         "title": "Geo Optimization",
         "desc": "Global scale. Local precision."
       }
+    }
+  },
+  "articlesPage": {
+    "nav": {
+      "howItWorks": "How it Works",
+      "articles": "Articles",
+      "partners": "Partners",
+      "testimonials": "Testimonials",
+      "pricing": "Pricing",
+      "faq": "FAQ"
+    },
+    "ctaStartNow": "Start Now",
+    "ctaFloating": "Start Your Project",
+    "featuredBadge": "Must Read",
+    "featuredTitle": "Why your website isn't selling (and how to fix it).",
+    "featuredDesc": "Most websites are digital brochures. Learn the 3-step framework we use to turn traffic into paying customers in less than 7 days.",
+    "readArticle": "Read Article",
+    "featuredImageAlt": "Featured Article Illustration",
+    "articles": [
+      {
+        "tag": "Strategy",
+        "title": "The €50/mo Model vs. €5k Upfront: The Math",
+        "desc": "Why the subscription model is taking over the web design industry and how it benefits cash flow."
+      },
+      {
+        "tag": "Design",
+        "title": "5 Design Trends That Are Killing Your Conversion Rate",
+        "desc": "Stop using carousels and parallax scrolling if you want to sell. Here is what actually works in 2024."
+      },
+      {
+        "tag": "Tech",
+        "title": "How We Build High-Speed Sites in 7 Days",
+        "desc": "Our tech stack revealed. Why we chose raw HTML/Tailwind over Wordpress and Webflow."
+      },
+      {
+        "tag": "SEO",
+        "title": "SEO Basics for 2024: What Still Matters?",
+        "desc": "Forget keyword stuffing. Focus on Core Web Vitals and helpful content to rank higher."
+      },
+      {
+        "tag": "Copywriting",
+        "title": "Writing Headlines That Hook",
+        "desc": "The exact formula we use to write H1 headers that decrease bounce rate by 30%."
+      }
+    ],
+    "readMore": "Read More",
+    "ctaCardTitle": "Want results like these?",
+    "ctaCardDesc": "Stop reading and start growing. Get your high-converting site this week.",
+    "ctaCardButton": "Start Your Project",
+    "loadMore": "View More Articles",
+    "newsletterBadge": "Weekly Growth Tips",
+    "newsletterTitle": "Don't miss the next big insight.",
+    "newsletterDesc": "Join 500+ founders receiving actionable web design and conversion strategies every Tuesday. No spam, just value.",
+    "newsletterEmailPlaceholder": "enter your email...",
+    "newsletterSubscribe": "Subscribe",
+    "newsletterUnsubscribe": "Unsubscribe at any time.",
+    "bottomTitle": "Ready to apply these insights?",
+    "bottomDesc": "We don't just write about it. We build it for you. Professional design, development, and hosting for one flat monthly fee.",
+    "bottomPlans": "View Plans & Pricing",
+    "bottomProcess": "See Our Process"
+  },
+  "partnersPage": {
+    "nav": {
+      "channels": "Channels",
+      "value": "Value",
+      "process": "Process",
+      "tiers": "Tiers",
+      "apply": "Apply"
+    },
+    "ctaBecomePartner": "Become a Partner",
+    "ctaJoinProgram": "Join Program",
+    "heroBadge": "Rewards scale with performance and deal size.",
+    "heroTitleLine1": "Refer. We execute.",
+    "heroTitleGradient": "You get rewarded.",
+    "heroIntro": "Introduce businesses that need websites, funnels, or conversion upgrades. We handle sales + delivery. You get rewarded — with full tracking and clean communication.",
+    "heroApply": "Apply to Partner Program",
+    "heroEmail": "Email Partnerships",
+    "heroNote": "2-minute application. We reply within 48 hours.",
+    "heroBullets": [
+      "Tracked referrals",
+      "Fast quoting",
+      "Reliable execution"
+    ],
+    "youCanTitle": "You can get",
+    "youCanList": [
+      "Rewards per closed deal you introduce",
+      "Tiered rewards as performance grows",
+      "Fast quoting (scope + range, quickly)",
+      "Partner tracking (status of every referral)",
+      "Dedicated partner contact",
+      "Partner kit (deck, 1-pagers, messaging)",
+      "Co-marketing (featured partners, collaborations)",
+      "Priority scheduling for partner leads"
+    ],
+    "soYouCanTitle": "So you can",
+    "soYouCanList": [
+      "Monetize your network without building a delivery team",
+      "Move faster when clients ask \"who can do this?\"",
+      "Protect your reputation with reliable execution",
+      "Close better opportunities by bringing real solutions",
+      "Save time (we run sales + delivery)",
+      "Increase trust with transparent progress + outcomes"
+    ],
+    "disclaimer": "No white-label. We work directly with the client — you remain the introducer and we keep you informed.",
+    "ecosystemLabel": "The Ecosystem",
+    "channelsTitle": "Partner Channels",
+    "channelsIntro": "Choose the channel that matches how you create introductions.",
+    "channels": [
+      {
+        "icon": "ph-duotone ph-briefcase",
+        "title": "Advisor",
+        "desc": "Accountants, lawyers, & consultants who refer trusted clients."
+      },
+      {
+        "icon": "ph-duotone ph-broadcast",
+        "title": "Audience",
+        "desc": "Creators, newsletter writers & podcasters with SME audiences."
+      },
+      {
+        "icon": "ph-duotone ph-users-three",
+        "title": "Community",
+        "desc": "Discord/Slack groups, coworking spaces & local networks."
+      },
+      {
+        "icon": "ph-duotone ph-pencil-circle",
+        "title": "Agency",
+        "desc": "Complementary services: PPC, SEO, Branding & Automation."
+      }
+    ],
+    "channelsFooter": "We also partner with SaaS/tools, distribution networks, education programs, and enterprise ecosystems.",
+    "howTitle": "How it works",
+    "howSteps": [
+      {
+        "step": "1. Apply",
+        "desc": "2 minutes. Tell us your channel + market.",
+        "active": true
+      },
+      {
+        "step": "2. Alignment Call",
+        "desc": "We confirm fit, referral process, and rewards structure."
+      },
+      {
+        "step": "3. Introduce",
+        "desc": "You submit a referral or do a warm intro using our template."
+      },
+      {
+        "step": "4. We Close + Deliver",
+        "desc": "You get updates throughout — and rewards when the deal closes."
+      }
+    ],
+    "howFooter": "You'll never wonder what's happening — every referral is tracked.",
+    "deliverTitle": "What we deliver",
+    "deliverItems": [
+      {
+        "icon": "ph-bold ph-desktop",
+        "title": "High-converting websites",
+        "desc": "Business-first design, not just pretty pictures."
+      },
+      {
+        "icon": "ph-bold ph-funnel",
+        "title": "Landing pages + Funnels",
+        "desc": "Built to convert traffic into leads (paid-ready)."
+      },
+      {
+        "icon": "ph-bold ph-arrows-clockwise",
+        "title": "Conversion-focused redesigns",
+        "desc": "Fix what's leaking money."
+      },
+      {
+        "icon": "ph-bold ph-chart-bar",
+        "title": "Analytics Setup",
+        "desc": "Events, pixels, funnels. Tracking ready."
+      }
+    ],
+    "transparencyTitle": "Transparency is our currency.",
+    "transparencyCards": [
+      {
+        "title": "Pipeline Visibility",
+        "desc": "Track every referral: received → qualified → proposal → won/lost."
+      },
+      {
+        "title": "Update Cadence",
+        "desc": "Get updates weekly or bi-weekly — no chasing."
+      },
+      {
+        "title": "Delivery Standards",
+        "desc": "Clear scope, timelines, and acceptance criteria (no ambiguity)."
+      }
+    ],
+    "tiersTitle": "Partner Tiers",
+    "tiersIntro": "Rewards scale with performance.",
+    "tierPopular": "Most Popular",
+    "tierStarter": {
+      "name": "Starter",
+      "desc": "1–2 qualified referrals / quarter",
+      "bullets": [
+        "Standard referral rewards",
+        "Partner kit access"
+      ]
+    },
+    "tierGrowth": {
+      "name": "Growth",
+      "desc": "1–2 qualified referrals / month",
+      "bullets": [
+        "Higher rewards",
+        "Priority scheduling",
+        "Partner review call"
+      ],
+      "bulletHighlight": "Higher"
+    },
+    "tierElite": {
+      "name": "Elite",
+      "desc": "3+ qualified referrals / month",
+      "bullets": [
+        "Max rewards",
+        "Priority response times",
+        "Early access to new offers"
+      ]
+    },
+    "applyTitle": "Apply to Partner",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "name@company.com",
+      "channel": "Partner Channel",
+      "referrals": "Est. Referrals / Month",
+      "link": "Link (Website/Social)",
+      "linkPlaceholder": "https://",
+      "market": "Market",
+      "collab": "How do you want to collaborate?",
+      "collabPlaceholder": "Tell us a bit about your typical clients...",
+      "submit": "Apply Now",
+      "applicationReceived": "Application received. We'll reply within 48 hours.",
+      "channelOptions": [
+        "Advisor (Legal/Finance)",
+        "Audience (Creator/Media)",
+        "Community",
+        "Agency (Service)",
+        "Tech / Platform",
+        "Other"
+      ],
+      "referralOptions": [
+        "0-1",
+        "2-5",
+        "6-10",
+        "10+"
+      ],
+      "marketOptions": [
+        "Cyprus",
+        "Europe",
+        "Global"
+      ]
     }
   }
 }

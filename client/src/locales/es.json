@@ -1,7 +1,8 @@
 {
   "nav": {
     "about": "Sobre",
-    "ecosystem": "Ecosistema",
+    "services": "Servicios",
+    "reviews": "Testimonios",
     "results": "Resultados",
     "news": "Novedades",
     "langLabel": "ES",
@@ -11,23 +12,83 @@
       "el": "Ελληνικά"
     }
   },
-  "ecosystem": {
-    "badge": "Ecosistema Conectado",
-    "h2": "Una ventaja competitiva",
-    "h2Line2": "en cada dimensión",
-    "paragraph": "Nuestras capacidades conectadas dan a las marcas una ventaja medible en el marketing y las ventas de hoy.",
-    "buttonLine1": "Ecosistema",
-    "buttonLine2": "Conectado",
-    "marquee": {
-      "advertising": "Publicidad",
-      "branding": "Branding",
-      "websites": "Sitios web",
-      "sales": "Ventas",
-      "media": "Medios",
-      "precisionMarketing": "Marketing de Precisión",
-      "production": "Producción",
-      "gamification": "Gamificación",
-      "softwareForMarketing": "Software de Marketing"
+  "servicesSection": {
+    "h2": "Nuestros",
+    "h2Italic": "Servicios",
+    "tablistLabel": "Categorías de servicio",
+    "includedLabel": "Servicios incluidos",
+    "cta": "Hablar del proyecto",
+    "tabs": {
+      "websitesFunnels": {
+        "tabLabel": "Websites y Embudos",
+        "title": "Experiencias digitales que convierten",
+        "body": "Diseñamos y construimos la capa digital donde ocurre el ingreso: posicionamiento claro, páginas rápidas y flujos sin fricción que convierten visitas en conversaciones cualificadas.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775998671/Mokker_zg5kau.png",
+        "imageAlt": "Ejemplo de website y embudo",
+        "included": [
+          "Landing Pages",
+          "Websites Completos",
+          "Tiendas Online",
+          "Portfolios Online",
+          "Embudos de Venta"
+        ]
+      },
+      "branding": {
+        "tabLabel": "Branding",
+        "title": "Identidad que comunica calidad",
+        "body": "Naming, sistemas visuales, guías y narrativa para que tu marca se vea tan seria como los resultados que entregas—coherente en cada punto de contacto.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775824087/Group_30_jbetfw.png",
+        "imageAlt": "Visión general de marca y metodología",
+        "included": [
+          "Estrategia de Marca",
+          "Identidad Visual",
+          "Design Systems",
+          "Mensajes",
+          "Guías de Marca"
+        ]
+      },
+      "contentSocial": {
+        "tabLabel": "Contenido y Social",
+        "title": "Motores creativos para distribución",
+        "body": "Conceptos de campaña, sistemas en redes y creatividades listas para publicar, pensadas para captar atención sin sacrificar claridad ni conversión.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775998671/Mokker_zg5kau.png",
+        "imageAlt": "Contenido y redes sociales",
+        "included": [
+          "Estrategia Social",
+          "Producción de Contenido",
+          "Creatividad de Campaña",
+          "Calendarios Editoriales",
+          "Playbooks de Comunidad"
+        ]
+      },
+      "adsGrowth": {
+        "tabLabel": "Anuncios y Crecimiento",
+        "title": "Paid media con visión de negocio",
+        "body": "Pruebas estructuradas, tracking sólido e iteración creativa centrada en el impacto en el pipeline—no en métricas vanidosas.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775998671/Mokker_zg5kau.png",
+        "imageAlt": "Anuncios y sistemas de crecimiento",
+        "included": [
+          "Social Ads",
+          "Search Ads",
+          "Experimentos en Landing",
+          "Configuración de Atribución",
+          "Reporting de Crecimiento"
+        ]
+      },
+      "systemsCrm": {
+        "tabLabel": "Sistemas y CRM",
+        "title": "Operaciones que escalan contigo",
+        "body": "Automatizaciones, higiene de CRM e integraciones que evitan fugas de leads entre herramientas y equipos.",
+        "imageSrc": "https://res.cloudinary.com/dwvhqhtts/image/upload/v1775824087/Group_30_jbetfw.png",
+        "imageAlt": "Flujo de sistemas y CRM",
+        "included": [
+          "Configuración de CRM",
+          "Automatizaciones",
+          "Integraciones",
+          "Enrutado de Leads",
+          "Dashboards de Informes"
+        ]
+      }
     }
   },
   "partners": {
@@ -39,9 +100,113 @@
     "h1Line2": "y",
     "h1Highlight2": "ventas",
     "h1Line3": "orientado a la conversión para la era de la IA.",
-    "subtitle": "Construido para el crecimiento inteligente",
-    "subtitleLine2": "en la era de la IA.",
-    "paragraph": "Ayudamos a las marcas a resolver sus desafíos de crecimiento más críticos, dándoles acceso a insights de referencia, tecnología innovadora y el talento creativo más destacado del sector."
+    "imageAlt": "Panorama de la metodología Studio 17",
+    "services": {
+      "websites": {
+        "title": "Websites y landing pages",
+        "desc": "Websites, landing pages y páginas de venta. Pensados para convertir visitas en leads, llamadas y ventas."
+      },
+      "brandVisuals": {
+        "title": "Identidad visual de nivel comercial",
+        "desc": "Creatividades de campaña, imagen de producto y activos de marca. Creatividad realista y pulida para marcas premium."
+      },
+      "adsFunnels": {
+        "title": "Anuncios, embudos y crecimiento",
+        "desc": "Paid media, generación de leads y sistemas de conversión. Tráfico cualificado y resultados medibles."
+      }
+    }
+  },
+  "reviews": {
+    "badge": "Historias de Clientes",
+    "h2": "No te quedes solo con nuestra palabra.",
+    "readOriginal": "Leer original ({{language}})",
+    "viewCaseStudy": "Ver estudio de caso",
+    "carouselPrev": "Testimonios anteriores",
+    "carouselNext": "Testimonios siguientes",
+    "carouselDots": "Diapositivas de testimonios",
+    "languages": {
+      "italian": "italiano",
+      "portuguese": "portugués",
+      "greek": "griego",
+      "german": "alemán"
+    },
+    "items": {
+      "0": {
+        "quote": "Teníamos una web aceptable, pero no explicaba bien nuestro valor y la gente abandonaba demasiado pronto. Studio 17 nos ayudó a simplificar la estructura, mejorar el mensaje y hacer que la marca se sintiera más seria. El resultado encajó mucho mejor con el nivel de negocio que queremos hacer.",
+        "name": "Marco Bellini",
+        "location": "Italia",
+        "originalLangKey": "italian",
+        "originalHref": "#",
+        "caseStudySlug": "optics-clinic-cyprus"
+      },
+      "1": {
+        "quote": "En mi opinión, lo que hace diferente a Studio 17 es que no piensan solo como diseñadores. Piensan en posicionamiento, claridad y en cómo el cliente se mueve por la página. Eso hizo que todo el proceso se sintiera mucho más estratégico y menos aleatorio.",
+        "name": "Giulia Moretti",
+        "location": "Italia",
+        "originalLangKey": "italian",
+        "originalHref": "#",
+        "caseStudySlug": "strategic-journey-giulia"
+      },
+      "2": {
+        "quote": "Antes de trabajar con Studio 17, nuestra presencia online parecía inconsistente. La marca no parecía débil, pero tampoco generaba confianza al instante. Nos ayudaron a unirlo todo y dieron al negocio una imagen mucho más premium y organizada.",
+        "name": "João Ferreira",
+        "location": "Portugal",
+        "originalLangKey": "portuguese",
+        "originalHref": "#",
+        "caseStudySlug": "brand-presence-joao"
+      },
+      "3": {
+        "quote": "Lo que más valoré fue la atención al detalle. Teníamos muchas ideas, pero estaban dispersas y mal presentadas. Studio 17 ayudó a convertirlo en algo claro, moderno y mucho más fácil de entender para los clientes. De verdad se sintió como un paso adelante.",
+        "name": "Mariana Costa",
+        "location": "Portugal",
+        "originalLangKey": "portuguese",
+        "originalHref": "#",
+        "caseStudySlug": "clarity-mariana"
+      },
+      "4": {
+        "quote": "Necesitábamos algo que pareciera profesional y que también tuviera más sentido desde el negocio. Studio 17 fue muy fuerte identificando lo que faltaba, lo que confundía y lo que debía cambiar. El resultado final se sintió mucho más nítido e intencional.",
+        "name": "Andreas Nicolaou",
+        "location": "Chipre",
+        "originalLangKey": "greek",
+        "originalHref": "#",
+        "caseStudySlug": "growth-andreas"
+      },
+      "5": {
+        "quote": "Me gustó que no intentaran impresionarnos con charla vacía. Fueron prácticos, rápidos y claros en cómo abordaron el trabajo. Se nota que les importa cómo se ve la marca, pero también si funciona de verdad.",
+        "name": "Elena Petrou",
+        "location": "Chipre",
+        "originalLangKey": "greek",
+        "originalHref": "#",
+        "caseStudySlug": "execution-elena"
+      },
+      "6": {
+        "quote": "Teníamos el problema común de demasiadas ideas y poca estructura. Studio 17 ayudó a enfocar la comunicación y dio al proyecto una dirección mucho más fuerte. Para mí, fue de las partes más valiosas de trabajar con ellos.",
+        "name": "Lukas Schneider",
+        "location": "Alemania",
+        "originalLangKey": "german",
+        "originalHref": "#",
+        "caseStudySlug": "focus-lukas"
+      },
+      "7": {
+        "quote": "Mi impresión fue muy positiva desde el principio. El equipo entendió el tono que queríamos, respetó el lado de negocio y entregó algo que se sentía limpio, moderno y creíble. No se sentía genérico, lo cual es raro.",
+        "name": "Hannah Weber",
+        "location": "Alemania",
+        "originalLangKey": "german",
+        "originalHref": "#",
+        "caseStudySlug": "credible-modern-hannah"
+      }
+    }
+  },
+  "caseStudy": {
+    "badge": "Estudio de caso",
+    "share": "Compartir",
+    "linkCopied": "Enlace copiado",
+    "copyFallback": "Copia este enlace:",
+    "close": "Cerrar estudio de caso",
+    "closeOverlay": "Cerrar panel del estudio de caso",
+    "challenge": "El Reto",
+    "approach": "Enfoque Studio 17",
+    "results": "Los Resultados"
   },
   "results": {
     "badge": "Resultados",
@@ -55,11 +220,26 @@
     "h2Line2": "en Studio 17",
     "viewAll": "Ver Todo",
     "items": {
-      "0": { "title": "Studio 17 Lanza Nuevo Framework de Marketing con IA", "date": "1 de marzo de 2026" },
-      "1": { "title": "Por qué el Diseño Orientado a la Conversión es el Futuro de las Ventas", "date": "24 de febrero de 2026" },
-      "2": { "title": "Cómo la Inteligencia Predictiva está Cambiando el Media Buying", "date": "15 de febrero de 2026" },
-      "3": { "title": "El Fin del Retainer Tradicional de Agencias B2B", "date": "2 de febrero de 2026" },
-      "4": { "title": "Construir un Motor de Crecimiento: Una Guía Paso a Paso", "date": "18 de enero de 2026" }
+      "0": {
+        "title": "Studio 17 Lanza Nuevo Framework de Marketing con IA",
+        "date": "1 de marzo de 2026"
+      },
+      "1": {
+        "title": "Por qué el Diseño Orientado a la Conversión es el Futuro de las Ventas",
+        "date": "24 de febrero de 2026"
+      },
+      "2": {
+        "title": "Cómo la Inteligencia Predictiva está Cambiando el Media Buying",
+        "date": "15 de febrero de 2026"
+      },
+      "3": {
+        "title": "El Fin del Retainer Tradicional de Agencias B2B",
+        "date": "2 de febrero de 2026"
+      },
+      "4": {
+        "title": "Construir un Motor de Crecimiento: Una Guía Paso a Paso",
+        "date": "18 de enero de 2026"
+      }
     }
   },
   "contact": {
@@ -74,13 +254,15 @@
     "or": "O",
     "scheduleMeeting": "Programar reunión",
     "bookCall": "Reservar Llamada de Crecimiento",
-    "directInquiry": "Contacto directo"
+    "directInquiry": "Contacto directo",
+    "messageSentSuccess": "¡Mensaje enviado correctamente!"
   },
   "footer": {
     "tagline": "El estudio de marketing y ventas orientado a la conversión para la era de la IA.",
     "copyright": "© 2026 Studio 17. Todos los derechos reservados.",
     "about": "Sobre",
-    "ecosystem": "Ecosistema",
+    "reviews": "Testimonios",
+    "services": "Servicios",
     "results": "Resultados",
     "news": "Novedades",
     "privacy": "Política de Privacidad",
@@ -115,6 +297,259 @@
         "title": "Optimización Geográfica",
         "desc": "Escala global. Precisión local."
       }
+    }
+  },
+  "articlesPage": {
+    "nav": {
+      "howItWorks": "Cómo funciona",
+      "articles": "Artículos",
+      "partners": "Socios",
+      "testimonials": "Testimonios",
+      "pricing": "Precios",
+      "faq": "FAQ"
+    },
+    "ctaStartNow": "Empezar ahora",
+    "ctaFloating": "Empezar tu proyecto",
+    "featuredBadge": "Imprescindible",
+    "featuredTitle": "Por qué tu web no vende (y cómo solucionarlo).",
+    "featuredDesc": "La mayoría de webs son folletos digitales. Aprende el marco en 3 pasos que usamos para convertir tráfico en clientes de pago en menos de 7 días.",
+    "readArticle": "Leer artículo",
+    "featuredImageAlt": "Ilustración del artículo destacado",
+    "articles": [
+      {
+        "tag": "Estrategia",
+        "title": "Modelo 50€/mes vs. 5000€ al inicio: las cuentas",
+        "desc": "Por qué la suscripción gana en el diseño web y cómo mejora el flujo de caja."
+      },
+      {
+        "tag": "Diseño",
+        "title": "5 tendencias de diseño que matan la conversión",
+        "desc": "Deja carruseles y parallax si quieres vender. Esto es lo que funciona en 2024."
+      },
+      {
+        "tag": "Tech",
+        "title": "Cómo construimos webs rápidas en 7 días",
+        "desc": "Nuestra stack al descubierto. Por qué HTML/Tailwind en lugar de Wordpress y Webflow."
+      },
+      {
+        "tag": "SEO",
+        "title": "SEO en 2024: ¿qué sigue importando?",
+        "desc": "Olvida el relleno de keywords. Core Web Vitals y contenido útil para rankear."
+      },
+      {
+        "tag": "Copy",
+        "title": "Titulares que enganchan",
+        "desc": "La fórmula exacta para H1 que reducen el rebote un 30%."
+      }
+    ],
+    "readMore": "Leer más",
+    "ctaCardTitle": "¿Quieres resultados así?",
+    "ctaCardDesc": "Deja de leer y empieza a crecer. Consigue una web de alta conversión esta semana.",
+    "ctaCardButton": "Empezar tu proyecto",
+    "loadMore": "Ver más artículos",
+    "newsletterBadge": "Tips semanales de crecimiento",
+    "newsletterTitle": "No te pierdas el próximo insight.",
+    "newsletterDesc": "Únete a más de 500 fundadores con estrategias accionables de diseño y conversión cada martes. Sin spam, solo valor.",
+    "newsletterEmailPlaceholder": "tu email...",
+    "newsletterSubscribe": "Suscribirse",
+    "newsletterUnsubscribe": "Cancelar suscripción en cualquier momento.",
+    "bottomTitle": "¿Listo para aplicar estos insights?",
+    "bottomDesc": "No solo escribimos sobre ello: lo construimos para ti. Diseño, desarrollo y hosting profesional por una cuota mensual fija.",
+    "bottomPlans": "Ver planes y precios",
+    "bottomProcess": "Ver nuestro proceso"
+  },
+  "partnersPage": {
+    "nav": {
+      "channels": "Canales",
+      "value": "Valor",
+      "process": "Proceso",
+      "tiers": "Niveles",
+      "apply": "Aplicar"
+    },
+    "ctaBecomePartner": "Ser socio",
+    "ctaJoinProgram": "Unirse al programa",
+    "heroBadge": "Las recompensas escalan con el rendimiento y el tamaño del acuerdo.",
+    "heroTitleLine1": "Refieres. Nosotros ejecutamos.",
+    "heroTitleGradient": "Tú ganas.",
+    "heroIntro": "Presenta negocios que necesiten webs, embudos o mejoras de conversión. Nosotros vendemos y entregamos. Tú recibes recompensas — con seguimiento y comunicación claros.",
+    "heroApply": "Solicitar programa de socios",
+    "heroEmail": "Email de partnerships",
+    "heroNote": "Solicitud de 2 minutos. Respondemos en 48 horas.",
+    "heroBullets": [
+      "Referencias rastreadas",
+      "Presupuestos rápidos",
+      "Ejecución fiable"
+    ],
+    "youCanTitle": "Puedes obtener",
+    "youCanList": [
+      "Recompensas por negocio cerrado que presentas",
+      "Recompensas por niveles según el rendimiento",
+      "Presupuesto rápido (alcance + rango, rápido)",
+      "Seguimiento de socio (estado de cada referencia)",
+      "Contacto dedicado para socios",
+      "Kit de socio (deck, one-pagers, mensajes)",
+      "Co-marketing (socios destacados, colaboraciones)",
+      "Prioridad en la agenda para leads de socios"
+    ],
+    "soYouCanTitle": "Así puedes",
+    "soYouCanList": [
+      "Monetizar tu red sin montar equipo de entrega",
+      "Ir más rápido cuando el cliente pregunta \"¿quién puede hacerlo?\"",
+      "Proteger tu reputación con ejecución fiable",
+      "Cerrar mejores oportunidades con soluciones reales",
+      "Ahorrar tiempo (nosotros vendemos + entregamos)",
+      "Más confianza con progreso y resultados transparentes"
+    ],
+    "disclaimer": "Sin white-label. Trabajamos directamente con el cliente — tú sigues siendo quien presenta y te mantenemos informado.",
+    "ecosystemLabel": "El ecosistema",
+    "channelsTitle": "Canales de socios",
+    "channelsIntro": "Elige el canal que encaje con cómo generas presentaciones.",
+    "channels": [
+      {
+        "icon": "ph-duotone ph-briefcase",
+        "title": "Advisor",
+        "desc": "Contables, abogados y consultores que refieren clientes de confianza."
+      },
+      {
+        "icon": "ph-duotone ph-broadcast",
+        "title": "Audiencia",
+        "desc": "Creadores, newsletters y podcasts con audiencias PYME."
+      },
+      {
+        "icon": "ph-duotone ph-users-three",
+        "title": "Comunidad",
+        "desc": "Grupos Discord/Slack, coworkings y redes locales."
+      },
+      {
+        "icon": "ph-duotone ph-pencil-circle",
+        "title": "Agencia",
+        "desc": "Servicios complementarios: PPC, SEO, branding y automatización."
+      }
+    ],
+    "channelsFooter": "También nos asociamos con SaaS/herramientas, redes de distribución, formación y ecosistemas enterprise.",
+    "howTitle": "Cómo funciona",
+    "howSteps": [
+      {
+        "step": "1. Aplicar",
+        "desc": "2 minutos. Cuéntanos tu canal y mercado.",
+        "active": true
+      },
+      {
+        "step": "2. Llamada de alineación",
+        "desc": "Confirmamos fit, proceso de referidos y recompensas."
+      },
+      {
+        "step": "3. Presentar",
+        "desc": "Envías un referido o haces intro con nuestra plantilla."
+      },
+      {
+        "step": "4. Cerramos y entregamos",
+        "desc": "Recibes actualizaciones — y recompensas al cerrar."
+      }
+    ],
+    "howFooter": "Nunca te quedarás sin saber qué pasa: cada referido está rastreado.",
+    "deliverTitle": "Qué entregamos",
+    "deliverItems": [
+      {
+        "icon": "ph-bold ph-desktop",
+        "title": "Webs de alta conversión",
+        "desc": "Diseño pensado para el negocio, no solo bonito."
+      },
+      {
+        "icon": "ph-bold ph-funnel",
+        "title": "Landings + embudos",
+        "desc": "Hechos para convertir tráfico en leads (listos para paid)."
+      },
+      {
+        "icon": "ph-bold ph-arrows-clockwise",
+        "title": "Rediseños orientados a conversión",
+        "desc": "Arreglar donde se pierde dinero."
+      },
+      {
+        "icon": "ph-bold ph-chart-bar",
+        "title": "Configuración de analytics",
+        "desc": "Eventos, pixels, embudos. Tracking listo."
+      }
+    ],
+    "transparencyTitle": "La transparencia es nuestra moneda.",
+    "transparencyCards": [
+      {
+        "title": "Visibilidad del pipeline",
+        "desc": "Sigue cada referido: recibido → cualificado → propuesta → ganado/perdido."
+      },
+      {
+        "title": "Ritmo de actualizaciones",
+        "desc": "Actualizaciones semanales o quincenales — sin perseguir."
+      },
+      {
+        "title": "Estándares de entrega",
+        "desc": "Alcance, plazos y criterios de aceptación claros."
+      }
+    ],
+    "tiersTitle": "Niveles de socio",
+    "tiersIntro": "Las recompensas escalan con el rendimiento.",
+    "tierPopular": "Más popular",
+    "tierStarter": {
+      "name": "Starter",
+      "desc": "1–2 referidos cualificados / trimestre",
+      "bullets": [
+        "Recompensas estándar",
+        "Acceso al kit de socio"
+      ]
+    },
+    "tierGrowth": {
+      "name": "Growth",
+      "desc": "1–2 referidos cualificados / mes",
+      "bullets": [
+        "Recompensas más altas",
+        "Prioridad de agenda",
+        "Llamada de revisión con socios"
+      ],
+      "bulletHighlight": "Más altas"
+    },
+    "tierElite": {
+      "name": "Elite",
+      "desc": "3+ referidos cualificados / mes",
+      "bullets": [
+        "Recompensas máximas",
+        "Tiempos de respuesta prioritarios",
+        "Acceso anticipado a ofertas"
+      ]
+    },
+    "applyTitle": "Solicitud de socio",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "nombre@empresa.com",
+      "channel": "Canal de socio",
+      "referrals": "Ref. estimadas / mes",
+      "link": "Link (web/redes)",
+      "linkPlaceholder": "https://",
+      "market": "Mercado",
+      "collab": "¿Cómo quieres colaborar?",
+      "collabPlaceholder": "Cuéntanos sobre tus clientes típicos...",
+      "submit": "Aplicar ahora",
+      "applicationReceived": "Solicitud recibida. Responderemos en 48 horas.",
+      "channelOptions": [
+        "Advisor (Legal/Finanzas)",
+        "Audiencia (Creador/Media)",
+        "Comunidad",
+        "Agencia (Servicio)",
+        "Tech / Plataforma",
+        "Otro"
+      ],
+      "referralOptions": [
+        "0-1",
+        "2-5",
+        "6-10",
+        "10+"
+      ],
+      "marketOptions": [
+        "Chipre",
+        "Europa",
+        "Global"
+      ]
     }
   }
 }
