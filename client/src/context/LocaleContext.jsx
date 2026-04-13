@@ -54,12 +54,16 @@ export function LocaleProvider({ children }) {
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data) => {
         if (cancelled) return;
+        // User may have picked a language while geo was in flight; never overwrite an explicit choice.
+        if (localStorage.getItem(LOCALE_MANUAL_KEY) === 'true') return;
         const countryCode = (data?.country || '').toUpperCase();
         const detected = COUNTRY_TO_LOCALE[countryCode] || 'en';
         setLocaleState(detected);
       })
       .catch(() => {
-        if (!cancelled) setLocaleState('en');
+        if (cancelled) return;
+        if (localStorage.getItem(LOCALE_MANUAL_KEY) === 'true') return;
+        setLocaleState('en');
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
@@ -71,13 +75,18 @@ export function LocaleProvider({ children }) {
   }, []);
 
   const t = useCallback(
-    (key) => {
+    (key, vars) => {
       const keys = key.split('.');
       let value = translations;
       for (const k of keys) {
         value = value?.[k];
       }
       if (value === undefined || value === null) return key;
+      if (typeof value === 'string' && vars && typeof vars === 'object') {
+        return value.replace(/\{\{\s*(\w+)\s*\}\}/g, (_, name) =>
+          vars[name] !== undefined && vars[name] !== null ? String(vars[name]) : ''
+        );
+      }
       return value;
     },
     [translations]
