@@ -1,0 +1,221 @@
+{
+  "contactPatch": {
+    "messageSentSuccess": "¡Mensaje enviado correctamente!"
+  },
+  "articlesPage": {
+    "nav": {
+      "howItWorks": "Cómo funciona",
+      "articles": "Artículos",
+      "partners": "Socios",
+      "testimonials": "Testimonios",
+      "pricing": "Precios",
+      "faq": "FAQ"
+    },
+    "ctaStartNow": "Empezar ahora",
+    "ctaFloating": "Empezar tu proyecto",
+    "featuredBadge": "Imprescindible",
+    "featuredTitle": "Por qué tu web no vende (y cómo solucionarlo).",
+    "featuredDesc": "La mayoría de webs son folletos digitales. Aprende el marco en 3 pasos que usamos para convertir tráfico en clientes de pago en menos de 7 días.",
+    "readArticle": "Leer artículo",
+    "featuredImageAlt": "Ilustración del artículo destacado",
+    "articles": [
+      {
+        "tag": "Estrategia",
+        "title": "Modelo 50€/mes vs. 5000€ al inicio: las cuentas",
+        "desc": "Por qué la suscripción gana en el diseño web y cómo mejora el flujo de caja."
+      },
+      {
+        "tag": "Diseño",
+        "title": "5 tendencias de diseño que matan la conversión",
+        "desc": "Deja carruseles y parallax si quieres vender. Esto es lo que funciona en 2024."
+      },
+      {
+        "tag": "Tech",
+        "title": "Cómo construimos webs rápidas en 7 días",
+        "desc": "Nuestra stack al descubierto. Por qué HTML/Tailwind en lugar de Wordpress y Webflow."
+      },
+      {
+        "tag": "SEO",
+        "title": "SEO en 2024: ¿qué sigue importando?",
+        "desc": "Olvida el relleno de keywords. Core Web Vitals y contenido útil para rankear."
+      },
+      {
+        "tag": "Copy",
+        "title": "Titulares que enganchan",
+        "desc": "La fórmula exacta para H1 que reducen el rebote un 30%."
+      }
+    ],
+    "readMore": "Leer más",
+    "ctaCardTitle": "¿Quieres resultados así?",
+    "ctaCardDesc": "Deja de leer y empieza a crecer. Consigue una web de alta conversión esta semana.",
+    "ctaCardButton": "Empezar tu proyecto",
+    "loadMore": "Ver más artículos",
+    "newsletterBadge": "Tips semanales de crecimiento",
+    "newsletterTitle": "No te pierdas el próximo insight.",
+    "newsletterDesc": "Únete a más de 500 fundadores con estrategias accionables de diseño y conversión cada martes. Sin spam, solo valor.",
+    "newsletterEmailPlaceholder": "tu email...",
+    "newsletterSubscribe": "Suscribirse",
+    "newsletterUnsubscribe": "Cancelar suscripción en cualquier momento.",
+    "bottomTitle": "¿Listo para aplicar estos insights?",
+    "bottomDesc": "No solo escribimos sobre ello: lo construimos para ti. Diseño, desarrollo y hosting profesional por una cuota mensual fija.",
+    "bottomPlans": "Ver planes y precios",
+    "bottomProcess": "Ver nuestro proceso"
+  },
+  "partnersPage": {
+    "nav": {
+      "channels": "Canales",
+      "value": "Valor",
+      "process": "Proceso",
+      "tiers": "Niveles",
+      "apply": "Aplicar"
+    },
+    "ctaBecomePartner": "Ser socio",
+    "ctaJoinProgram": "Unirse al programa",
+    "heroBadge": "Las recompensas escalan con el rendimiento y el tamaño del acuerdo.",
+    "heroTitleLine1": "Refieres. Nosotros ejecutamos.",
+    "heroTitleGradient": "Tú ganas.",
+    "heroIntro": "Presenta negocios que necesiten webs, embudos o mejoras de conversión. Nosotros vendemos y entregamos. Tú recibes recompensas — con seguimiento y comunicación claros.",
+    "heroApply": "Solicitar programa de socios",
+    "heroEmail": "Email de partnerships",
+    "heroNote": "Solicitud de 2 minutos. Respondemos en 48 horas.",
+    "heroBullets": ["Referencias rastreadas", "Presupuestos rápidos", "Ejecución fiable"],
+    "youCanTitle": "Puedes obtener",
+    "youCanList": [
+      "Recompensas por negocio cerrado que presentas",
+      "Recompensas por niveles según el rendimiento",
+      "Presupuesto rápido (alcance + rango, rápido)",
+      "Seguimiento de socio (estado de cada referencia)",
+      "Contacto dedicado para socios",
+      "Kit de socio (deck, one-pagers, mensajes)",
+      "Co-marketing (socios destacados, colaboraciones)",
+      "Prioridad en la agenda para leads de socios"
+    ],
+    "soYouCanTitle": "Así puedes",
+    "soYouCanList": [
+      "Monetizar tu red sin montar equipo de entrega",
+      "Ir más rápido cuando el cliente pregunta \"¿quién puede hacerlo?\"",
+      "Proteger tu reputación con ejecución fiable",
+      "Cerrar mejores oportunidades con soluciones reales",
+      "Ahorrar tiempo (nosotros vendemos + entregamos)",
+      "Más confianza con progreso y resultados transparentes"
+    ],
+    "disclaimer": "Sin white-label. Trabajamos directamente con el cliente — tú sigues siendo quien presenta y te mantenemos informado.",
+    "ecosystemLabel": "El ecosistema",
+    "channelsTitle": "Canales de socios",
+    "channelsIntro": "Elige el canal que encaje con cómo generas presentaciones.",
+    "channels": [
+      {
+        "icon": "ph-duotone ph-briefcase",
+        "title": "Advisor",
+        "desc": "Contables, abogados y consultores que refieren clientes de confianza."
+      },
+      {
+        "icon": "ph-duotone ph-broadcast",
+        "title": "Audiencia",
+        "desc": "Creadores, newsletters y podcasts con audiencias PYME."
+      },
+      {
+        "icon": "ph-duotone ph-users-three",
+        "title": "Comunidad",
+        "desc": "Grupos Discord/Slack, coworkings y redes locales."
+      },
+      {
+        "icon": "ph-duotone ph-pencil-circle",
+        "title": "Agencia",
+        "desc": "Servicios complementarios: PPC, SEO, branding y automatización."
+      }
+    ],
+    "channelsFooter": "También nos asociamos con SaaS/herramientas, redes de distribución, formación y ecosistemas enterprise.",
+    "howTitle": "Cómo funciona",
+    "howSteps": [
+      { "step": "1. Aplicar", "desc": "2 minutos. Cuéntanos tu canal y mercado.", "active": true },
+      { "step": "2. Llamada de alineación", "desc": "Confirmamos fit, proceso de referidos y recompensas." },
+      { "step": "3. Presentar", "desc": "Envías un referido o haces intro con nuestra plantilla." },
+      { "step": "4. Cerramos y entregamos", "desc": "Recibes actualizaciones — y recompensas al cerrar." }
+    ],
+    "howFooter": "Nunca te quedarás sin saber qué pasa: cada referido está rastreado.",
+    "deliverTitle": "Qué entregamos",
+    "deliverItems": [
+      {
+        "icon": "ph-bold ph-desktop",
+        "title": "Webs de alta conversión",
+        "desc": "Diseño pensado para el negocio, no solo bonito."
+      },
+      {
+        "icon": "ph-bold ph-funnel",
+        "title": "Landings + embudos",
+        "desc": "Hechos para convertir tráfico en leads (listos para paid)."
+      },
+      {
+        "icon": "ph-bold ph-arrows-clockwise",
+        "title": "Rediseños orientados a conversión",
+        "desc": "Arreglar donde se pierde dinero."
+      },
+      {
+        "icon": "ph-bold ph-chart-bar",
+        "title": "Configuración de analytics",
+        "desc": "Eventos, pixels, embudos. Tracking listo."
+      }
+    ],
+    "transparencyTitle": "La transparencia es nuestra moneda.",
+    "transparencyCards": [
+      {
+        "title": "Visibilidad del pipeline",
+        "desc": "Sigue cada referido: recibido → cualificado → propuesta → ganado/perdido."
+      },
+      {
+        "title": "Ritmo de actualizaciones",
+        "desc": "Actualizaciones semanales o quincenales — sin perseguir."
+      },
+      {
+        "title": "Estándares de entrega",
+        "desc": "Alcance, plazos y criterios de aceptación claros."
+      }
+    ],
+    "tiersTitle": "Niveles de socio",
+    "tiersIntro": "Las recompensas escalan con el rendimiento.",
+    "tierPopular": "Más popular",
+    "tierStarter": {
+      "name": "Starter",
+      "desc": "1–2 referidos cualificados / trimestre",
+      "bullets": ["Recompensas estándar", "Acceso al kit de socio"]
+    },
+    "tierGrowth": {
+      "name": "Growth",
+      "desc": "1–2 referidos cualificados / mes",
+      "bullets": ["Recompensas más altas", "Prioridad de agenda", "Llamada de revisión con socios"],
+      "bulletHighlight": "Más altas"
+    },
+    "tierElite": {
+      "name": "Elite",
+      "desc": "3+ referidos cualificados / mes",
+      "bullets": ["Recompensas máximas", "Tiempos de respuesta prioritarios", "Acceso anticipado a ofertas"]
+    },
+    "applyTitle": "Solicitud de socio",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "nombre@empresa.com",
+      "channel": "Canal de socio",
+      "referrals": "Ref. estimadas / mes",
+      "link": "Link (web/redes)",
+      "linkPlaceholder": "https://",
+      "market": "Mercado",
+      "collab": "¿Cómo quieres colaborar?",
+      "collabPlaceholder": "Cuéntanos sobre tus clientes típicos...",
+      "submit": "Aplicar ahora",
+      "applicationReceived": "Solicitud recibida. Responderemos en 48 horas.",
+      "channelOptions": [
+        "Advisor (Legal/Finanzas)",
+        "Audiencia (Creador/Media)",
+        "Comunidad",
+        "Agencia (Servicio)",
+        "Tech / Plataforma",
+        "Otro"
+      ],
+      "referralOptions": ["0-1", "2-5", "6-10", "10+"],
+      "marketOptions": ["Chipre", "Europa", "Global"]
+    }
+  }
+}

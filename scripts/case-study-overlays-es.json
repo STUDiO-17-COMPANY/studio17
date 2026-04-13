@@ -1,0 +1,258 @@
+{
+  "optics-clinic-cyprus": {
+    "ogTitle": "Clínica de óptica (Chipre) | Caso de estudio | Studio 17",
+    "ogDescription": "Cómo reconstruimos la arquitectura de conversión para una clínica de óptica premium: +142% de citas confirmadas y una experiencia de marca más creíble.",
+    "headerTitle": "Clínica de óptica (Chipre)",
+    "clientRole": "Propietario, clínica de óptica premium (Chipre)",
+    "headlineBefore": "De visitantes que se iban a ",
+    "headlineAccent": "+142%",
+    "headlineAfter": " de conversión en citas.",
+    "challengeQuote": "Teníamos una web aceptable, pero no explicaba bien nuestro valor y la gente abandonaba demasiado pronto.",
+    "challengeBody": "A pesar de gafas de gama alta y servicios de optometría premium, la web actuaba como un embudo con fugas. El tráfico llegaba desde búsquedas locales en Google, pero el recorrido confundía. El mensaje no reflejaba la tienda física premium y el proceso de reserva tenía demasiada fricción.",
+    "approachIntro": "Rediseñamos por completo la arquitectura de conversión. En lugar de solo «quedar bonita», reconstruimos la web como un representante de ventas silencioso.",
+    "approachPoints": [
+      {
+        "title": "Reposicionamiento de la propuesta de valor",
+        "body": "Simplificamos la estructura y mejoramos el mensaje para que la marca suene seria y alineada con su mercado objetivo."
+      },
+      {
+        "title": "Embudo de reserva sin fricción",
+        "body": "Sustituimos un formulario de contacto pesado por un flujo de citas integrado con su calendario local."
+      },
+      {
+        "title": "Optimización del rendimiento",
+        "body": "Redujimos el tiempo de carga de unos ocho segundos a menos de uno y medio, bajando fuerte el rebote en móvil."
+      }
+    ],
+    "metrics": [
+      { "value": "+142%", "label": "Aumento de citas confirmadas", "tone": "dark" },
+      { "value": "-65%", "label": "Reducción de la tasa de rebote", "tone": "primary" }
+    ],
+    "ctaTitle": "¿Listo para tapar fugas en tu embudo?",
+    "ctaBody": "Construimos webs que funcionan como tu mejor vendedor. Revisemos tu setup y encontremos los cuellos de botella."
+  },
+  "strategic-journey-giulia": {
+    "ogTitle": "Giulia Moretti (Italia) | Caso de estudio | Studio 17",
+    "ogDescription": "Posicionamiento, claridad y un recorrido página a página estratégico — no aleatorio. Un rediseño orientado a la conversión para una marca italiana en crecimiento.",
+    "headerTitle": "Marca lifestyle italiana",
+    "clientRole": "Responsable de marketing, Italia",
+    "headlineBefore": "De páginas dispersas a una ",
+    "headlineAccent": "única",
+    "headlineAfter": " historia con confianza.",
+    "challengeQuote": "Lo que hace diferente a Studio 17 es que no piensan solo como diseñadores. Piensan en posicionamiento, claridad y en cómo el cliente se mueve por la página.",
+    "challengeBody": "La marca tenía buen gusto, pero la web no guiaba decisiones. Las secciones competían entre sí, las pruebas sociales quedaban enterradas y la navegación móvil hacía la exploración incierta.",
+    "approachIntro": "Reencuadramos la web en una narrativa comercial principal y diseñamos cada sección para responder a la siguiente pregunta de un comprador serio.",
+    "approachPoints": [
+      {
+        "title": "Mapeo del recorrido",
+        "body": "Definimos el camino crítico desde la primera visita hasta la consulta y quitamos lo que no merecía lugar en ese recorrido."
+      },
+      {
+        "title": "Copy y estructura",
+        "body": "Ajustamos titulares, clarificamos ofertas y mostramos señales de credibilidad antes — sin perder la personalidad de la marca."
+      },
+      {
+        "title": "Diseño de interacción",
+        "body": "Mejoramos jerarquía, espaciado y consistencia de componentes para que la experiencia se sienta intencionada en todos los tamaños de pantalla."
+      }
+    ],
+    "metrics": [
+      { "value": "Más clara", "label": "Posicionamiento y narrativa", "tone": "dark" },
+      { "value": "Más rápida", "label": "Primera acción con sentido", "tone": "primary" }
+    ],
+    "ctaTitle": "¿Quieres la misma claridad estratégica?",
+    "ctaBody": "Cuéntanos qué vendes y a quién — te mostraremos dónde se pierde la historia."
+  },
+  "brand-presence-joao": {
+    "ogTitle": "João Ferreira (Portugal) | Caso de estudio | Studio 17",
+    "ogDescription": "Unificar una presencia online fragmentada en una imagen premium y ordenada que genera confianza desde el primer scroll.",
+    "headerTitle": "Marca de hospitalidad portuguesa",
+    "clientRole": "Fundador, Portugal",
+    "headlineBefore": "De presencia inconsistente a una ",
+    "headlineAccent": "premium",
+    "headlineAfter": " primera impresión.",
+    "challengeQuote": "Nuestra presencia online parecía inconsistente. La marca no parecía débil, pero tampoco generaba confianza al instante.",
+    "challengeBody": "Los puntos de contacto se habían desalineado con el tiempo — tonos distintos, visuales dispares y páginas que no parecían el mismo negocio. Los prospectos necesitaban confianza antes de consultar.",
+    "approachIntro": "Consolidamos lenguaje visual, tipografía y patrones de layout y reescribimos páginas clave con una voz calmada y autoritaria.",
+    "approachPoints": [
+      {
+        "title": "Sistema de marca",
+        "body": "Reglas repetibles para color, tipografía, fotografía y componentes de UI para que cada página se sienta coherente."
+      },
+      {
+        "title": "Arquitectura de confianza",
+        "body": "Mostramos pruebas, proceso y FAQs en el orden adecuado para que el visitante entienda qué pasa después de contactar."
+      },
+      {
+        "title": "Disciplina de lanzamiento",
+        "body": "Entregas por hitos para evitar páginas a medias que confunden a quien vuelve."
+      }
+    ],
+    "metrics": [
+      { "value": "Unificada", "label": "Sistema de marca y UX", "tone": "dark" },
+      { "value": "Más fuerte", "label": "Confianza en la primera visita", "tone": "primary" }
+    ],
+    "ctaTitle": "¿Listo para parecer tan serio como eres?",
+    "ctaBody": "Ayudamos a equipos a convertir activos dispersos en una historia creíble — sin sonar genérico."
+  },
+  "clarity-mariana": {
+    "ogTitle": "Mariana Costa (Portugal) | Caso de estudio | Studio 17",
+    "ogDescription": "Convertir ideas dispersas en una historia clara y moderna que los clientes entienden rápido — y saben qué hacer.",
+    "headerTitle": "Empresa de servicios en Portugal",
+    "clientRole": "Propietaria, Portugal",
+    "headlineBefore": "De ideas dispersas a ",
+    "headlineAccent": "comunicación",
+    "headlineAfter": " clara.",
+    "challengeQuote": "Teníamos muchas ideas, pero estaban dispersas y mal presentadas.",
+    "challengeBody": "El equipo dominaba su oficio, pero la web reflejaba complejidad interna en lugar de resultados para el cliente. El visitante tenía que esforzarse demasiado para ver el siguiente paso.",
+    "approachIntro": "Priorizamos un conjunto pequeño de mensajes, reconstruimos la arquitectura de información y diseñamos módulos repetibles para que las actualizaciones mantengan consistencia.",
+    "approachPoints": [
+      {
+        "title": "Jerarquía de mensajes",
+        "body": "Elegimos una promesa principal y pilares de apoyo y eliminamos afirmaciones competidoras que diluían la atención."
+      },
+      {
+        "title": "Presentación moderna",
+        "body": "Layouts más limpios, más contraste y espacio en blanco intencional para que el premium se sienta natural."
+      },
+      {
+        "title": "Llamadas a la conversión",
+        "body": "CTAs donde la intención es mayor, con copy alineada a la fase del recorrido del visitante."
+      }
+    ],
+    "metrics": [
+      { "value": "Más simple", "label": "Historia central en la home", "tone": "dark" },
+      { "value": "Más claro", "label": "Siguiente paso para el visitante", "tone": "primary" }
+    ],
+    "ctaTitle": "¿Necesitas claridad sin perder profundidad?",
+    "ctaBody": "Te ayudamos a decir menos — y decir lo que importa — donde cuenta."
+  },
+  "growth-andreas": {
+    "ogTitle": "Andreas Nicolaou (Chipre) | Caso de estudio | Studio 17",
+    "ogDescription": "Identificar lo que faltaba, lo que confundía y lo que debía cambiar — y lanzar una experiencia digital más nítida e intencional.",
+    "headerTitle": "Servicios profesionales en Chipre",
+    "clientRole": "Director, Chipre",
+    "headlineBefore": "De señales confusas a ",
+    "headlineAccent": "crecimiento",
+    "headlineAfter": " intencional.",
+    "challengeQuote": "Necesitábamos algo que pareciera profesional y que también tuviera más sentido desde el negocio.",
+    "challengeBody": "La web comunicaba esfuerzo, pero no dirección. Las ofertas se solapaban, la navegación escondía servicios importantes y el flujo de contacto no encajaba con cómo compran los clientes.",
+    "approachIntro": "Hicimos una auditoría estructurada de mensajes, IA y rutas de conversión — y reconstruimos primero los recorridos con más tráfico.",
+    "approachPoints": [
+      {
+        "title": "Claridad de la oferta",
+        "body": "Separamos servicios en rutas distintas con resultados, plazos y criterios explícitos de qué es «bueno»."
+      },
+      {
+        "title": "Menos fricción",
+        "body": "Menos campos innecesarios y expectativas claras antes del primer clic en «contactar»."
+      },
+      {
+        "title": "Precisión visual",
+        "body": "Tipografía y detalles de UI más ajustados para que la marca refleje la precisión del equipo."
+      }
+    ],
+    "metrics": [
+      { "value": "Más nítida", "label": "Narrativa comercial", "tone": "dark" },
+      { "value": "Más limpia", "label": "Experiencia de contacto", "tone": "primary" }
+    ],
+    "ctaTitle": "¿Quieres una web comercial más nítida?",
+    "ctaBody": "Mapeamos lo que confunde — y entregamos correcciones en el orden que protege ingresos."
+  },
+  "execution-elena": {
+    "ogTitle": "Elena Petrou (Chipre) | Caso de estudio | Studio 17",
+    "ogDescription": "Ejecución práctica, rápida y clara: una marca premium y una web que funciona en el día a día para clientes reales.",
+    "headerTitle": "Marca de consumo en Chipre",
+    "clientRole": "Fundadora, Chipre",
+    "headlineBefore": "De la charla a la ",
+    "headlineAccent": "entrega",
+    "headlineAfter": " con confianza.",
+    "challengeQuote": "Eran prácticos, rápidos y claros en cómo abordaron el trabajo.",
+    "challengeBody": "El negocio necesitaba momentum: una web creíble, menos reuniones perdidas por confusión y un design system que no se rompiera cada vez que salía algo nuevo.",
+    "approachIntro": "Optimizamos para velocidad de claridad — ciclos cortos, decisiones explícitas y un plan de construcción que priorizó páginas críticas para el cliente.",
+    "approachPoints": [
+      {
+        "title": "Descubrimiento práctico",
+        "body": "Talleres centrados en lo que el cliente necesita creer antes de consultar o comprar."
+      },
+      {
+        "title": "Design systems",
+        "body": "Componentes reutilizables para que el equipo publique sin romper la marca por accidente."
+      },
+      {
+        "title": "Nivel de calidad",
+        "body": "Equilibrio entre pulido y rendimiento — cargas rápidas, contraste accesible y layouts mobile-first."
+      }
+    ],
+    "metrics": [
+      { "value": "Más rápida", "label": "Ritmo de entrega", "tone": "dark" },
+      { "value": "Sólida", "label": "Uso en el día a día", "tone": "primary" }
+    ],
+    "ctaTitle": "¿Prefieres ejecución a teatro?",
+    "ctaBody": "Te ayudamos a lanzar una web que tu equipo pueda operar — y que los clientes puedan usar."
+  },
+  "focus-lukas": {
+    "ogTitle": "Lukas Schneider (Alemania) | Caso de estudio | Studio 17",
+    "ogDescription": "Demasiadas ideas, poca estructura: enfocar la comunicación y dar al proyecto una dirección más fuerte.",
+    "headerTitle": "Marca B2B alemana",
+    "clientRole": "Director de marketing, Alemania",
+    "headlineBefore": "De ruido a ",
+    "headlineAccent": "foco",
+    "headlineAfter": " en la narrativa.",
+    "challengeQuote": "Teníamos el problema común de demasiadas ideas y poca estructura.",
+    "challengeBody": "El input de stakeholders creaba una historia sobrecargada. Los prospectos veían mucho contenido, pero ninguna razón obvia para elegir a esta empresa ahora.",
+    "approachIntro": "Impusimos priorización: una audiencia principal, una conversión principal y una estrategia de prueba principal — y diseñamos alrededor de esa columna vertebral.",
+    "approachPoints": [
+      {
+        "title": "Cortes editoriales",
+        "body": "Eliminamos páginas y párrafos que no apoyaban directamente el ángulo comercial elegido."
+      },
+      {
+        "title": "Narrativa estructurada",
+        "body": "Reconstruimos la home como secuencia: problema → enfoque → prueba → siguiente paso."
+      },
+      {
+        "title": "Gobernanza",
+        "body": "Reglas documentadas para que futuras campañas sigan alineadas con el mensaje central del sitio."
+      }
+    ],
+    "metrics": [
+      { "value": "Enfocado", "label": "Narrativa principal", "tone": "dark" },
+      { "value": "Más fuerte", "label": "Dirección para campañas", "tone": "primary" }
+    ],
+    "ctaTitle": "¿Necesitas ayuda para recortar lo que sobra?",
+    "ctaBody": "Aportamos foco — para que tu web deje de contradecirse."
+  },
+  "credible-modern-hannah": {
+    "ogTitle": "Hannah Weber (Alemania) | Caso de estudio | Studio 17",
+    "ogDescription": "Una web limpia, moderna y creíble que respeta el lado de negocio del briefing — sin sonar genérica.",
+    "headerTitle": "Marca premium alemana",
+    "clientRole": "Responsable de marca, Alemania",
+    "headlineBefore": "De plantillas genéricas a una ",
+    "headlineAccent": "firma",
+    "headlineAfter": " creíble.",
+    "challengeQuote": "El equipo entendió el tono que queríamos, respetó el lado de negocio y entregó algo limpio, moderno y creíble.",
+    "challengeBody": "La marca necesitaba sofisticación sin frialdad — y una experiencia digital que sostuviera precios premium sin parecer un tema de stock.",
+    "approachIntro": "Diseñamos un lenguaje visual contenido con momentos distintivos: tipografía, dirección de fotografía y detalles de interacción que se sienten a medida.",
+    "approachPoints": [
+      {
+        "title": "Control del tono",
+        "body": "Equilibrio entre calidez y autoridad para que la marca se sienta cercana pero seria."
+      },
+      {
+        "title": "Oficio moderno",
+        "body": "Espaciado, rejillas y motion refinados para que la UI se sienta contemporánea sin trucos vacíos."
+      },
+      {
+        "title": "Alineación con el negocio",
+        "body": "CTAs y contenido mapeados al proceso de ventas real — no a un embudo «perfecto» ficticio."
+      }
+    ],
+    "metrics": [
+      { "value": "Creíble", "label": "Percepción premium", "tone": "dark" },
+      { "value": "Distinta", "label": "Oficio no genérico", "tone": "primary" }
+    ],
+    "ctaTitle": "¿Listo para una presencia digital con firma?",
+    "ctaBody": "Te ayudamos a verte moderno — sin parecer igual que todo el mundo."
+  }
+}

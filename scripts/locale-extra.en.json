@@ -1,0 +1,221 @@
+{
+  "contactPatch": {
+    "messageSentSuccess": "Message sent successfully!"
+  },
+  "articlesPage": {
+    "nav": {
+      "howItWorks": "How it Works",
+      "articles": "Articles",
+      "partners": "Partners",
+      "testimonials": "Testimonials",
+      "pricing": "Pricing",
+      "faq": "FAQ"
+    },
+    "ctaStartNow": "Start Now",
+    "ctaFloating": "Start Your Project",
+    "featuredBadge": "Must Read",
+    "featuredTitle": "Why your website isn't selling (and how to fix it).",
+    "featuredDesc": "Most websites are digital brochures. Learn the 3-step framework we use to turn traffic into paying customers in less than 7 days.",
+    "readArticle": "Read Article",
+    "featuredImageAlt": "Featured Article Illustration",
+    "articles": [
+      {
+        "tag": "Strategy",
+        "title": "The €50/mo Model vs. €5k Upfront: The Math",
+        "desc": "Why the subscription model is taking over the web design industry and how it benefits cash flow."
+      },
+      {
+        "tag": "Design",
+        "title": "5 Design Trends That Are Killing Your Conversion Rate",
+        "desc": "Stop using carousels and parallax scrolling if you want to sell. Here is what actually works in 2024."
+      },
+      {
+        "tag": "Tech",
+        "title": "How We Build High-Speed Sites in 7 Days",
+        "desc": "Our tech stack revealed. Why we chose raw HTML/Tailwind over Wordpress and Webflow."
+      },
+      {
+        "tag": "SEO",
+        "title": "SEO Basics for 2024: What Still Matters?",
+        "desc": "Forget keyword stuffing. Focus on Core Web Vitals and helpful content to rank higher."
+      },
+      {
+        "tag": "Copywriting",
+        "title": "Writing Headlines That Hook",
+        "desc": "The exact formula we use to write H1 headers that decrease bounce rate by 30%."
+      }
+    ],
+    "readMore": "Read More",
+    "ctaCardTitle": "Want results like these?",
+    "ctaCardDesc": "Stop reading and start growing. Get your high-converting site this week.",
+    "ctaCardButton": "Start Your Project",
+    "loadMore": "View More Articles",
+    "newsletterBadge": "Weekly Growth Tips",
+    "newsletterTitle": "Don't miss the next big insight.",
+    "newsletterDesc": "Join 500+ founders receiving actionable web design and conversion strategies every Tuesday. No spam, just value.",
+    "newsletterEmailPlaceholder": "enter your email...",
+    "newsletterSubscribe": "Subscribe",
+    "newsletterUnsubscribe": "Unsubscribe at any time.",
+    "bottomTitle": "Ready to apply these insights?",
+    "bottomDesc": "We don't just write about it. We build it for you. Professional design, development, and hosting for one flat monthly fee.",
+    "bottomPlans": "View Plans & Pricing",
+    "bottomProcess": "See Our Process"
+  },
+  "partnersPage": {
+    "nav": {
+      "channels": "Channels",
+      "value": "Value",
+      "process": "Process",
+      "tiers": "Tiers",
+      "apply": "Apply"
+    },
+    "ctaBecomePartner": "Become a Partner",
+    "ctaJoinProgram": "Join Program",
+    "heroBadge": "Rewards scale with performance and deal size.",
+    "heroTitleLine1": "Refer. We execute.",
+    "heroTitleGradient": "You get rewarded.",
+    "heroIntro": "Introduce businesses that need websites, funnels, or conversion upgrades. We handle sales + delivery. You get rewarded — with full tracking and clean communication.",
+    "heroApply": "Apply to Partner Program",
+    "heroEmail": "Email Partnerships",
+    "heroNote": "2-minute application. We reply within 48 hours.",
+    "heroBullets": ["Tracked referrals", "Fast quoting", "Reliable execution"],
+    "youCanTitle": "You can get",
+    "youCanList": [
+      "Rewards per closed deal you introduce",
+      "Tiered rewards as performance grows",
+      "Fast quoting (scope + range, quickly)",
+      "Partner tracking (status of every referral)",
+      "Dedicated partner contact",
+      "Partner kit (deck, 1-pagers, messaging)",
+      "Co-marketing (featured partners, collaborations)",
+      "Priority scheduling for partner leads"
+    ],
+    "soYouCanTitle": "So you can",
+    "soYouCanList": [
+      "Monetize your network without building a delivery team",
+      "Move faster when clients ask \"who can do this?\"",
+      "Protect your reputation with reliable execution",
+      "Close better opportunities by bringing real solutions",
+      "Save time (we run sales + delivery)",
+      "Increase trust with transparent progress + outcomes"
+    ],
+    "disclaimer": "No white-label. We work directly with the client — you remain the introducer and we keep you informed.",
+    "ecosystemLabel": "The Ecosystem",
+    "channelsTitle": "Partner Channels",
+    "channelsIntro": "Choose the channel that matches how you create introductions.",
+    "channels": [
+      {
+        "icon": "ph-duotone ph-briefcase",
+        "title": "Advisor",
+        "desc": "Accountants, lawyers, & consultants who refer trusted clients."
+      },
+      {
+        "icon": "ph-duotone ph-broadcast",
+        "title": "Audience",
+        "desc": "Creators, newsletter writers & podcasters with SME audiences."
+      },
+      {
+        "icon": "ph-duotone ph-users-three",
+        "title": "Community",
+        "desc": "Discord/Slack groups, coworking spaces & local networks."
+      },
+      {
+        "icon": "ph-duotone ph-pencil-circle",
+        "title": "Agency",
+        "desc": "Complementary services: PPC, SEO, Branding & Automation."
+      }
+    ],
+    "channelsFooter": "We also partner with SaaS/tools, distribution networks, education programs, and enterprise ecosystems.",
+    "howTitle": "How it works",
+    "howSteps": [
+      { "step": "1. Apply", "desc": "2 minutes. Tell us your channel + market.", "active": true },
+      { "step": "2. Alignment Call", "desc": "We confirm fit, referral process, and rewards structure." },
+      { "step": "3. Introduce", "desc": "You submit a referral or do a warm intro using our template." },
+      { "step": "4. We Close + Deliver", "desc": "You get updates throughout — and rewards when the deal closes." }
+    ],
+    "howFooter": "You'll never wonder what's happening — every referral is tracked.",
+    "deliverTitle": "What we deliver",
+    "deliverItems": [
+      {
+        "icon": "ph-bold ph-desktop",
+        "title": "High-converting websites",
+        "desc": "Business-first design, not just pretty pictures."
+      },
+      {
+        "icon": "ph-bold ph-funnel",
+        "title": "Landing pages + Funnels",
+        "desc": "Built to convert traffic into leads (paid-ready)."
+      },
+      {
+        "icon": "ph-bold ph-arrows-clockwise",
+        "title": "Conversion-focused redesigns",
+        "desc": "Fix what's leaking money."
+      },
+      {
+        "icon": "ph-bold ph-chart-bar",
+        "title": "Analytics Setup",
+        "desc": "Events, pixels, funnels. Tracking ready."
+      }
+    ],
+    "transparencyTitle": "Transparency is our currency.",
+    "transparencyCards": [
+      {
+        "title": "Pipeline Visibility",
+        "desc": "Track every referral: received → qualified → proposal → won/lost."
+      },
+      {
+        "title": "Update Cadence",
+        "desc": "Get updates weekly or bi-weekly — no chasing."
+      },
+      {
+        "title": "Delivery Standards",
+        "desc": "Clear scope, timelines, and acceptance criteria (no ambiguity)."
+      }
+    ],
+    "tiersTitle": "Partner Tiers",
+    "tiersIntro": "Rewards scale with performance.",
+    "tierPopular": "Most Popular",
+    "tierStarter": {
+      "name": "Starter",
+      "desc": "1–2 qualified referrals / quarter",
+      "bullets": ["Standard referral rewards", "Partner kit access"]
+    },
+    "tierGrowth": {
+      "name": "Growth",
+      "desc": "1–2 qualified referrals / month",
+      "bullets": ["Higher rewards", "Priority scheduling", "Partner review call"],
+      "bulletHighlight": "Higher"
+    },
+    "tierElite": {
+      "name": "Elite",
+      "desc": "3+ qualified referrals / month",
+      "bullets": ["Max rewards", "Priority response times", "Early access to new offers"]
+    },
+    "applyTitle": "Apply to Partner",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "name@company.com",
+      "channel": "Partner Channel",
+      "referrals": "Est. Referrals / Month",
+      "link": "Link (Website/Social)",
+      "linkPlaceholder": "https://",
+      "market": "Market",
+      "collab": "How do you want to collaborate?",
+      "collabPlaceholder": "Tell us a bit about your typical clients...",
+      "submit": "Apply Now",
+      "applicationReceived": "Application received. We'll reply within 48 hours.",
+      "channelOptions": [
+        "Advisor (Legal/Finance)",
+        "Audience (Creator/Media)",
+        "Community",
+        "Agency (Service)",
+        "Tech / Platform",
+        "Other"
+      ],
+      "referralOptions": ["0-1", "2-5", "6-10", "10+"],
+      "marketOptions": ["Cyprus", "Europe", "Global"]
+    }
+  }
+}

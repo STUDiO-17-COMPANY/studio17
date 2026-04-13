@@ -1,0 +1,221 @@
+{
+  "contactPatch": {
+    "messageSentSuccess": "Mensagem enviada com sucesso!"
+  },
+  "articlesPage": {
+    "nav": {
+      "howItWorks": "Como funciona",
+      "articles": "Artigos",
+      "partners": "Parceiros",
+      "testimonials": "Testemunhos",
+      "pricing": "Preços",
+      "faq": "FAQ"
+    },
+    "ctaStartNow": "Começar agora",
+    "ctaFloating": "Começar o teu projeto",
+    "featuredBadge": "Leitura obrigatória",
+    "featuredTitle": "Porque o teu site não vende (e como corrigir).",
+    "featuredDesc": "A maioria dos sites é um folheto digital. Aprende o framework em 3 passos que usamos para transformar tráfego em clientes pagantes em menos de 7 dias.",
+    "readArticle": "Ler artigo",
+    "featuredImageAlt": "Ilustração do artigo em destaque",
+    "articles": [
+      {
+        "tag": "Estratégia",
+        "title": "Modelo 50€/mês vs. 5000€ iniciais: as contas",
+        "desc": "Porque a subscrição está a ganhar na indústria de web design e como melhora o fluxo de caixa."
+      },
+      {
+        "tag": "Design",
+        "title": "5 tendências de design que matam a conversão",
+        "desc": "Deixa de usar carrosséis e parallax se queres vender. O que realmente funciona em 2024."
+      },
+      {
+        "tag": "Tech",
+        "title": "Como construímos sites rápidos em 7 dias",
+        "desc": "A nossa stack revelada. Porque escolhemos HTML/Tailwind em vez de Wordpress e Webflow."
+      },
+      {
+        "tag": "SEO",
+        "title": "SEO em 2024: o que ainda importa?",
+        "desc": "Esquece keyword stuffing. Foca-te em Core Web Vitals e conteúdo útil para subir posições."
+      },
+      {
+        "tag": "Copy",
+        "title": "Escrever títulos que prendem",
+        "desc": "A fórmula exacta que usamos para H1 que reduzem a taxa de rejeição em 30%."
+      }
+    ],
+    "readMore": "Ler mais",
+    "ctaCardTitle": "Queres resultados assim?",
+    "ctaCardDesc": "Para de ler e começa a crescer. Obtém um site de alta conversão esta semana.",
+    "ctaCardButton": "Começar o teu projeto",
+    "loadMore": "Ver mais artigos",
+    "newsletterBadge": "Dicas semanais de crescimento",
+    "newsletterTitle": "Não percas o próximo insight.",
+    "newsletterDesc": "Junta-te a mais de 500 fundadores com estratégias accionáveis de web design e conversão todas as terças-feiras. Sem spam, só valor.",
+    "newsletterEmailPlaceholder": "o teu email...",
+    "newsletterSubscribe": "Subscrever",
+    "newsletterUnsubscribe": "Cancelar subscrição a qualquer momento.",
+    "bottomTitle": "Pronto para aplicar estes insights?",
+    "bottomDesc": "Não escrevemos só sobre isto — construímos para ti. Design, desenvolvimento e alojamento profissionais por uma mensalidade fixa.",
+    "bottomPlans": "Ver planos e preços",
+    "bottomProcess": "Ver o nosso processo"
+  },
+  "partnersPage": {
+    "nav": {
+      "channels": "Canais",
+      "value": "Valor",
+      "process": "Processo",
+      "tiers": "Níveis",
+      "apply": "Candidatar"
+    },
+    "ctaBecomePartner": "Tornar-me parceiro",
+    "ctaJoinProgram": "Entrar no programa",
+    "heroBadge": "As recompensas sobem com o desempenho e o tamanho do negócio.",
+    "heroTitleLine1": "Indicas. Nós executamos.",
+    "heroTitleGradient": "Tu és recompensado.",
+    "heroIntro": "Apresenta empresas que precisam de sites, funis ou melhorias de conversão. Nós tratamos de vendas e entrega. Tu és recompensado — com tracking e comunicação claros.",
+    "heroApply": "Candidatar ao programa de parceiros",
+    "heroEmail": "Email para parcerias",
+    "heroNote": "Candidatura de 2 minutos. Respondemos em até 48 horas.",
+    "heroBullets": ["Referências rastreadas", "Orçamentos rápidos", "Execução fiável"],
+    "youCanTitle": "Podes obter",
+    "youCanList": [
+      "Recompensas por negócio fechado que indicas",
+      "Recompensas escalonadas à medida que o desempenho cresce",
+      "Orçamento rápido (âmbito + intervalo, depressa)",
+      "Tracking de parceiro (estado de cada referência)",
+      "Contacto dedicado para parceiros",
+      "Kit de parceiro (deck, one-pagers, mensagens)",
+      "Co-marketing (parceiros em destaque, colaborações)",
+      "Prioridade no agendamento de leads de parceiros"
+    ],
+    "soYouCanTitle": "Para poderes",
+    "soYouCanList": [
+      "Monetizar a tua rede sem montar equipa de entrega",
+      "Ir mais depressa quando os clientes perguntam \"quem faz isto?\"",
+      "Proteger a tua reputação com execução fiável",
+      "Fechar melhores oportunidades com soluções reais",
+      "Poupar tempo (nós tratamos de vendas + entrega)",
+      "Aumentar confiança com progresso e resultados transparentes"
+    ],
+    "disclaimer": "Sem white-label. Trabalhamos directamente com o cliente — tu permaneces o introdutor e mantemos-te informado.",
+    "ecosystemLabel": "O ecossistema",
+    "channelsTitle": "Canais de parceiros",
+    "channelsIntro": "Escolhe o canal que corresponde à forma como crias introduções.",
+    "channels": [
+      {
+        "icon": "ph-duotone ph-briefcase",
+        "title": "Advisor",
+        "desc": "Contabilistas, advogados e consultores que referem clientes de confiança."
+      },
+      {
+        "icon": "ph-duotone ph-broadcast",
+        "title": "Audiência",
+        "desc": "Criadores, newsletters e podcasts com audiências PME."
+      },
+      {
+        "icon": "ph-duotone ph-users-three",
+        "title": "Comunidade",
+        "desc": "Grupos Discord/Slack, coworkings e redes locais."
+      },
+      {
+        "icon": "ph-duotone ph-pencil-circle",
+        "title": "Agência",
+        "desc": "Serviços complementares: PPC, SEO, branding e automação."
+      }
+    ],
+    "channelsFooter": "Também fazemos parceria com SaaS/ferramentas, redes de distribuição, programas de formação e ecossistemas enterprise.",
+    "howTitle": "Como funciona",
+    "howSteps": [
+      { "step": "1. Candidatura", "desc": "2 minutos. Indica o teu canal e mercado.", "active": true },
+      { "step": "2. Chamada de alinhamento", "desc": "Confirmamos fit, processo de referência e recompensas." },
+      { "step": "3. Introduzir", "desc": "Submetes uma referência ou fazes intro com o nosso template." },
+      { "step": "4. Nós fechamos e entregamos", "desc": "Recebes updates — e recompensas quando o negócio fecha." }
+    ],
+    "howFooter": "Nunca vais ficar às escuras — cada referência é rastreada.",
+    "deliverTitle": "O que entregamos",
+    "deliverItems": [
+      {
+        "icon": "ph-bold ph-desktop",
+        "title": "Sites de alta conversão",
+        "desc": "Design orientado ao negócio, não só estética."
+      },
+      {
+        "icon": "ph-bold ph-funnel",
+        "title": "Landing pages + funis",
+        "desc": "Feitos para converter tráfego em leads (prontos para paid media)."
+      },
+      {
+        "icon": "ph-bold ph-arrows-clockwise",
+        "title": "Redesign focado em conversão",
+        "desc": "Corrigir onde está a perder dinheiro."
+      },
+      {
+        "icon": "ph-bold ph-chart-bar",
+        "title": "Configuração de analytics",
+        "desc": "Eventos, pixels, funis. Tracking pronto."
+      }
+    ],
+    "transparencyTitle": "A transparência é a nossa moeda.",
+    "transparencyCards": [
+      {
+        "title": "Visibilidade do pipeline",
+        "desc": "Segue cada referência: recebida → qualificada → proposta → ganho/perdido."
+      },
+      {
+        "title": "Ritmo de updates",
+        "desc": "Updates semanais ou quinzenais — sem teres de correr atrás."
+      },
+      {
+        "title": "Padrões de entrega",
+        "desc": "Âmbito, prazos e critérios de aceitação claros (sem ambiguidade)."
+      }
+    ],
+    "tiersTitle": "Níveis de parceiro",
+    "tiersIntro": "As recompensas sobem com o desempenho.",
+    "tierPopular": "Mais popular",
+    "tierStarter": {
+      "name": "Starter",
+      "desc": "1–2 referências qualificadas / trimestre",
+      "bullets": ["Recompensas de referência standard", "Acesso ao kit de parceiro"]
+    },
+    "tierGrowth": {
+      "name": "Growth",
+      "desc": "1–2 referências qualificadas / mês",
+      "bullets": ["Recompensas mais altas", "Agendamento prioritário", "Chamada de review com parceiros"],
+      "bulletHighlight": "Mais altas"
+    },
+    "tierElite": {
+      "name": "Elite",
+      "desc": "3+ referências qualificadas / mês",
+      "bullets": ["Recompensas máximas", "Tempos de resposta prioritários", "Acesso antecipado a novas ofertas"]
+    },
+    "applyTitle": "Candidatar a parceiro",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "namePlaceholder": "O teu nome",
+      "emailPlaceholder": "nome@empresa.com",
+      "channel": "Canal de parceiro",
+      "referrals": "Ref. estimadas / mês",
+      "link": "Link (site/redes)",
+      "linkPlaceholder": "https://",
+      "market": "Mercado",
+      "collab": "Como queres colaborar?",
+      "collabPlaceholder": "Conta-nos um pouco sobre os teus clientes típicos...",
+      "submit": "Candidatar agora",
+      "applicationReceived": "Candidatura recebida. Respondemos em até 48 horas.",
+      "channelOptions": [
+        "Advisor (Legal/Finanças)",
+        "Audiência (Criador/Media)",
+        "Comunidade",
+        "Agência (Serviço)",
+        "Tech / Plataforma",
+        "Outro"
+      ],
+      "referralOptions": ["0-1", "2-5", "6-10", "10+"],
+      "marketOptions": ["Chipre", "Europa", "Global"]
+    }
+  }
+}

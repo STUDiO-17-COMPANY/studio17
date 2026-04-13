@@ -1,0 +1,221 @@
+{
+  "contactPatch": {
+    "messageSentSuccess": "Το μήνυμα στάλθηκε επιτυχώς!"
+  },
+  "articlesPage": {
+    "nav": {
+      "howItWorks": "Πώς λειτουργεί",
+      "articles": "Άρθρα",
+      "partners": "Συνεργάτες",
+      "testimonials": "Μαρτυρίες",
+      "pricing": "Τιμές",
+      "faq": "FAQ"
+    },
+    "ctaStartNow": "Ξεκίνα τώρα",
+    "ctaFloating": "Ξεκίνα το project σου",
+    "featuredBadge": "Must read",
+    "featuredTitle": "Γιατί ο ιστότοπός σου δεν πουλάει (και πώς να το διορθώσεις).",
+    "featuredDesc": "Οι περισσότεροι ιστότοποι είναι ψηφιακά φυλλάδια. Μάθε το πλαίσιο 3 βημάτων που χρησιμοποιούμε για να μετατρέψουμε την επισκεψιμότητα σε πληρωτές πελάτες σε λιγότερο από 7 ημέρες.",
+    "readArticle": "Διάβασε το άρθρο",
+    "featuredImageAlt": "Εικονογράφηση άρθρου",
+    "articles": [
+      {
+        "tag": "Στρατηγική",
+        "title": "Μοντέλο 50€/μήνα vs. 5000€ προκαταβολή: τα νούμερα",
+        "desc": "Γιατί το subscription κερδίζει στο web design και πώς βελτιώνει τη ρευστότητα."
+      },
+      {
+        "tag": "Design",
+        "title": "5 τάσεις design που σκοτώνουν τη μετατροπή",
+        "desc": "Άσε τα carousels και το parallax αν θέλεις πωλήσεις. Τι δουλεύει το 2024."
+      },
+      {
+        "tag": "Tech",
+        "title": "Πώς χτίζουμε γρήγορους ιστότοπους σε 7 μέρες",
+        "desc": "Η stack μας. Γιατί HTML/Tailwind αντί για Wordpress και Webflow."
+      },
+      {
+        "tag": "SEO",
+        "title": "SEO 2024: τι μετράει ακόμη;",
+        "desc": "Ξέχνα το keyword stuffing. Core Web Vitals και χρήσιμο περιεχόμενο για ranking."
+      },
+      {
+        "tag": "Copy",
+        "title": "Τίτλοι που «πιάνουν»",
+        "desc": "Η ακριβής φόρμουλα για H1 που μειώνουν το bounce ~30%."
+      }
+    ],
+    "readMore": "Διάβασε περισσότερα",
+    "ctaCardTitle": "Θέλεις τέτοια αποτελέσματα;",
+    "ctaCardDesc": "Σταμάτα να διαβάζεις και ξεκίνα ανάπτυξη. Απόκτησε high-converting site αυτή την εβδομάδα.",
+    "ctaCardButton": "Ξεκίνα το project σου",
+    "loadMore": "Περισσότερα άρθρα",
+    "newsletterBadge": "Εβδομαδιαία tips ανάπτυξης",
+    "newsletterTitle": "Μη χάσεις το επόμενο insight.",
+    "newsletterDesc": "Γίνε μέλος με 500+ founders με actionable web design & conversion κάθε Τρίτη. Χωρίς spam, μόνο αξία.",
+    "newsletterEmailPlaceholder": "το email σου...",
+    "newsletterSubscribe": "Εγγραφή",
+    "newsletterUnsubscribe": "Απεγγραφή οποτεδήποτε.",
+    "bottomTitle": "Έτοιμος να εφαρμόσεις αυτά τα insights;",
+    "bottomDesc": "Δεν γράφουμε μόνο — το χτίζουμε για εσένα. Επαγγελματικό design, development και hosting με σταθερό μηνιαίο fee.",
+    "bottomPlans": "Δες πλάνα & τιμές",
+    "bottomProcess": "Δες τη διαδικασία μας"
+  },
+  "partnersPage": {
+    "nav": {
+      "channels": "Κανάλια",
+      "value": "Αξία",
+      "process": "Διαδικασία",
+      "tiers": "Επίπεδα",
+      "apply": "Αίτηση"
+    },
+    "ctaBecomePartner": "Γίνε συνεργάτης",
+    "ctaJoinProgram": "Μπες στο πρόγραμμα",
+    "heroBadge": "Οι ανταμοιβές κλιμακώνονται με την απόδοση και το μέγεθος της συμφωνίας.",
+    "heroTitleLine1": "Εσύ παραπέμπεις. Εμείς εκτελούμε.",
+    "heroTitleGradient": "Εσύ κερδίζεις.",
+    "heroIntro": "Παρουσίασε επιχειρήσεις που χρειάζονται sites, funnels ή αναβάθμιση conversion. Εμείς αναλαμβάνουμε πωλήσεις + delivery. Εσύ κερδίζεις — με πλήρη tracking και καθαρή επικοινωνία.",
+    "heroApply": "Αίτηση συνεργασίας",
+    "heroEmail": "Email partnerships",
+    "heroNote": "Αίτηση 2 λεπτών. Απαντάμε εντός 48 ωρών.",
+    "heroBullets": ["Παρακολουθημένα referrals", "Γρήγορα quotes", "Αξιόπιστη εκτέλεση"],
+    "youCanTitle": "Μπορείς να έχεις",
+    "youCanList": [
+      "Ανταμοιβές ανά κλειστή συμφωνία που φέρνεις",
+      "Κλιμακούμενες ανταμοιβές καθώς αυξάνεται η απόδοση",
+      "Γρήγορο quoting (scope + range, γρήγορα)",
+      "Partner tracking (κατάσταση κάθε referral)",
+      "Αφιερωμένη επαφή συνεργάτη",
+      "Partner kit (deck, one-pagers, μηνύματα)",
+      "Co-marketing (featured partners, συνεργασίες)",
+      "Προτεραιότητα στο scheduling για leads συνεργατών"
+    ],
+    "soYouCanTitle": "Ώστε να μπορείς να",
+    "soYouCanList": [
+      "Μονετοποιήσεις το δίκτυό σου χωρίς delivery team",
+      "Κινείσαι γρηγορότερα όταν ρωτούν «ποιος το κάνει;»",
+      "Προστατεύεις τη φήμη σου με αξιόπιστη εκτέλεση",
+      "Κλείνεις καλύτερες ευκαιρίες με πραγμαικές λύσεις",
+      "Εξοικονομείς χρόνο (εμείς τρέχουμε πωλήσεις + delivery)",
+      "Αυξάνεις εμπιστοσύνη με διαφάνεια προόδου + αποτελεσμάτων"
+    ],
+    "disclaimer": "Χωρίς white-label. Δουλεύουμε απευθείας με τον πελάτη — εσύ παραμένεις ο introducer και σε ενημερώνουμε.",
+    "ecosystemLabel": "Το οικοσύστημα",
+    "channelsTitle": "Κανάλια συνεργατών",
+    "channelsIntro": "Διάλεξε το κανάλι που ταιριάζει στο πώς δημιουργείς εισαγωγές.",
+    "channels": [
+      {
+        "icon": "ph-duotone ph-briefcase",
+        "title": "Advisor",
+        "desc": "Λογιστές, δικηγόροι & σύμβουλοι που παραπέμπουν trusted πελάτες."
+      },
+      {
+        "icon": "ph-duotone ph-broadcast",
+        "title": "Κοινό",
+        "desc": "Creators, newsletters & podcasts με SME κοινό."
+      },
+      {
+        "icon": "ph-duotone ph-users-three",
+        "title": "Κοινότητα",
+        "desc": "Discord/Slack, coworking & τοπικά δίκτυα."
+      },
+      {
+        "icon": "ph-duotone ph-pencil-circle",
+        "title": "Agency",
+        "desc": "Συμπληρωματικές υπηρεσίες: PPC, SEO, branding & automation."
+      }
+    ],
+    "channelsFooter": "Συνεργαζόμαστε επίσης με SaaS/εργαλεία, δίκτυα διανομής, εκπαίδευση και enterprise οικοσυστήματα.",
+    "howTitle": "Πώς λειτουργεί",
+    "howSteps": [
+      { "step": "1. Αίτηση", "desc": "2 λεπτά. Πες μας κανάλι + αγορά.", "active": true },
+      { "step": "2. Κλήση ευθυγράμμισης", "desc": "Επιβεβαιώνουμε fit, διαδικασία referral και ανταμοιβές." },
+      { "step": "3. Εισαγωγή", "desc": "Υποβάλλεις referral ή κάνεις warm intro με template μας." },
+      { "step": "4. Κλείνουμε + παραδίδουμε", "desc": "Λαμβάνεις updates — και ανταμοιβές όταν κλείνει η συμφωνία." }
+    ],
+    "howFooter": "Δεν θα αναρωτιέσαι τι συμβαίνει — κάθε referral είναι tracked.",
+    "deliverTitle": "Τι παραδίδουμε",
+    "deliverItems": [
+      {
+        "icon": "ph-bold ph-desktop",
+        "title": "High-converting websites",
+        "desc": "Design με business lens, όχι μόνο εικόνες."
+      },
+      {
+        "icon": "ph-bold ph-funnel",
+        "title": "Landings + funnels",
+        "desc": "Για να μετατρέπουν επισκεψιμότητα σε leads (paid-ready)."
+      },
+      {
+        "icon": "ph-bold ph-arrows-clockwise",
+        "title": "Redesigns με focus conversion",
+        "desc": "Διορθώνουμε όπου χάνονται χρήματα."
+      },
+      {
+        "icon": "ph-bold ph-chart-bar",
+        "title": "Analytics setup",
+        "desc": "Events, pixels, funnels. Έτοιμο tracking."
+      }
+    ],
+    "transparencyTitle": "Η διαφάνεια είναι το νόμισμά μας.",
+    "transparencyCards": [
+      {
+        "title": "Ορατότητα pipeline",
+        "desc": "Track κάθε referral: received → qualified → proposal → won/lost."
+      },
+      {
+        "title": "Ρυθμός ενημερώσεων",
+        "desc": "Ενημερώσεις εβδομαδιαίες ή διμηνιαίες — χωρίς κυνήγι."
+      },
+      {
+        "title": "Πρότυπα delivery",
+        "desc": "Σαφές scope, timelines και acceptance criteria."
+      }
+    ],
+    "tiersTitle": "Επίπεδα συνεργατών",
+    "tiersIntro": "Οι ανταμοιβές κλιμακώνονται με την απόδοση.",
+    "tierPopular": "Πιο δημοφιλές",
+    "tierStarter": {
+      "name": "Starter",
+      "desc": "1–2 qualified referrals / τρίμηνο",
+      "bullets": ["Τυπικές ανταμοιβές referral", "Πρόσβαση στο partner kit"]
+    },
+    "tierGrowth": {
+      "name": "Growth",
+      "desc": "1–2 qualified referrals / μήνα",
+      "bullets": ["Υψηλότερες ανταμοιβές", "Προτεραιότητα scheduling", "Partner review call"],
+      "bulletHighlight": "Υψηλότερες"
+    },
+    "tierElite": {
+      "name": "Elite",
+      "desc": "3+ qualified referrals / μήνα",
+      "bullets": ["Μέγιστες ανταμοιβές", "Προτεραιότητα response", "Πρώιμη πρόσβαση σε προσφορές"]
+    },
+    "applyTitle": "Αίτηση συνεργάτη",
+    "form": {
+      "name": "Όνομα",
+      "email": "Email",
+      "namePlaceholder": "Το όνομά σου",
+      "emailPlaceholder": "name@company.com",
+      "channel": "Κανάλι συνεργάτη",
+      "referrals": "Εκτίμ. referrals / μήνα",
+      "link": "Link (site/social)",
+      "linkPlaceholder": "https://",
+      "market": "Αγορά",
+      "collab": "Πώς θέλεις να συνεργαστείς;",
+      "collabPlaceholder": "Πες μας για τους τυπικούς πελάτες σου...",
+      "submit": "Αίτηση τώρα",
+      "applicationReceived": "Λάβαμε την αίτηση. Απαντάμε εντός 48 ωρών.",
+      "channelOptions": [
+        "Advisor (Νομικό/Χρηματοοικονομικά)",
+        "Κοινό (Creator/Media)",
+        "Κοινότητα",
+        "Agency (Υπηρεσία)",
+        "Tech / Πλατφόρμα",
+        "Άλλο"
+      ],
+      "referralOptions": ["0-1", "2-5", "6-10", "10+"],
+      "marketOptions": ["Κύπρος", "Ευρώπη", "Παγκόσμια"]
+    }
+  }
+}
