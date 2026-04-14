@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Yogis | Yoga & Nutrition for Moms & Kids</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Nunito', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            plum: '#5A3A69',       /* Deep, calming purple for text/yoga */
+                            peach: '#F8A978',      /* Warm, inviting orange for kids/energy */
+                            peachLight: '#FFF0E6',
+                            sage: '#A8C3A6',       /* Earthy green for recipes/nutrition */
+                            sageLight: '#EAF2EA',
+                            cream: '#FCFAED',      /* Soft, warm background */
+                        }
+                    },
+                    boxShadow: { 
+                        'soft': '0 20px 40px -15px rgba(90, 58, 105, 0.08)',
+                        'card': '0 10px 30px -10px rgba(90, 58, 105, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FCFAED; }
+        ::-webkit-scrollbar-thumb { background: #F8A978; border-radius: 4px; }
+        .text-balance { text-wrap: balance; }
+        
+        /* Organic Shapes for Imagery Placeholders */
+        .shape-yoga { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+        .shape-food { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .shape-kids { border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%; }
+
+        /* Recipe Card Hover */
+        .recipe-card:hover .recipe-img { transform: scale(1.05); }
+        .recipe-img { transition: transform 0.5s ease; }
+
+        /* Schedule Tab Animation */
+        .tab-content { display: none; opacity: 0; }
+        .tab-content.active { display: block; animation: fadeInTab 0.5s ease forwards; }
+        @keyframes fadeInTab { 
+            0% { opacity: 0; transform: translateY(15px); } 
+            100% { opacity: 1; transform: translateY(0); } 
+        }
+
+        .nav-scrolled { background-color: rgba(252, 250, 237, 0.95); backdrop-filter: blur(10px); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-plum font-sans antialiased overflow-x-hidden selection:bg-brand-peach selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center bg-white/80 backdrop-blur-md rounded-full px-6 py-3 shadow-sm border border-white/50">
+            <a href="#" class="flex items-center gap-2 group">
+                <i class="ph-fill ph-plant text-3xl text-brand-sage group-hover:text-brand-peach transition-colors duration-300"></i>
+                <span class="font-black text-2xl tracking-tight text-brand-plum">Healthy<span class="text-brand-peach">yogis</span></span>
+            </a>
+            
+            <nav class="hidden lg:flex items-center gap-8 font-bold text-brand-plum/80">
+                <a href="#philosophy" class="hover:text-brand-peach transition-colors">Our Approach</a>
+                <a href="#recipes" class="hover:text-brand-sage transition-colors">Healthy Recipes</a>
+                <a href="#schedule" class="hover:text-brand-peach transition-colors">Classes</a>
+                <a href="#about" class="hover:text-brand-peach transition-colors">About Haris</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#schedule" class="bg-brand-plum hover:bg-brand-peach text-white px-6 py-2.5 rounded-full font-bold transition-colors hidden md:block shadow-md">
+                    Join a Class
+                </a>
+                <button class="lg:hidden text-2xl text-brand-plum bg-brand-peachLight p-2 rounded-full">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[95vh] flex items-center pt-24 pb-20 px-6 overflow-hidden">
+            <!-- Decorative blur blobs -->
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-peachLight rounded-full blur-3xl opacity-60 -z-10 translate-x-1/3 -translate-y-1/3"></div>
+            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-sageLight rounded-full blur-3xl opacity-60 -z-10 -translate-x-1/3 translate-y-1/3"></div>
+            
+            <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text -->
+                <div class="lg:col-span-6 text-center lg:text-left z-10 pt-10 lg:pt-0">
+                    <div class="inline-flex items-center gap-2 bg-white text-brand-sage px-5 py-2 rounded-full text-sm font-bold mb-6 shadow-sm border border-brand-sageLight hero-elem">
+                        <i class="ph-fill ph-heart text-brand-peach"></i> For Mothers & Their Little Ones
+                    </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 hero-elem text-balance tracking-tight">
+                        Nourish your family.<br>
+                        <span class="text-brand-sage italic font-semibold">Calm</span> your mind.
+                    </h1>
+                    <p class="text-lg md:text-xl text-brand-plum/70 mb-8 max-w-lg mx-auto lg:mx-0 hero-elem text-balance font-medium leading-relaxed">
+                        A holistic sanctuary offering adult yoga, kids' mindful movement, and registered dietitian-approved recipes to clean your diet, home, and thoughts.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start hero-elem">
+                        <a href="#schedule" class="bg-brand-peach hover:bg-orange-400 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2">
+                            View Schedule <i class="ph-bold ph-calendar-blank"></i>
+                        </a>
+                        <a href="#recipes" class="bg-white hover:bg-brand-sageLight text-brand-plum px-8 py-4 rounded-full font-bold text-lg transition-all shadow-sm border border-brand-sageLight flex items-center justify-center gap-2">
+                            Explore Recipes <i class="ph-bold ph-cooking-pot"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Collage -->
+                <div class="lg:col-span-6 relative w-full h-[500px] md:h-[600px] hero-visual mt-10 lg:mt-0">
+                    <!-- Main Mother/Yoga Image Placeholder -->
+                    <div class="absolute top-0 right-10 w-64 h-80 md:w-80 md:h-96 bg-brand-plum shape-yoga overflow-hidden shadow-card border-4 border-white flex items-center justify-center z-20">
+                        <div class="text-center p-6">
+                            <i class="ph-thin ph-flower-lotus text-7xl text-brand-peachLight mb-2"></i>
+                            <p class="text-brand-peachLight font-bold text-xl">Mom's Time</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Kids Shape Placeholder -->
+                    <div class="absolute bottom-10 right-0 w-48 h-48 md:w-56 md:h-56 bg-brand-peach shape-kids overflow-hidden shadow-card border-4 border-white flex items-center justify-center z-30">
+                        <div class="text-center p-4">
+                            <i class="ph-thin ph-smiley text-6xl text-white mb-1"></i>
+                            <p class="text-white font-bold text-lg">Kids Yoga</p>
+                        </div>
+                    </div>
+
+                    <!-- Food/Recipe Shape Placeholder -->
+                    <div class="absolute top-1/4 left-0 w-56 h-56 md:w-64 md:h-64 bg-brand-sage shape-food overflow-hidden shadow-card border-4 border-white flex items-center justify-center z-10">
+                        <div class="text-center p-4">
+                            <i class="ph-thin ph-bowl-food text-6xl text-brand-sageLight mb-1"></i>
+                            <p class="text-brand-sageLight font-bold text-lg">Clean Eats</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge -->
+                    <div class="absolute bottom-1/4 left-10 bg-white px-6 py-4 rounded-2xl shadow-xl z-40 flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <div class="bg-brand-sageLight p-3 rounded-full text-brand-sage">
+                            <i class="ph-fill ph-carrot text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-brand-plum/60 font-bold uppercase tracking-wider">Registered</p>
+                            <p class="text-brand-plum font-black text-sm">Dietitian & Nutritionist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Approach Section -->
+        <section id="philosophy" class="py-24 px-6 bg-white relative">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 section-header max-w-3xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-black text-brand-plum mb-6">Wellness for the Whole Family</h2>
+                    <p class="text-lg text-brand-plum/70 font-medium">We know motherhood is demanding. That's why we've created a space where you can focus on your health, nurture your children's development, and learn how to feed your family better.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Pillar 1 -->
+                    <div class="bg-brand-cream p-10 rounded-[2.5rem] hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-brand-plum rounded-2xl flex items-center justify-center mb-6 shadow-md text-white">
+                            <i class="ph-fill ph-person-simple-lotus text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Maternal Yoga</h3>
+                        <p class="text-brand-plum/70 mb-6 font-medium">Recharge your body with flows designed for moms. From pre/post-natal care to dynamic vinyasa to clear the mental load.</p>
+                        <a href="#schedule" class="text-brand-plum font-bold hover:text-brand-peach flex items-center gap-2">Explore Classes <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="bg-brand-peachLight p-10 rounded-[2.5rem] hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-brand-peach rounded-2xl flex items-center justify-center mb-6 shadow-md text-white">
+                            <i class="ph-fill ph-baby text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Little Yogis</h3>
+                        <p class="text-brand-plum/70 mb-6 font-medium">Imaginative, sensory-friendly flows that teach kids (ages 3-12) focus, emotional regulation, and joyful movement.</p>
+                        <a href="#schedule" class="text-brand-peach font-bold hover:text-orange-500 flex items-center gap-2">View Kids Schedule <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="bg-brand-sageLight p-10 rounded-[2.5rem] hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-brand-sage rounded-2xl flex items-center justify-center mb-6 shadow-md text-white">
+                            <i class="ph-fill ph-cooking-pot text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Family Nutrition</h3>
+                        <p class="text-brand-plum/70 mb-6 font-medium">Led by a Registered Dietitian. Learn realistic, clean-eating habits and access recipes that even picky toddlers will love.</p>
+                        <a href="#recipes" class="text-brand-sage font-bold hover:text-green-700 flex items-center gap-2">See Recipes <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New: Healthy Recipes Section -->
+        <section id="recipes" class="py-24 px-6 bg-brand-sageLight relative overflow-hidden">
+            <!-- decorative background elements -->
+            <i class="ph-thin ph-leaf absolute top-10 right-10 text-[200px] text-brand-sage/20 -rotate-12"></i>
+            <i class="ph-thin ph-orange-slice absolute bottom-10 left-10 text-[150px] text-brand-sage/20 rotate-45"></i>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 section-header gap-6">
+                    <div class="max-w-2xl">
+                        <h2 class="text-4xl md:text-5xl font-black text-brand-plum mb-4">From the Clean Kitchen</h2>
+                        <p class="text-lg text-brand-plum/70 font-medium">Dietitian-crafted, kid-approved. Discover simple recipes to fuel your yoga practice and nourish your family.</p>
+                    </div>
+                    <button class="bg-white text-brand-sage px-6 py-3 rounded-full font-bold shadow-sm border border-brand-sage hover:bg-brand-sage hover:text-white transition-colors whitespace-nowrap">
+                        View All Recipes
+                    </button>
+                </div>
+
+                <!-- Recipe Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Recipe 1 -->
+                    <div class="recipe-card bg-white rounded-[2rem] overflow-hidden shadow-card cursor-pointer group" onclick="openRecipeModal('Green Monster Smoothie', 'A sweet, nutrient-packed smoothie that hides two handfuls of spinach perfectly. Kids love the color!', '5 mins')">
+                        <div class="h-56 bg-brand-sage overflow-hidden relative flex items-center justify-center">
+                            <div class="recipe-img absolute inset-0 bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/dwvhqhtts/image/upload/v1776190716/482239283_1239239211537941_147845239518434086_n_hkoowf.jpg');"></div>
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-0"></div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brand-sage flex items-center gap-1 z-10">
+                                <i class="ph-bold ph-clock"></i> 5 Min
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="bg-brand-peachLight text-brand-peach text-xs font-bold px-2 py-1 rounded-md uppercase">Kid Favorite</span>
+                                <span class="bg-brand-sageLight text-brand-sage text-xs font-bold px-2 py-1 rounded-md uppercase">Breakfast</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-brand-plum mb-2 group-hover:text-brand-sage transition-colors">"Green Monster" Toddler Smoothie</h4>
+                            <p class="text-brand-plum/60 text-sm mb-4 line-clamp-2">A sweet, nutrient-packed smoothie that hides two handfuls of spinach perfectly. Kids love the color!</p>
+                            <div class="flex items-center text-sm font-bold text-brand-plum">
+                                Read Recipe <i class="ph-bold ph-caret-right ml-1 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recipe 2 -->
+                    <div class="recipe-card bg-white rounded-[2rem] overflow-hidden shadow-card cursor-pointer group" onclick="openRecipeModal('Post-Yoga Glow Bowl', 'Quinoa, roasted sweet potatoes, avocado, and a tahini-lemon drizzle. The perfect recovery meal.', '20 mins')">
+                        <div class="h-56 bg-brand-peach overflow-hidden relative flex items-center justify-center">
+                            <div class="recipe-img absolute inset-0 bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/dwvhqhtts/image/upload/v1776190768/542619334_18324804835235659_7915593145197801921_n_dqmbgj.jpg');"></div>
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-0"></div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brand-peach flex items-center gap-1 z-10">
+                                <i class="ph-bold ph-clock"></i> 20 Min
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="bg-brand-plum/10 text-brand-plum text-xs font-bold px-2 py-1 rounded-md uppercase">For Moms</span>
+                                <span class="bg-brand-sageLight text-brand-sage text-xs font-bold px-2 py-1 rounded-md uppercase">Lunch</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-brand-plum mb-2 group-hover:text-brand-peach transition-colors">Post-Yoga Glow Bowl</h4>
+                            <p class="text-brand-plum/60 text-sm mb-4 line-clamp-2">Quinoa, roasted sweet potatoes, avocado, and a tahini-lemon drizzle. The perfect recovery meal.</p>
+                            <div class="flex items-center text-sm font-bold text-brand-plum">
+                                Read Recipe <i class="ph-bold ph-caret-right ml-1 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recipe 3 -->
+                    <div class="recipe-card bg-white rounded-[2rem] overflow-hidden shadow-card cursor-pointer group" onclick="openRecipeModal('No-Bake Energy Bites', 'Oats, chia seeds, almond butter, and dark chocolate chips. Great for lunchboxes!', '10 mins')">
+                        <div class="h-56 bg-brand-plum overflow-hidden relative flex items-center justify-center">
+                            <div class="recipe-img absolute inset-0 bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/dwvhqhtts/image/upload/v1776190844/476610392_1213129920815537_6868663964066853877_n_vub4og.jpg');"></div>
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-0"></div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brand-plum flex items-center gap-1 z-10">
+                                <i class="ph-bold ph-clock"></i> 10 Min
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded-md uppercase">Snack</span>
+                                <span class="bg-brand-peachLight text-brand-peach text-xs font-bold px-2 py-1 rounded-md uppercase">Meal Prep</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-brand-plum mb-2 group-hover:text-brand-plum/70 transition-colors">No-Bake Energy Bites</h4>
+                            <p class="text-brand-plum/60 text-sm mb-4 line-clamp-2">Oats, chia seeds, almond butter, and dark chocolate chips. Perfect for lunchboxes or a quick pre-class energy boost.</p>
+                            <div class="flex items-center text-sm font-bold text-brand-plum">
+                                Read Recipe <i class="ph-bold ph-caret-right ml-1 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Schedule Section -->
+        <section id="schedule" class="py-24 px-6 bg-brand-cream">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12 section-header">
+                    <h2 class="text-4xl md:text-5xl font-black text-brand-plum mb-4">Weekly Schedule</h2>
+                    <p class="text-lg text-brand-plum/70 font-medium">Find the perfect time to roll out your mat—with or without the kids.</p>
+                </div>
+
+                <!-- Filters/Legend -->
+                <div class="flex flex-wrap justify-center gap-4 mb-10">
+                    <div class="flex items-center gap-2 text-sm font-bold text-brand-plum bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
+                        <i class="ph-fill ph-person-simple-lotus text-brand-plum"></i> Moms / Adults
+                    </div>
+                    <div class="flex items-center gap-2 text-sm font-bold text-brand-plum bg-brand-peachLight px-4 py-2 rounded-full shadow-sm border border-brand-peach/20">
+                        <i class="ph-fill ph-baby text-brand-peach"></i> Kids (Ages 3-9)
+                    </div>
+                </div>
+
+                <!-- Schedule Tabs -->
+                <div class="bg-white rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden p-4 md:p-8">
+                    <div class="flex overflow-x-auto pb-4 gap-2 no-scrollbar justify-start md:justify-center mb-6 border-b border-gray-100" id="day-tabs">
+                        <button onclick="switchTab('mon')" class="tab-btn active whitespace-nowrap px-6 py-3 rounded-2xl font-bold transition-all bg-brand-plum text-white" data-day="mon">Monday</button>
+                        <button onclick="switchTab('tue')" class="tab-btn whitespace-nowrap px-6 py-3 rounded-2xl font-bold transition-all text-gray-500 hover:bg-gray-50" data-day="tue">Tuesday</button>
+                        <button onclick="switchTab('wed')" class="tab-btn whitespace-nowrap px-6 py-3 rounded-2xl font-bold transition-all text-gray-500 hover:bg-gray-50" data-day="wed">Wednesday</button>
+                        <button onclick="switchTab('thu')" class="tab-btn whitespace-nowrap px-6 py-3 rounded-2xl font-bold transition-all text-gray-500 hover:bg-gray-50" data-day="thu">Thursday</button>
+                        <button onclick="switchTab('fri')" class="tab-btn whitespace-nowrap px-6 py-3 rounded-2xl font-bold transition-all text-gray-500 hover:bg-gray-50" data-day="fri">Friday</button>
+                    </div>
+
+                    <!-- Monday Content -->
+                    <div id="mon" class="tab-content active space-y-4">
+                        <div class="group flex flex-col md:flex-row items-center justify-between p-5 rounded-3xl border-2 border-transparent hover:border-brand-plum/10 hover:bg-gray-50 transition-all cursor-pointer">
+                            <div class="flex items-center gap-6 w-full md:w-auto">
+                                <div class="text-center bg-brand-cream text-brand-plum p-4 rounded-2xl min-w-[120px] border border-gray-200">
+                                    <span class="block text-xs font-bold uppercase opacity-60 leading-none mb-1">PM</span>
+                                    <span class="text-xl font-black">6:00 - 7:00</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="bg-gray-200 text-gray-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Adults Only</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-brand-plum">Adult Yoga</h4>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6 md:mt-0 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-gray-100">
+                                <button onclick="showBooking('Adult Yoga (Mon 6:00 PM)')" class="w-full md:w-auto bg-brand-plum text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-purple-900 transition-colors">Book Spot</button>
+                            </div>
+                        </div>
+
+                        <div class="group flex flex-col md:flex-row items-center justify-between p-5 rounded-3xl border-2 border-transparent hover:border-brand-plum/10 hover:bg-gray-50 transition-all cursor-pointer">
+                            <div class="flex items-center gap-6 w-full md:w-auto">
+                                <div class="text-center bg-brand-cream text-brand-plum p-4 rounded-2xl min-w-[120px] border border-gray-200">
+                                    <span class="block text-xs font-bold uppercase opacity-60 leading-none mb-1">PM</span>
+                                    <span class="text-xl font-black">7:15 - 8:15</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="bg-gray-200 text-gray-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Adults Only</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-brand-plum">Adult Yoga</h4>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6 md:mt-0 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-gray-100">
+                                <button onclick="showBooking('Adult Yoga (Mon 7:15 PM)')" class="w-full md:w-auto bg-brand-plum text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-purple-900 transition-colors">Book Spot</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tuesday Content -->
+                    <div id="tue" class="tab-content space-y-4">
+                        <div class="text-center py-12">
+                            <i class="ph-fill ph-coffee text-5xl text-brand-plum/20 mb-4"></i>
+                            <h4 class="text-xl font-bold text-brand-plum/60">Rest Day</h4>
+                            <p class="text-brand-plum/40 mt-2">No classes currently scheduled for Tuesday.</p>
+                        </div>
+                    </div>
+
+                    <!-- Wednesday Content -->
+                    <div id="wed" class="tab-content space-y-4">
+                        <div class="group flex flex-col md:flex-row items-center justify-between p-5 rounded-3xl border-2 border-transparent hover:border-brand-plum/10 hover:bg-gray-50 transition-all cursor-pointer">
+                            <div class="flex items-center gap-6 w-full md:w-auto">
+                                <div class="text-center bg-brand-cream text-brand-plum p-4 rounded-2xl min-w-[120px] border border-gray-200">
+                                    <span class="block text-xs font-bold uppercase opacity-60 leading-none mb-1">AM</span>
+                                    <span class="text-xl font-black">10:00 - 11:00</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="bg-gray-200 text-gray-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Adults Only</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-brand-plum">Adult Yoga</h4>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6 md:mt-0 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-gray-100">
+                                <button onclick="showBooking('Adult Yoga (Wed 10:00 AM)')" class="w-full md:w-auto bg-brand-plum text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-purple-900 transition-colors">Book Spot</button>
+                            </div>
+                        </div>
+
+                        <div class="group flex flex-col md:flex-row items-center justify-between p-5 rounded-3xl border-2 border-transparent hover:border-brand-peach/30 hover:bg-brand-peachLight/50 transition-all cursor-pointer">
+                            <div class="flex items-center gap-6 w-full md:w-auto">
+                                <div class="text-center bg-brand-peach text-white p-4 rounded-2xl min-w-[120px] shadow-sm">
+                                    <span class="block text-xs font-bold uppercase opacity-80 leading-none mb-1">PM</span>
+                                    <span class="text-xl font-black">4:00 - 6:00</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="bg-brand-peachLight text-brand-peach text-[10px] font-bold px-2 py-0.5 rounded uppercase border border-brand-peach/20">Ages 4-7</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-brand-plum">Kids Yoga & Cooking Class</h4>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6 md:mt-0 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-gray-100">
+                                <button onclick="showBooking('Kids Yoga & Cooking (Wed 4:00 PM)')" class="w-full md:w-auto bg-brand-peach text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-orange-500 transition-colors">Book Kid's Spot</button>
+                            </div>
+                        </div>
+
+                        <div class="group flex flex-col md:flex-row items-center justify-between p-5 rounded-3xl border-2 border-transparent hover:border-brand-plum/10 hover:bg-gray-50 transition-all cursor-pointer">
+                            <div class="flex items-center gap-6 w-full md:w-auto">
+                                <div class="text-center bg-brand-cream text-brand-plum p-4 rounded-2xl min-w-[120px] border border-gray-200">
+                                    <span class="block text-xs font-bold uppercase opacity-60 leading-none mb-1">PM</span>
+                                    <span class="text-xl font-black">7:00 - 8:00</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="bg-gray-200 text-gray-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Adults Only</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-brand-plum">Adult Yoga</h4>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6 md:mt-0 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-gray-100">
+                                <button onclick="showBooking('Adult Yoga (Wed 7:00 PM)')" class="w-full md:w-auto bg-brand-plum text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-purple-900 transition-colors">Book Spot</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thursday Content -->
+                    <div id="thu" class="tab-content space-y-4">
+                        <div class="text-center py-12">
+                            <i class="ph-fill ph-coffee text-5xl text-brand-plum/20 mb-4"></i>
+                            <h4 class="text-xl font-bold text-brand-plum/60">Rest Day</h4>
+                            <p class="text-brand-plum/40 mt-2">No classes currently scheduled for Thursday.</p>
+                        </div>
+                    </div>
+
+                    <!-- Friday Content -->
+                    <div id="fri" class="tab-content space-y-4">
+                        <div class="group flex flex-col md:flex-row items-center justify-between p-5 rounded-3xl border-2 border-transparent hover:border-brand-plum/10 hover:bg-gray-50 transition-all cursor-pointer">
+                            <div class="flex items-center gap-6 w-full md:w-auto">
+                                <div class="text-center bg-brand-cream text-brand-plum p-4 rounded-2xl min-w-[120px] border border-gray-200">
+                                    <span class="block text-xs font-bold uppercase opacity-60 leading-none mb-1">PM</span>
+                                    <span class="text-xl font-black">1:30 - 2:30</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="bg-gray-200 text-gray-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Adults Only</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-brand-plum">Adult Yoga</h4>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6 md:mt-0 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-gray-100">
+                                <button onclick="showBooking('Adult Yoga (Fri 1:30 PM)')" class="w-full md:w-auto bg-brand-plum text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-purple-900 transition-colors">Book Spot</button>
+                            </div>
+                        </div>
+
+                        <div class="group flex flex-col md:flex-row items-center justify-between p-5 rounded-3xl border-2 border-transparent hover:border-brand-peach/30 hover:bg-brand-peachLight/50 transition-all cursor-pointer">
+                            <div class="flex items-center gap-6 w-full md:w-auto">
+                                <div class="text-center bg-brand-peach text-white p-4 rounded-2xl min-w-[120px] shadow-sm">
+                                    <span class="block text-xs font-bold uppercase opacity-80 leading-none mb-1">PM</span>
+                                    <span class="text-xl font-black">3:00 - 4:00</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="bg-brand-peachLight text-brand-peach text-[10px] font-bold px-2 py-0.5 rounded uppercase border border-brand-peach/20">Ages 3-5</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-brand-plum">Kids Yoga @Fun Philosophy Nursery</h4>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6 md:mt-0 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-gray-100">
+                                <button onclick="showBooking('Kids Yoga Nursery (Fri 3:00 PM)')" class="w-full md:w-auto bg-brand-peach text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-orange-500 transition-colors">Book Kid's Spot</button>
+                            </div>
+                        </div>
+
+                        <div class="group flex flex-col md:flex-row items-center justify-between p-5 rounded-3xl border-2 border-transparent hover:border-brand-peach/30 hover:bg-brand-peachLight/50 transition-all cursor-pointer">
+                            <div class="flex items-center gap-6 w-full md:w-auto">
+                                <div class="text-center bg-brand-peach text-white p-4 rounded-2xl min-w-[120px] shadow-sm">
+                                    <span class="block text-xs font-bold uppercase opacity-80 leading-none mb-1">PM</span>
+                                    <span class="text-xl font-black">5:00 - 7:00</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="bg-brand-peachLight text-brand-peach text-[10px] font-bold px-2 py-0.5 rounded uppercase border border-brand-peach/20">Ages 7-9</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-brand-plum">Kids Yoga & Cooking Class</h4>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6 md:mt-0 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-gray-100">
+                                <button onclick="showBooking('Kids Yoga & Cooking (Fri 5:00 PM)')" class="w-full md:w-auto bg-brand-peach text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-orange-500 transition-colors">Book Kid's Spot</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-24 px-6 bg-white relative">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-black text-brand-plum mb-4">Pricing & Memberships</h2>
+                <p class="text-lg text-brand-plum/70 font-medium mb-12">Flexible monthly packages for you and your little ones.</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-8">
+                    <!-- Standard Plan -->
+                    <div class="bg-brand-sageLight p-8 rounded-[2rem] border border-brand-sage/20 relative shadow-sm hover:-translate-y-1 transition-transform">
+                        <h3 class="text-2xl font-bold text-brand-plum mb-2">Standard Lessons</h3>
+                        <div class="text-4xl font-black text-brand-sage mb-4">€60 <span class="text-lg font-medium text-brand-plum/60">/month</span></div>
+                        <p class="text-brand-plum/70 mb-6 font-medium">1 lesson per week (2 hours each)</p>
+                        <button onclick="showBooking('Standard Plan: €60/mo')" class="w-full bg-brand-sage text-white py-3 rounded-xl font-bold shadow hover:bg-green-700 transition-colors">Select Plan</button>
+                    </div>
+                    
+                    <!-- Sibling Plan -->
+                    <div class="bg-brand-peachLight p-8 rounded-[2rem] border border-brand-peach/20 relative shadow-sm hover:-translate-y-1 transition-transform">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-peach text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">Sibling Offer</div>
+                        <h3 class="text-2xl font-bold text-brand-plum mb-2">Two Children</h3>
+                        <div class="text-4xl font-black text-brand-peach mb-4">€100 <span class="text-lg font-medium text-brand-plum/60">/month</span></div>
+                        <p class="text-brand-plum/70 mb-6 font-medium">1 lesson per week (2 hours each)</p>
+                        <button onclick="showBooking('Sibling Plan: €100/mo')" class="w-full bg-brand-peach text-white py-3 rounded-xl font-bold shadow hover:bg-orange-500 transition-colors">Select Plan</button>
+                    </div>
+                </div>
+                
+                <div class="bg-brand-cream border border-brand-plum/10 p-6 rounded-2xl inline-block shadow-sm">
+                     <p class="text-brand-plum font-bold text-lg flex items-center gap-2 justify-center"><i class="ph-fill ph-gift text-brand-peach text-2xl"></i> Your first trial class is completely <span class="text-brand-peach uppercase ml-1">FREE!</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Haris -->
+        <section id="about" class="py-24 px-6 bg-brand-cream relative">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="relative">
+                        <!-- Real Image Replacement -->
+                        <div class="w-full aspect-[4/5] bg-white rounded-[3rem] shadow-xl relative overflow-hidden border-4 border-white z-10">
+                            <img src="https://res.cloudinary.com/dwvhqhtts/image/upload/v1776190674/480881537_1228702175924978_1154110640441417471_n_fv5hid.jpg" alt="Haris Maratheftis" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Decorations -->
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-brand-peach rounded-full z-0 flex items-center justify-center">
+                            <i class="ph-bold ph-star text-white text-3xl"></i>
+                        </div>
+                        <div class="absolute bottom-10 -left-8 bg-white px-6 py-4 rounded-2xl shadow-xl z-20 border border-gray-100">
+                            <p class="font-bold text-brand-plum text-lg">Haris Maratheftis</p>
+                            <p class="text-sm text-brand-sage font-bold">Founder, RD, RCYT</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col justify-center">
+                        <h2 class="text-4xl md:text-5xl font-black text-brand-plum mb-6 leading-tight">Supporting mothers <br><span class="text-brand-sage">on and off the mat.</span></h2>
+                        <p class="text-brand-plum/80 text-lg leading-relaxed mb-6 font-medium">
+                            As a Registered Dietitian and Certified Yoga Teacher, I understand that true wellness isn't just about an hour of exercise—it's about how we feed our families, manage our homes, and clean our thoughts.
+                        </p>
+                        <p class="text-brand-plum/80 text-lg leading-relaxed mb-8 font-medium">
+                            I created Healthy Yogis to be a sanctuary for mothers. A place where you can find challenging flows for yourself, engaging classes for your kids, and realistic, healthy recipes that actually work for a busy family life.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="flex flex-col p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                                <i class="ph-fill ph-graduation-cap text-3xl text-brand-sage mb-2"></i>
+                                <span class="font-bold text-brand-plum">BSc Dietetics</span>
+                                <span class="text-sm text-brand-plum/60">Registered Nutritionist</span>
+                            </div>
+                            <div class="flex flex-col p-4 bg-brand-peachLight rounded-2xl border border-brand-peach/10 shadow-sm">
+                                <i class="ph-fill ph-flower-lotus text-3xl text-brand-peach mb-2"></i>
+                                <span class="font-bold text-brand-plum">RCYT Certified</span>
+                                <span class="text-sm text-brand-plum/60">Kids & Adult Yoga</span>
+                            </div>
+                        </div>
+
+                        <a href="#schedule" class="text-lg font-bold text-brand-plum border-b-2 border-brand-peach inline-self-start self-start pb-1 hover:text-brand-peach transition-colors">
+                            Practice with me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-6">
+        <div class="absolute inset-0 bg-brand-plum/80 backdrop-blur-sm" onclick="closeModal('booking-modal')"></div>
+        <div class="bg-white rounded-[2rem] p-8 md:p-10 max-w-md w-full relative z-10 shadow-2xl transform transition-all scale-95 opacity-0" id="booking-modal-content">
+            <button onclick="closeModal('booking-modal')" class="absolute top-6 right-6 text-gray-400 hover:text-brand-plum text-2xl"><i class="ph ph-x"></i></button>
+            <h3 class="text-2xl font-black text-brand-plum mb-1" id="modal-title">Book Class</h3>
+            <p class="text-brand-plum/60 font-medium mb-6">Reserve your spot on the mat.</p>
+            
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Booking request sent to Haris!'); closeModal('booking-modal');">
+                <div>
+                    <label class="text-xs font-bold text-brand-plum uppercase ml-2 mb-1 block">Your Name</label>
+                    <input type="text" placeholder="Jane Doe" class="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-peach focus:ring-2 focus:ring-brand-peach/20 transition-all" required>
+                </div>
+                <div>
+                    <label class="text-xs font-bold text-brand-plum uppercase ml-2 mb-1 block">Email</label>
+                    <input type="email" placeholder="jane@example.com" class="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-peach focus:ring-2 focus:ring-brand-peach/20 transition-all" required>
+                </div>
+                <div>
+                    <label class="text-xs font-bold text-brand-plum uppercase ml-2 mb-1 block">Child's Name & Age (If applicable)</label>
+                    <input type="text" placeholder="e.g. Leo, 5" class="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-peach focus:ring-2 focus:ring-brand-peach/20 transition-all">
+                </div>
+                <button type="submit" class="w-full bg-brand-plum text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-purple-900 transition-colors mt-6">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Recipe Modal -->
+    <div id="recipe-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-6">
+        <div class="absolute inset-0 bg-brand-plum/80 backdrop-blur-sm" onclick="closeModal('recipe-modal')"></div>
+        <div class="bg-white rounded-[2rem] p-8 md:p-10 max-w-lg w-full relative z-10 shadow-2xl transform transition-all scale-95 opacity-0" id="recipe-modal-content">
+            <button onclick="closeModal('recipe-modal')" class="absolute top-6 right-6 text-gray-400 hover:text-brand-plum text-2xl"><i class="ph ph-x"></i></button>
+            <div class="w-16 h-16 bg-brand-sageLight text-brand-sage rounded-2xl flex items-center justify-center mb-4">
+                <i class="ph-fill ph-cooking-pot text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-black text-brand-plum mb-2" id="recipe-title">Recipe Title</h3>
+            <div class="flex gap-3 mb-4">
+                <span class="text-xs font-bold text-brand-sage bg-brand-sageLight px-3 py-1 rounded-full flex items-center gap-1" id="recipe-time"><i class="ph-bold ph-clock"></i> Time</span>
+            </div>
+            <p class="text-brand-plum/70 font-medium mb-8 leading-relaxed" id="recipe-desc">Recipe description goes here.</p>
+            
+            <div class="bg-brand-cream p-5 rounded-2xl border border-brand-sage/20">
+                <h4 class="font-bold text-brand-plum mb-2 flex items-center gap-2"><i class="ph-bold ph-lock-key text-brand-peach"></i> Full recipe locked</h4>
+                <p class="text-sm text-brand-plum/70 mb-4">Join our community or book a nutrition consultation with Haris to access full meal plans and family recipes.</p>
+                <a href="#join" onclick="closeModal('recipe-modal')" class="text-brand-sage font-bold hover:underline text-sm">Subscribe for free recipes</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white text-brand-plum py-10 px-6 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <i class="ph-fill ph-plant text-2xl text-brand-sage"></i>
+                <span class="font-black text-xl tracking-tight">Healthy<span class="text-brand-peach">yogis</span></span>
+            </div>
+            <div class="flex gap-6 text-2xl text-brand-plum/50">
+                <i class="ph-fill ph-instagram-logo hover:text-brand-peach cursor-pointer transition-colors"></i>
+                <i class="ph-fill ph-envelope-simple hover:text-brand-peach cursor-pointer transition-colors"></i>
+            </div>
+            <p class="text-sm font-medium text-brand-plum/50">© 2024 Healthy Yogis. Clean diet, home & thoughts.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Tab Logic (Schedule)
+        function switchTab(dayId) {
+            document.querySelectorAll('.tab-content').forEach(c => {
+                c.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('active', 'bg-brand-plum', 'text-white');
+                b.classList.add('text-gray-500', 'hover:bg-gray-50');
+            });
+            
+            document.getElementById(dayId).classList.add('active');
+            const activeBtn = document.querySelector(`[data-day="${dayId}"]`);
+            activeBtn.classList.remove('text-gray-500', 'hover:bg-gray-50');
+            activeBtn.classList.add('active', 'bg-brand-plum', 'text-white');
+        }
+
+        // Modal Logic
+        function showBooking(className) {
+            document.getElementById('modal-title').innerText = className;
+            openModal('booking-modal');
+        }
+
+        function openRecipeModal(title, desc, time) {
+            document.getElementById('recipe-title').innerText = title;
+            document.getElementById('recipe-desc').innerText = desc;
+            document.getElementById('recipe-time').innerHTML = `<i class="ph-bold ph-clock"></i> ${time}`;
+            openModal('recipe-modal');
+        }
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            const content = document.getElementById(id + '-content');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // small delay for animation
+            setTimeout(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            const content = document.getElementById(id + '-content');
+            
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }, 200); // wait for transition
+        }
+
+        // Lenis Smooth Scroll
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        // GSAP Animations
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Hero
+            gsap.from(".hero-elem", { y: 30, opacity: 0, duration: 1, stagger: 0.15, ease: "power3.out" });
+            gsap.from(".hero-visual > div", { 
+                scale: 0.8, 
+                opacity: 0, 
+                duration: 1.5, 
+                stagger: 0.2,
+                ease: "back.out(1.2)", 
+                delay: 0.3 
+            });
+            
+            // General Sections
+            gsap.utils.toArray('.section-header').forEach(header => {
+                gsap.from(header, { scrollTrigger: { trigger: header, start: "top 85%" }, y: 30, opacity: 0, duration: 0.8 });
+            });
+
+            // Recipe Cards
+            gsap.from(".recipe-card", {
+                scrollTrigger: { trigger: "#recipes", start: "top 70%" },
+                y: 40,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.15,
+                ease: "power2.out"
+            });
+        });
+    </script>
+</body>
+</html>
