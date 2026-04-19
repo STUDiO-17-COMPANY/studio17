@@ -154,34 +154,71 @@
     <div class="noise"></div>
 
     <!-- Navigation -->
-    <div class="fixed w-full top-6 z-50 px-4 md:px-8 pointer-events-none flex justify-center">
-        <nav class="relative pointer-events-auto w-full max-w-6xl bg-brand-light/85 backdrop-blur-md rounded-full px-6 py-4 flex justify-between items-center shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-brand-dark/5 transition-all duration-300"
+    <div class="fixed w-full top-4 md:top-6 z-50 px-4 md:px-8 pointer-events-none flex justify-center">
+        <nav class="relative pointer-events-auto w-full max-w-6xl bg-brand-light/90 backdrop-blur-md rounded-full px-5 py-3 md:px-6 md:py-4 flex justify-between items-center shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-brand-dark/5 transition-all duration-300"
             id="nav">
 
-            <!-- Left Links -->
-            <div class="hidden md:flex items-center gap-8 flex-1">
-                <a href="#about"
-                    class="text-xs tracking-widest uppercase font-medium hover:text-brand-red transition-colors">Philosophy</a>
-                <a href="#classes"
-                    class="text-xs tracking-widest uppercase font-medium hover:text-brand-red transition-colors">Classes</a>
-            </div>
-
-            <!-- Center Logo -->
-            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                <a href="#">
+            <!-- Mobile Layout -->
+            <div class="flex md:hidden items-center justify-between w-full">
+                <a href="#" class="flex-shrink-0">
                     <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1776580459/Frame_115_gyjwki.png"
-                        alt="The Project Pilates Home" class="h-5 md:h-[22px] object-contain" />
+                        alt="Home" class="h-[18px] object-contain" />
                 </a>
+                <button id="mobile-menu-btn" class="p-2 -mr-2 text-brand-dark focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16">
+                        </path>
+                    </svg>
+                </button>
             </div>
 
-            <!-- Right CTA -->
-            <div class="flex items-center justify-end flex-1">
-                <a href="#schedule"
-                    class="text-xs tracking-[0.1em] uppercase bg-brand-dark text-brand-light px-6 py-2.5 rounded-full hover:bg-brand-red transition-colors duration-300 whitespace-nowrap">
-                    Book a Mat
-                </a>
+            <!-- Desktop Layout -->
+            <div class="hidden md:flex items-center justify-between w-full">
+                <!-- Left Links -->
+                <div class="flex items-center gap-8 flex-1">
+                    <a href="#about"
+                        class="text-xs tracking-widest uppercase font-medium hover:text-brand-red transition-colors">Philosophy</a>
+                    <a href="#classes"
+                        class="text-xs tracking-widest uppercase font-medium hover:text-brand-red transition-colors">Classes</a>
+                </div>
+
+                <!-- Center Logo -->
+                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex-shrink-0">
+                    <a href="#">
+                        <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1776580459/Frame_115_gyjwki.png"
+                            alt="The Project Pilates Home" class="h-[22px] object-contain" />
+                    </a>
+                </div>
+
+                <!-- Right CTA -->
+                <div class="flex items-center justify-end flex-1">
+                    <a href="#schedule"
+                        class="text-xs tracking-[0.1em] uppercase bg-brand-dark text-brand-light px-6 py-2.5 rounded-full hover:bg-brand-red transition-colors duration-300 whitespace-nowrap">
+                        Book a Mat
+                    </a>
+                </div>
             </div>
         </nav>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-brand-light z-[100] flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <button id="mobile-close-btn" class="absolute top-6 right-6 p-2 text-brand-dark focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div class="flex flex-col items-center gap-10 text-center">
+            <a href="#about"
+                class="mobile-link font-serif text-4xl text-brand-dark hover:text-brand-red transition-colors">Philosophy</a>
+            <a href="#classes"
+                class="mobile-link font-serif text-4xl text-brand-dark hover:text-brand-red transition-colors">Classes</a>
+            <a href="#schedule"
+                class="mobile-link mt-6 px-10 py-4 bg-brand-red text-brand-light text-xs tracking-[0.2em] uppercase font-medium rounded-full hover:bg-brand-dark transition-all duration-300">
+                Book a Mat
+            </a>
+        </div>
     </div>
 
     <main>
@@ -714,7 +751,27 @@
     </main>
 
     <script>
-        // --- 1. Initialize Lenis (Smooth Scrolling) ---
+        // --- 1. Mobile Menu Toggle ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        const openMenu = () => {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+        };
+
+        const closeMenu = () => {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+        };
+
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMenu);
+        if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // --- 2. Initialize Lenis (Smooth Scrolling) ---
         const lenis = new Lenis({
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
