@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELENE | Beauty as Detail</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        selene: {
+                            white: '#ffffff',
+                            offwhite: '#faf9f8',
+                            black: '#1a1a1a',
+                            nude: '#e6dfd8',
+                            blush: '#d9cdc3',
+                            silver: '#e2e2e2',
+                            skintone: '#d4c3b3',
+                            lightgray: '#f0f0f0'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS -->
+    <style>
+        body {
+            background-color: #faf9f8;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Selection */
+        ::selection { background-color: #e6dfd8; color: #1a1a1a; }
+
+        /* Image Containers */
+        .img-container { overflow: hidden; position: relative; background-color: #f0f0f0; }
+        .img-container img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+
+        /* Custom Hover Nav */
+        .nav-link::after {
+            content: ''; position: absolute; width: 100%; transform: scaleX(0);
+            height: 1px; bottom: -2px; left: 0; background-color: currentColor;
+            transform-origin: bottom right;
+        }
+        .nav-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="font-sans font-light selection:bg-selene-nude selection:text-selene-black">
+
+    <!-- Mobile Sticky CTA -->
+    <div class="md:hidden fixed bottom-4 left-4 right-4 z-50">
+        <a href="https://instagram.com/selenethebrand" target="_blank" rel="noopener noreferrer" class="block w-full bg-selene-black text-selene-white text-center py-4 uppercase tracking-[0.15em] text-xs font-medium shadow-[0_4px_20px_rgba(0,0,0,0.15)]">
+            DM to Book
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-40 bg-selene-white/90 backdrop-blur-md px-6 py-4 flex justify-between items-center border-b border-selene-lightgray" id="navbar">
+        <a href="#" class="font-serif text-xl md:text-2xl tracking-[0.2em] uppercase flex items-center gap-3">
+            <span>SELENE</span>
+        </a>
+        <div class="flex items-center gap-8">
+            <a href="#services" class="hidden md:block text-xs uppercase tracking-[0.15em] nav-link relative">Services</a>
+            <a href="#work" class="hidden md:block text-xs uppercase tracking-[0.15em] nav-link relative">Work</a>
+            <a href="#artist" class="hidden md:block text-xs uppercase tracking-[0.15em] nav-link relative">Artist</a>
+            <a href="https://instagram.com/selenethebrand" target="_blank" rel="noopener noreferrer" class="hidden md:block text-xs uppercase tracking-[0.15em] nav-link relative font-medium">DM to Book</a>
+        </div>
+    </nav>
+
+    <main>
+        <div>
+
+            <!-- Hero Section -->
+            <section class="min-h-[100svh] w-full relative flex flex-col justify-center px-6 md:px-12 pt-32 pb-20 bg-selene-offwhite overflow-hidden">
+                
+                <!-- Background Image & Overlay -->
+                <div class="absolute inset-0 z-0">
+                    <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820256/hf_20260503_145535_de47fffe-7c32-4455-a28d-dc323d0635d4_1_bmbrw9.png" alt="Selene Beauty Background" class="w-full h-full object-cover">
+                    <!-- White opacity overlay to maintain readability and clean brand feel -->
+                    <div class="absolute inset-0 bg-selene-offwhite/85 backdrop-blur-[1px]"></div>
+                </div>
+
+                <div class="max-w-5xl mx-auto w-full flex flex-col items-center text-center mt-auto relative z-10">
+                    
+                    <!-- Center Logo -->
+                    <div class="font-serif text-2xl md:text-3xl tracking-[0.4em] uppercase mb-10 text-selene-black font-medium">SELENE</div>
+                    
+                    <!-- Headlines -->
+                    <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[1.1] mb-6 text-selene-black">
+                        Beauty as detail.<br>
+                        <span class="italic">Beauty as art.</span>
+                    </h1>
+                    
+                    <p class="text-selene-black/90 font-medium text-xs md:text-sm uppercase tracking-[0.15em] max-w-lg leading-relaxed mb-12">
+                        Lip blush, brows, lashes & tooth gems — soft enhancements designed to become your signature.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
+                        <a href="https://www.instagram.com/selenethebrand/" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-selene-black text-selene-white px-10 py-4 uppercase tracking-[0.15em] text-xs hover:bg-selene-black/90">
+                            DM to Book
+                        </a>
+                        <a href="#work" class="inline-flex justify-center items-center border border-selene-black/20 text-selene-black px-10 py-4 uppercase tracking-[0.15em] text-xs hover:border-selene-black">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Instagram Style Strip -->
+                <div class="w-full max-w-7xl mx-auto mt-20 relative z-10">
+                    <div class="grid grid-cols-4 gap-2 md:gap-4">
+                        <div class="aspect-square img-container"><img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820751/616437144_18077368907582259_6466011471020169883_n_ljgay3.jpg" alt="Lips Detail"></div>
+                        <div class="aspect-square img-container"><img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820750/612559419_18076901693582259_4827431635469872526_n_mh2muy.jpg" alt="Brows Detail"></div>
+                        <div class="aspect-square img-container"><img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820973/573109312_18069280640582259_911572434065995549_n_cdh17i.jpg" alt="Lashes Detail"></div>
+                        <div class="aspect-square img-container"><img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820750/612544631_18076738442582259_2254677463725042209_n_zphnfi.jpg" alt="Tooth Gem Detail"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Signature Details Section -->
+            <section class="py-32 md:py-48 px-6 bg-selene-white relative overflow-hidden">
+                <!-- Subtle background logo -->
+                <div class="absolute -right-10 md:-right-20 top-1/2 -translate-y-1/2 text-[12rem] md:text-[24rem] font-serif uppercase tracking-[0.1em] opacity-[0.03] pointer-events-none whitespace-nowrap leading-none select-none">SELENE</div>
+                
+                <div class="max-w-4xl mx-auto text-center relative z-10">
+                    <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.3] tracking-tight text-selene-black">
+                        Your lips. Your brows.<br>
+                        Your lashes. Your smile.<br>
+                        <span class="italic text-selene-black/50 mt-6 block text-2xl md:text-4xl">The smallest details become your signature.</span>
+                    </h2>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="py-24 bg-selene-offwhite">
+                <div class="max-w-6xl mx-auto px-4 md:px-8">
+                    
+                    <!-- Lip Blush -->
+                    <div class="group flex flex-col md:flex-row items-center gap-8 md:gap-20 mb-24 md:mb-32">
+                        <div class="w-full md:w-1/2 aspect-[4/5] img-container">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820751/616437144_18077368907582259_6466011471020169883_n_ljgay3.jpg" alt="Lip Blush">
+                        </div>
+                        <div class="w-full md:w-1/2 flex flex-col justify-center px-2">
+                            <span class="text-selene-nude text-xs uppercase tracking-[0.2em] mb-4">Service — 01</span>
+                            <h3 class="font-serif text-4xl md:text-5xl mb-4">Lip Blush</h3>
+                            <p class="text-selene-black/60 text-lg md:text-xl font-light italic mb-6">Soft enhancements</p>
+                            <p class="text-sm tracking-wide text-selene-black/70 max-w-sm leading-relaxed">Soft color designed to define the lips while keeping the result natural and feminine.</p>
+                        </div>
+                    </div>
+
+                    <!-- Brows -->
+                    <div class="group flex flex-col md:flex-row-reverse items-center gap-8 md:gap-20 mb-24 md:mb-32">
+                        <div class="w-full md:w-1/2 aspect-[4/5] img-container">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820750/612559419_18076901693582259_4827431635469872526_n_mh2muy.jpg" alt="Brows">
+                        </div>
+                        <div class="w-full md:w-1/2 flex flex-col justify-center px-2 md:text-right">
+                            <span class="text-selene-blush text-xs uppercase tracking-[0.2em] mb-4">Service — 02</span>
+                            <h3 class="font-serif text-4xl md:text-5xl mb-4">Brows</h3>
+                            <p class="text-selene-black/60 text-lg md:text-xl font-light italic mb-6">Signature framework</p>
+                            <p class="text-sm tracking-wide text-selene-black/70 max-w-sm leading-relaxed md:ml-auto">Shape, structure, and detail designed around your face.</p>
+                        </div>
+                    </div>
+
+                    <!-- Lashes -->
+                    <div class="group flex flex-col md:flex-row items-center gap-8 md:gap-20 mb-24 md:mb-32">
+                        <div class="w-full md:w-1/2 aspect-[4/5] img-container">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820973/573109312_18069280640582259_911572434065995549_n_cdh17i.jpg" alt="Lashes">
+                        </div>
+                        <div class="w-full md:w-1/2 flex flex-col justify-center px-2">
+                            <span class="text-selene-skintone text-xs uppercase tracking-[0.2em] mb-4">Service — 03</span>
+                            <h3 class="font-serif text-4xl md:text-5xl mb-4">Lashes</h3>
+                            <p class="text-selene-black/60 text-lg md:text-xl font-light italic mb-6">Elevated gaze</p>
+                            <p class="text-sm tracking-wide text-selene-black/70 max-w-sm leading-relaxed">A softer, more lifted gaze with clean, feminine definition.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tooth Gems -->
+                    <div class="group flex flex-col md:flex-row-reverse items-center gap-8 md:gap-20">
+                        <div class="w-full md:w-1/2 aspect-[4/5] img-container">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820750/612544631_18076738442582259_2254677463725042209_n_zphnfi.jpg" alt="Tooth Gems">
+                        </div>
+                        <div class="w-full md:w-1/2 flex flex-col justify-center px-2 md:text-right">
+                            <span class="text-selene-silver text-xs uppercase tracking-[0.2em] mb-4">Service — 04</span>
+                            <h3 class="font-serif text-4xl md:text-5xl mb-4">Tooth Gems</h3>
+                            <p class="text-selene-black/60 text-lg md:text-xl font-light italic mb-6">Smile details</p>
+                            <p class="text-sm tracking-wide text-selene-black/70 max-w-sm leading-relaxed md:ml-auto">A tiny smile detail made to feel personal, playful, and intentional.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Portfolio / IG Grid Section -->
+            <section id="work" class="py-32 bg-selene-white">
+                <div class="max-w-7xl mx-auto px-4 md:px-8">
+                    
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                        <div>
+                            <h2 class="font-serif text-4xl md:text-5xl mb-3">The Portfolio</h2>
+                            <p class="text-selene-black/50 uppercase tracking-[0.2em] text-xs">@selenethebrand</p>
+                        </div>
+                        <a href="https://instagram.com/selenethebrand" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 group mt-6 md:mt-0 pb-1 border-b border-selene-black/20 hover:border-selene-black">
+                            <span class="text-xs uppercase tracking-[0.1em]">See more work on Instagram</span>
+                            <svg class="w-3 h-3 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Instagram Masonry-style Grid -->
+                    <div class="columns-2 md:columns-3 lg:columns-4 gap-2 md:gap-4">
+                        
+                        <!-- Col 1 -->
+                        <div class="relative group overflow-hidden bg-selene-lightgray break-inside-avoid aspect-square w-full mb-2 md:mb-4">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820751/616437144_18077368907582259_6466011471020169883_n_ljgay3.jpg" alt="Work 1" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-selene-white/80 opacity-0 group-hover:opacity-100 flex items-center justify-center p-4 text-center transition-opacity duration-300">
+                                <span class="text-selene-black text-xs uppercase tracking-widest font-serif italic">Lip blush result</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Col 2 (Vertical) -->
+                        <div class="relative group overflow-hidden bg-selene-lightgray break-inside-avoid aspect-[3/4] w-full mb-2 md:mb-4">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820750/612559419_18076901693582259_4827431635469872526_n_mh2muy.jpg" alt="Work 2" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-selene-white/80 opacity-0 group-hover:opacity-100 flex items-center justify-center p-4 text-center transition-opacity duration-300">
+                                <span class="text-selene-black text-xs uppercase tracking-widest font-serif italic">Brow shape</span>
+                            </div>
+                        </div>
+
+                        <!-- Col 3 -->
+                        <div class="relative group overflow-hidden bg-selene-lightgray break-inside-avoid aspect-square w-full mb-2 md:mb-4">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820973/573109312_18069280640582259_911572434065995549_n_cdh17i.jpg" alt="Work 3" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-selene-white/80 opacity-0 group-hover:opacity-100 flex items-center justify-center p-4 text-center transition-opacity duration-300">
+                                <span class="text-selene-black text-xs uppercase tracking-widest font-serif italic">Lash detail</span>
+                            </div>
+                        </div>
+
+                        <!-- Col 4 (Vertical) -->
+                        <div class="relative group overflow-hidden bg-selene-lightgray break-inside-avoid aspect-[3/4] w-full mb-2 md:mb-4">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820750/612544631_18076738442582259_2254677463725042209_n_zphnfi.jpg" alt="Work 4" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-selene-white/80 opacity-0 group-hover:opacity-100 flex items-center justify-center p-4 text-center transition-opacity duration-300">
+                                <span class="text-selene-black text-xs uppercase tracking-widest font-serif italic">Tooth gem detail</span>
+                            </div>
+                        </div>
+
+                        <!-- Col 5 (Vertical) -->
+                        <div class="relative group overflow-hidden bg-selene-lightgray break-inside-avoid aspect-[3/4] w-full mb-2 md:mb-4">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820751/616437144_18077368907582259_6466011471020169883_n_ljgay3.jpg" alt="Work 5" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-selene-white/80 opacity-0 group-hover:opacity-100 flex items-center justify-center p-4 text-center transition-opacity duration-300">
+                                <span class="text-selene-black text-xs uppercase tracking-widest font-serif italic">Signature detail</span>
+                            </div>
+                        </div>
+
+                        <!-- Col 6 -->
+                        <div class="relative group overflow-hidden bg-selene-lightgray break-inside-avoid aspect-square w-full mb-2 md:mb-4">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820750/612559419_18076901693582259_4827431635469872526_n_mh2muy.jpg" alt="Work 6" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-selene-white/80 opacity-0 group-hover:opacity-100 flex items-center justify-center p-4 text-center transition-opacity duration-300">
+                                <span class="text-selene-black text-xs uppercase tracking-widest font-serif italic">Soft enhancement</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 text-center md:hidden">
+                         <a href="https://instagram.com/selenethebrand" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 group pb-1 border-b border-selene-black/20">
+                            <span class="text-xs uppercase tracking-[0.1em]">See more on Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Meet the Artist & Process Section -->
+            <section id="artist" class="py-24 md:py-32 bg-selene-offwhite relative">
+                <div class="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-16 md:gap-24 items-center relative z-10">
+                    
+                    <!-- Artist Image -->
+                    <div class="img-container aspect-[3/4] max-w-md mx-auto md:mx-0 w-full relative">
+                        <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777820864/649646465_17899714509245861_9178061629214168382_n_dqyiji.jpg" alt="Meet the Artist">
+                    </div>
+
+                    <!-- Artist Copy & Process -->
+                    <div>
+                        <h2 class="font-serif text-4xl md:text-5xl mb-6">Meet the Artist</h2>
+                        <p class="text-selene-black/80 text-lg md:text-xl font-light leading-relaxed mb-16 max-w-md">
+                            SELENE is shaped by a personal eye for beauty, detail, and expression. Every result is approached individually — not to change your face, but to bring more attention to the features that already make it yours.
+                        </p>
+
+                        <!-- Process -->
+                        <div class="space-y-8 border-t border-selene-black/10 pt-12">
+                            <h3 class="text-xs uppercase tracking-[0.2em] text-selene-black/50 mb-8">The Process</h3>
+                            
+                            <div class="flex gap-6 items-start">
+                                <span class="text-xs uppercase tracking-widest font-medium mt-1">01</span>
+                                <div>
+                                    <h4 class="font-serif text-2xl italic mb-2">Choose your detail</h4>
+                                    <p class="text-sm tracking-wide text-selene-black/60">Lip blush, brows, lashes, or tooth gems.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-6 items-start">
+                                <span class="text-xs uppercase tracking-widest font-medium mt-1">02</span>
+                                <div>
+                                    <h4 class="font-serif text-2xl italic mb-2">DM SELENE</h4>
+                                    <p class="text-sm tracking-wide text-selene-black/60">Send a message on Instagram for availability and guidance.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-6 items-start">
+                                <span class="text-xs uppercase tracking-widest font-medium mt-1">03</span>
+                                <div>
+                                    <h4 class="font-serif text-2xl italic mb-2">Arrive for your appointment</h4>
+                                    <p class="text-sm tracking-wide text-selene-black/60">A soft, intentional enhancement designed around your features.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Trust / Reassurance Bar -->
+            <section class="py-12 bg-selene-white border-y border-selene-lightgray overflow-hidden hide-scroll">
+                <div class="flex gap-12 px-6 whitespace-nowrap opacity-60 overflow-x-auto hide-scroll pb-2 items-center text-selene-black">
+                    <span class="text-xs uppercase tracking-[0.2em]">Soft natural results</span>
+                    <span class="text-selene-nude text-xl">✦</span>
+                    <span class="text-xs uppercase tracking-[0.2em]">Detail-focused approach</span>
+                    <span class="text-selene-nude text-xl">✦</span>
+                    <span class="text-xs uppercase tracking-[0.2em]">Designed around your features</span>
+                    <span class="text-selene-nude text-xl">✦</span>
+                    <span class="text-xs uppercase tracking-[0.2em]">Personal consultation through DM</span>
+                    <span class="text-xs uppercase tracking-[0.2em] ml-12 md:ml-0">Clean feminine aesthetic</span>
+                    <span class="text-selene-nude text-xl">✦</span>
+                    <span class="text-xs uppercase tracking-[0.2em]">Real work shown on Instagram</span>
+                </div>
+            </section>
+
+            <!-- Final CTA / Footer -->
+            <footer id="book" class="pt-32 md:pt-48 pb-12 bg-selene-black text-selene-white text-center relative overflow-hidden">
+                <div class="relative z-10 max-w-4xl mx-auto px-6">
+                    
+                    <div class="font-serif text-3xl md:text-4xl tracking-[0.4em] uppercase mx-auto mb-12 opacity-80">SELENE</div>
+
+                    <h2 class="font-serif text-4xl md:text-6xl lg:text-7xl mb-8 leading-[1.1]">
+                        Ready for your<br>
+                        <span class="italic text-selene-nude">signature detail?</span>
+                    </h2>
+                    <p class="text-selene-white/60 mb-16 max-w-md mx-auto text-sm tracking-wider uppercase font-light leading-relaxed">
+                        Message SELENE on Instagram to book your appointment.
+                    </p>
+                    
+                    <a href="https://www.instagram.com/selenethebrand/" target="_blank" rel="noopener noreferrer" class="inline-block bg-selene-white text-selene-black px-12 py-5 uppercase tracking-[0.2em] text-xs hover:bg-selene-nude">
+                        DM SELENE
+                    </a>
+                </div>
+                
+                <div class="mt-32 pt-8 border-t border-selene-white/10 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-6 text-[10px] text-selene-white/40 uppercase tracking-[0.2em]">
+                    <p class="mb-4 md:mb-0">© 2026 SELENE STUDIO</p>
+                    <div class="flex gap-8">
+                        <a href="https://www.instagram.com/selenethebrand/" target="_blank" rel="noopener noreferrer" class="hover:text-selene-white">Instagram</a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+</body>
+</html>
