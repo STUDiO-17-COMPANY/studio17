@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Metadata -->
+    <title>Lumière Bellè | Handmade Candle Bouquets & Custom Candle Gifts</title>
+    <meta name="description" content="Discover Lumière Bellè, handmade scented candle bouquets designed to look like flowers. Elegant custom candle gifts for birthdays, weddings, special occasions, and moments worth remembering.">
+    <meta name="keywords" content="handmade candle bouquets, custom candle gifts, scented candle arrangements, flower candles, luxury candle gifts, handmade candles, Lumière Bellè">
+    <meta name="author" content="Lumière Bellè">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://studio17.world/CY/LumierrBelle"> <!-- REPLACE CANONICAL URL BEFORE DEPLOY -->
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#FDFBF7">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777809880/FavIcon_-_Lumi%C3%A8re_Bell%C3%A8_jv8xxb.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777809880/FavIcon_-_Lumi%C3%A8re_Bell%C3%A8_jv8xxb.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://studio17.world/CY/LumierrBelle">
+    <meta property="og:title" content="Lumière Bellè | Handmade Candle Bouquets & Custom Candle Gifts">
+    <meta property="og:description" content="Discover Lumière Bellè, handmade scented candle bouquets designed to look like flowers. Elegant custom candle gifts for birthdays, weddings, special occasions, and moments worth remembering.">
+    <meta property="og:image" content="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777809879/OG_-_Lumi%C3%A8re_Bell%C3%A8_esfyzf.png">
+    <meta property="og:site_name" content="Lumière Bellè">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://studio17.world/CY/LumierrBelle">
+    <meta name="twitter:title" content="Lumière Bellè | Handmade Candle Bouquets & Custom Candle Gifts">
+    <meta name="twitter:description" content="Discover Lumière Bellè, handmade scented candle bouquets designed to look like flowers. Elegant custom candle gifts for birthdays, weddings, special occasions, and moments worth remembering.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777809879/OG_-_Lumi%C3%A8re_Bell%C3%A8_esfyzf.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Lumière Bellè",
+      "description": "Handmade scented candle bouquets and custom candle gifts for special occasions.",
+      "url": "https://studio17.world/CY/LumierrBelle",
+      "logo": "https://res.cloudinary.com/dnxoz9alm/image/upload/v1777809880/FavIcon_-_Lumi%C3%A8re_Bell%C3%A8_jv8xxb.png",
+      "sameAs": [
+        "https://www.instagram.com/lumiere_belle_candles"
+      ]
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDFBF7',
+                        blush: {
+                            100: '#F5EBE6',
+                            200: '#E8D5C8',
+                            300: '#DABBA6',
+                        },
+                        charcoal: '#333333',
+                        taupe: '#8A827C',
+                        primary: '#2563EB',
+                        royal: '#0456FE',
+                        dark: '#0F172A',
+                        blackbox: '#0A0A0A',
+                        light: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Lenis Smooth Scroll Setup */
+        html.lenis, html.lenis body {
+            height: auto;
+            width: 100vw;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        /* Custom Styles */
+        body {
+            background-color: theme('colors.cream');
+            color: theme('colors.charcoal');
+            overflow-x: hidden;
+        }
+
+        .text-balance {
+            text-wrap: balance;
+        }
+
+        /* Hide scrollbar for horizontal scrolling sections */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Accordion transition */
+        .accordion-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .accordion-content[data-open="true"] {
+            grid-template-rows: 1fr;
+        }
+        .accordion-inner {
+            overflow: hidden;
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(253, 251, 247, 0.8);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blush-200 selection:text-charcoal">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 nav-blur border-b border-blush-200/30 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-20">
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2 -ml-2 text-charcoal">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Links (Desktop) -->
+            <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase text-taupe">
+                <a href="#bouquets" class="hover:text-charcoal transition-colors">Bouquets</a>
+                <a href="#custom" class="hover:text-charcoal transition-colors">Custom Orders</a>
+            </div>
+
+            <!-- Logo -->
+            <a href="#" class="font-serif text-2xl tracking-wide absolute left-1/2 -translate-x-1/2">
+                Lumière Bellè
+            </a>
+
+            <!-- Right Icons -->
+            <div class="flex gap-4 items-center">
+                <a href="#how-to-order" class="hidden md:block text-sm font-medium tracking-widest uppercase text-taupe hover:text-charcoal transition-colors">How to Order</a>
+                <a href="#faq" class="hidden md:block text-sm font-medium tracking-widest uppercase text-taupe hover:text-charcoal transition-colors ml-4 mr-4">FAQ</a>
+                <a href="https://www.instagram.com/lumiere_belle_candles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-charcoal hover:text-taupe transition-colors">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+            <!-- Background Image with Parallax -->
+            <div class="absolute inset-0 w-full h-[120%] -top-[10%] z-0" id="hero-img-container">
+                <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777809065/ChatGPT_Image_3_05_2026_14_50_55_kudklh.png" 
+                     alt="Elegant soft pink candles and flowers" 
+                     class="w-full h-full object-cover opacity-90 hero-img object-center">
+                <div class="absolute inset-0 bg-cream/30 mix-blend-overlay"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-cream/90"></div>
+            </div>
+
+            <div class="relative z-10 text-center px-6 mt-20 max-w-4xl mx-auto">
+                <span class="block text-sm tracking-[0.2em] uppercase text-taupe mb-6 gs-reveal">Lumière Bellè</span>
+                <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 gs-reveal text-balance">
+                    Handmade candle bouquets for <br> <span class="italic">moments worth remembering.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-charcoal font-light mb-10 max-w-2xl mx-auto gs-reveal text-balance">
+                    Beautiful scented candle arrangements designed to look like flowers, made for gifts, custom orders, and special occasions.
+                </p>
+                <div class="gs-reveal flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://www.instagram.com/lumiere_belle_candles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="w-full sm:w-auto bg-charcoal text-cream px-10 py-4 rounded-full text-sm tracking-widest uppercase hover:bg-taupe transition-colors duration-300 flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> Order on Instagram
+                    </a>
+                    <a href="#bouquets" class="w-full sm:w-auto border border-charcoal/20 text-charcoal px-10 py-4 rounded-full text-sm tracking-widest uppercase hover:border-charcoal transition-colors duration-300">
+                        View Bouquets
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Concept -->
+        <section class="py-24 md:py-32 px-6 lg:px-12 bg-cream">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 lg:gap-24">
+                <div class="w-full md:w-1/2 aspect-[4/5] rounded-t-full rounded-b-xl overflow-hidden relative">
+                    <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777808108/hf_20260503_113151_4dce0201-d2ea-4409-ac08-14e4a05d37c4_1_ufcwco.png" 
+                         alt="Handcrafting a candle" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col justify-center">
+                    <h2 class="font-serif text-3xl md:text-5xl mb-6 text-balance">Flowers fade. Lumière Bellè lasts.</h2>
+                    <p class="text-taupe font-light text-lg mb-8 leading-relaxed">
+                        We believe in emotional gifting. Traditional flowers are beautiful but fleeting. Our candle bouquets are carefully hand-poured to capture the delicate, soft elegance of real petals while preserving the memory of the moment.
+                        <br><br>
+                        Perfect as an elegant centerpiece, scenting your space with lasting beauty. A handmade gift designed to be cherished and remembered.
+                    </p>
+                    <div class="flex gap-8 gs-reveal-up border-t border-blush-200 pt-8 mt-4">
+                        <div>
+                            <span class="block font-serif text-2xl text-blush-300 italic mb-1">Handmade</span>
+                            <span class="text-sm uppercase tracking-widest text-taupe">With Love</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-2xl text-blush-300 italic mb-1">Lasting</span>
+                            <span class="text-sm uppercase tracking-widest text-taupe">Memories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Bouquets Catalogue -->
+        <section id="bouquets" class="py-24 md:py-32 px-6 lg:px-12 bg-white rounded-t-[3rem]">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-12 md:mb-16 gs-reveal-up text-center md:text-left">
+                    <span class="text-sm tracking-widest uppercase text-blush-300 font-medium block mb-2">Catalogue</span>
+                    <h2 class="font-serif text-4xl md:text-5xl">Featured Bouquets</h2>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10 md:gap-x-8 md:gap-y-16">
+                    <!-- Product 1 -->
+                    <div class="group gs-reveal-up">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-cream mb-4 md:mb-6">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777808990/ChatGPT_Image_3_05_2026_14_49_34_qqwsf4.png" 
+                                 alt="The Peony Blush" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-lg md:text-xl mb-1 text-charcoal">The Peony Blush</h3>
+                            <p class="text-xs md:text-sm text-taupe font-light mb-2 md:mb-3 line-clamp-2 md:line-clamp-none">Soft pink peonies with notes of wild rose and sweet vanilla.</p>
+                            <p class="text-sm md:text-lg font-medium text-charcoal mb-3 md:mb-4">From €45</p>
+                            <a href="https://www.instagram.com/lumiere_belle_candles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="inline-flex items-center gap-1 md:gap-2 text-[10px] md:text-sm uppercase tracking-widest font-medium text-charcoal border-b border-blush-200 pb-1 hover:border-charcoal hover:text-taupe transition-all">
+                                Order <span class="hidden md:inline">this bouquet</span> <i data-lucide="arrow-up-right" class="w-3 h-3 md:w-4 md:h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="group gs-reveal-up" style="transition-delay: 100ms;">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-cream mb-4 md:mb-6">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777808990/ChatGPT_Image_3_05_2026_14_49_34_qqwsf4.png" 
+                                 alt="Ivory Elegance" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-lg md:text-xl mb-1 text-charcoal">Ivory Elegance</h3>
+                            <p class="text-xs md:text-sm text-taupe font-light mb-2 md:mb-3 line-clamp-2 md:line-clamp-none">Classic white roses and jasmine blended with warm sandalwood.</p>
+                            <p class="text-sm md:text-lg font-medium text-charcoal mb-3 md:mb-4">From €52</p>
+                            <a href="https://www.instagram.com/lumiere_belle_candles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="inline-flex items-center gap-1 md:gap-2 text-[10px] md:text-sm uppercase tracking-widest font-medium text-charcoal border-b border-blush-200 pb-1 hover:border-charcoal hover:text-taupe transition-all">
+                                Order <span class="hidden md:inline">this bouquet</span> <i data-lucide="arrow-up-right" class="w-3 h-3 md:w-4 md:h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="group gs-reveal-up" style="transition-delay: 200ms;">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-cream mb-4 md:mb-6">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777808990/ChatGPT_Image_3_05_2026_14_49_34_qqwsf4.png" 
+                                 alt="Dusty Rose Box" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-lg md:text-xl mb-1 text-charcoal">Dusty Rose Box</h3>
+                            <p class="text-xs md:text-sm text-taupe font-light mb-2 md:mb-3 line-clamp-2 md:line-clamp-none">A romantic arrangement of Damascus rose and rich amber.</p>
+                            <p class="text-sm md:text-lg font-medium text-charcoal mb-3 md:mb-4">From €65</p>
+                            <a href="https://www.instagram.com/lumiere_belle_candles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="inline-flex items-center gap-1 md:gap-2 text-[10px] md:text-sm uppercase tracking-widest font-medium text-charcoal border-b border-blush-200 pb-1 hover:border-charcoal hover:text-taupe transition-all">
+                                Order <span class="hidden md:inline">this bouquet</span> <i data-lucide="arrow-up-right" class="w-3 h-3 md:w-4 md:h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="group gs-reveal-up">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-cream mb-4 md:mb-6">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777808990/ChatGPT_Image_3_05_2026_14_49_34_qqwsf4.png" 
+                                 alt="Wild Lavender Basket" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-lg md:text-xl mb-1 text-charcoal">Wild Lavender</h3>
+                            <p class="text-xs md:text-sm text-taupe font-light mb-2 md:mb-3 line-clamp-2 md:line-clamp-none">Calming French lavender mixed with subtle hints of vanilla bean.</p>
+                            <p class="text-sm md:text-lg font-medium text-charcoal mb-3 md:mb-4">From €48</p>
+                            <a href="https://www.instagram.com/lumiere_belle_candles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="inline-flex items-center gap-1 md:gap-2 text-[10px] md:text-sm uppercase tracking-widest font-medium text-charcoal border-b border-blush-200 pb-1 hover:border-charcoal hover:text-taupe transition-all">
+                                Order <span class="hidden md:inline">this bouquet</span> <i data-lucide="arrow-up-right" class="w-3 h-3 md:w-4 md:h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="group gs-reveal-up" style="transition-delay: 100ms;">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-cream mb-4 md:mb-6">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777808990/ChatGPT_Image_3_05_2026_14_49_34_qqwsf4.png" 
+                                 alt="Crimson Velvet" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-lg md:text-xl mb-1 text-charcoal">Crimson Velvet</h3>
+                            <p class="text-xs md:text-sm text-taupe font-light mb-2 md:mb-3 line-clamp-2 md:line-clamp-none">Deep red petals conveying passion, scented with dark cherry and musk.</p>
+                            <p class="text-sm md:text-lg font-medium text-charcoal mb-3 md:mb-4">From €55</p>
+                            <a href="https://www.instagram.com/lumiere_belle_candles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="inline-flex items-center gap-1 md:gap-2 text-[10px] md:text-sm uppercase tracking-widest font-medium text-charcoal border-b border-blush-200 pb-1 hover:border-charcoal hover:text-taupe transition-all">
+                                Order <span class="hidden md:inline">this bouquet</span> <i data-lucide="arrow-up-right" class="w-3 h-3 md:w-4 md:h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="group gs-reveal-up" style="transition-delay: 200ms;">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-cream mb-4 md:mb-6">
+                            <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777808990/ChatGPT_Image_3_05_2026_14_49_34_qqwsf4.png" 
+                                 alt="Golden Amber Box" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-lg md:text-xl mb-1 text-charcoal">Golden Amber</h3>
+                            <p class="text-xs md:text-sm text-taupe font-light mb-2 md:mb-3 line-clamp-2 md:line-clamp-none">A warm, sunlit arrangement featuring honeysuckle and cedar.</p>
+                            <p class="text-sm md:text-lg font-medium text-charcoal mb-3 md:mb-4">From €60</p>
+                            <a href="https://www.instagram.com/lumiere_belle_candles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="inline-flex items-center gap-1 md:gap-2 text-[10px] md:text-sm uppercase tracking-widest font-medium text-charcoal border-b border-blush-200 pb-1 hover:border-charcoal hover:text-taupe transition-all">
+                                Order <span class="hidden md:inline">this bouquet</span> <i data-lucide="arrow-up-right" class="w-3 h-3 md:w-4 md:h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Orders -->
+        <section id="custom" class="py-24 md:py-32 px-6 lg:px-12 bg-blush-100/50 relative">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-5/12 order-2 md:order-1 gs-reveal-up">
+                    <span class="text-sm tracking-widest uppercase text-blush-300 font-medium block mb-2">Bespoke Design</span>
+                    <h2 class="font-serif text-4xl md:text-5xl mb-6">Custom Orders</h2>
+                    <p class="text-taupe font-light mb-8 text-lg">
+                        Because every piece is handmade, we can design the perfect gift tailored specifically to your vision. <br><br> Let us know your preferred <b>colours, themes, budget, occasion, and the date you need it by</b>, and we will craft a breathtaking arrangement just for you.
+                    </p>
+                    <a href="https://www.instagram.com/lumiere_belle_candles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="inline-flex items-center gap-3 bg-white hover:bg-cream text-charcoal px-8 py-4 rounded-full transition-colors font-medium text-sm tracking-wide shadow-sm border border-blush-200">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-blush-300"></i> Request a Custom Bouquet
+                    </a>
+                </div>
+                <div class="w-full md:w-7/12 order-1 md:order-2 grid grid-cols-2 gap-4 gs-reveal-up">
+                    <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777808990/ChatGPT_Image_3_05_2026_14_49_34_qqwsf4.png" alt="Pouring wax" class="rounded-xl w-full h-80 object-cover">
+                    <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1777808990/ChatGPT_Image_3_05_2026_14_49_34_qqwsf4.png" alt="Wax molds" class="rounded-xl w-full h-80 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-to-order" class="py-24 bg-cream text-center px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-serif text-3xl md:text-4xl mb-16 gs-reveal-up">How to Order</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                    <!-- Connecting line for desktop -->
+                    <div class="hidden md:block absolute top-8 left-1/6 right-1/6 h-[1px] bg-blush-200 z-0"></div>
+
+                    <div class="relative z-10 gs-reveal-up">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mx-auto mb-6 text-blush-300">
+                            <i data-lucide="flower-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl mb-3">Step 1</h3>
+                        <p class="text-sm text-taupe font-light">Choose a bouquet from our catalogue or decide on a custom idea.</p>
+                    </div>
+
+                    <div class="relative z-10 gs-reveal-up" style="transition-delay: 150ms;">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mx-auto mb-6 text-blush-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </div>
+                        <h3 class="font-serif text-xl mb-3">Step 2</h3>
+                        <p class="text-sm text-taupe font-light">Send us a direct message on Instagram with your request.</p>
+                    </div>
+
+                    <div class="relative z-10 gs-reveal-up" style="transition-delay: 300ms;">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mx-auto mb-6 text-blush-300">
+                            <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl mb-3">Step 3</h3>
+                        <p class="text-sm text-taupe font-light">We’ll reply to confirm the details, finalize the price, and arrange delivery or pickup.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 px-6 lg:px-12 bg-white rounded-t-[3rem] mt-[-2rem] relative z-10 border-t border-blush-100/50">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="font-serif text-3xl md:text-4xl text-center mb-12 gs-reveal-up">Frequently Asked Questions</h2>
+
+                <div class="space-y-4 gs-reveal-up">
+                    <!-- FAQ 1 -->
+                    <div class="border-b border-blush-100 py-4 cursor-pointer faq-item">
+                        <div class="flex justify-between items-center w-full">
+                            <h3 class="font-medium text-lg text-charcoal">Are these candles or decorative gifts?</h3>
+                            <i data-lucide="plus" class="w-5 h-5 text-taupe transition-transform duration-300 icon-plus"></i>
+                        </div>
+                        <div class="accordion-content" data-open="false">
+                            <div class="accordion-inner">
+                                <p class="text-taupe font-light pt-4 pb-2">
+                                    They are both! While they are fully functional candles made with premium wax and wicks, they are primarily designed as long-lasting decorative gifts that look beautiful and scent a room without ever needing to be lit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border-b border-blush-100 py-4 cursor-pointer faq-item">
+                        <div class="flex justify-between items-center w-full">
+                            <h3 class="font-medium text-lg text-charcoal">Can I customise colours?</h3>
+                            <i data-lucide="plus" class="w-5 h-5 text-taupe transition-transform duration-300 icon-plus"></i>
+                        </div>
+                        <div class="accordion-content" data-open="false">
+                            <div class="accordion-inner">
+                                <p class="text-taupe font-light pt-4 pb-2">
+                                    Yes, absolutely. Since every bouquet is handmade to order, we can mix custom colors to match a specific theme, event, or the recipient's favorite shades. Just let us know in your message.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border-b border-blush-100 py-4 cursor-pointer faq-item">
+                        <div class="flex justify-between items-center w-full">
+                            <h3 class="font-medium text-lg text-charcoal">How do I order?</h3>
+                            <i data-lucide="plus" class="w-5 h-5 text-taupe transition-transform duration-300 icon-plus"></i>
+                        </div>
+                        <div class="accordion-content" data-open="false">
+                            <div class="accordion-inner">
+                                <p class="text-taupe font-light pt-4 pb-2">
+                                    Simply browse our catalogue, choose what you like, and click the "Order this bouquet" button. It will take you to our Instagram page where you can send us a direct message to confirm your order details personally.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border-b border-blush-100 py-4 cursor-pointer faq-item">
+                        <div class="flex justify-between items-center w-full">
+                            <h3 class="font-medium text-lg text-charcoal">Do you offer delivery or pickup?</h3>
+                            <i data-lucide="plus" class="w-5 h-5 text-taupe transition-transform duration-300 icon-plus"></i>
+                        </div>
+                        <div class="accordion-content" data-open="false">
+                            <div class="accordion-inner">
+                                <p class="text-taupe font-light pt-4 pb-2">
+                                    We offer both! We can arrange secure local delivery to your door or the recipient's address, or you can choose to pick up your order directly from our studio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="border-b border-blush-100 py-4 cursor-pointer faq-item">
+                        <div class="flex justify-between items-center w-full">
+                            <h3 class="font-medium text-lg text-charcoal">How long does a custom order take?</h3>
+                            <i data-lucide="plus" class="w-5 h-5 text-taupe transition-transform duration-300 icon-plus"></i>
+                        </div>
+                        <div class="accordion-content" data-open="false">
+                            <div class="accordion-inner">
+                                <p class="text-taupe font-light pt-4 pb-2">
+                                    Standard catalogue bouquets usually take 2-3 days to prepare. For heavily customised requests, please allow 5-7 days. We always recommend ordering a little early for special dates!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-32 bg-charcoal text-cream text-center px-6 relative overflow-hidden">
+             <!-- Soft background glow -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blush-300/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-2xl mx-auto relative z-10 gs-reveal-up">
+                <i data-lucide="heart" class="w-10 h-10 mx-auto mb-8 text-blush-200"></i>
+                <h2 class="font-serif text-4xl md:text-6xl mb-6 text-balance">Ready to gift something beautiful?</h2>
+                <p class="text-taupe/80 text-lg font-light mb-12">
+                    Send us a message to secure your arrangement.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://www.instagram.com/lumiere_belle_candles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="w-full sm:w-auto bg-blush-200 text-charcoal hover:bg-blush-300 px-8 py-4 rounded-full font-medium tracking-wide transition-colors flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> DM on Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="bg-charcoal text-taupe py-12 px-6 lg:px-12 border-t border-cream/10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <span class="font-serif text-xl text-cream tracking-wide">Lumière Bellè</span>
+            <div class="flex gap-6 text-sm">
+                <a href="#how-to-order" class="hover:text-cream transition-colors">How to Order</a>
+                <a href="#faq" class="hover:text-cream transition-colors">FAQ</a>
+            </div>
+            <p class="text-xs font-light tracking-widest uppercase">© 2026 Lumière Bellè</p>
+        </div>
+    </footer>
+
+    <!-- ========================================================================= -->
+    <!-- INÍCIO DO RODAPÉ STUDIO 17                                                -->
+    <!-- ========================================================================= -->
+    <footer class="w-full bg-blackbox border-t border-white/10 py-6 md:py-8 relative z-50" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+        <div class="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <!-- Lado do Cliente (Copyright e Links Legais) -->
+            <div class="text-slate-500 text-sm font-medium flex flex-wrap items-center justify-center md:justify-start gap-3">
+                <span>&copy; <script>document.write(new Date().getFullYear())</script> Lumière Bellè.</span>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+
+            <!-- Lado da Agência (Assinatura Premium Studio 17) -->
+            <a href="https://www.studio17.world" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full pl-5 pr-1.5 py-1.5 transition-all duration-300 shadow-lg focus:outline-none">
+                <span class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-slate-300 transition-colors hidden sm:block">
+                    Built for Growth
+                </span>
+                
+                <div class="flex items-center gap-2 bg-[#111111] rounded-full px-4 py-2 border border-white/5 group-hover:border-primary/40 transition-colors shadow-inner">
+                    <div class="flex items-baseline select-none">
+                        <span class="font-extrabold text-base tracking-[-0.05em] text-white group-hover:text-white transition-colors">Studio</span>
+                        <span class="font-extrabold text-base tracking-[-0.12em] text-white ml-1 group-hover:text-primary transition-colors">17</span>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 ml-1 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                </div>
+            </a>
+
+        </div>
+    </footer>
+    <!-- ========================================================================= -->
+    <!-- FIM DO RODAPÉ STUDIO 17                                                   -->
+    <!-- ========================================================================= -->
+
+    <!-- Scripts -->
+    <!-- Lenis -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Initialize Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Navbar blur effect on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-blur', 'border-b', 'border-blush-200/30');
+                navbar.classList.remove('bg-transparent', 'border-transparent');
+            } else {
+                navbar.classList.remove('nav-blur', 'border-b', 'border-blush-200/30');
+                navbar.classList.add('bg-transparent', 'border-transparent');
+            }
+        });
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.querySelector('.accordion-content');
+                const icon = item.querySelector('.icon-plus');
+                const isOpen = content.getAttribute('data-open') === 'true';
+
+                // Close all others (optional, comment out for multiple open)
+                faqItems.forEach(otherItem => {
+                    if(otherItem !== item) {
+                        otherItem.querySelector('.accordion-content').setAttribute('data-open', 'false');
+                        otherItem.querySelector('.icon-plus').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current
+                if (isOpen) {
+                    content.setAttribute('data-open', 'false');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.setAttribute('data-open', 'true');
+                    icon.style.transform = 'rotate(45deg)';
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
