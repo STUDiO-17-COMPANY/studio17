@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Life Nicosia | Online Store</title>
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        'warm-cream': '#FDFBF7',
+                        'vintage-ink': '#2C2A28',
+                        'terracotta': '#C87967',
+                        'sage': '#A8B5A6',
+                        'soft-sand': '#F0EDE6',
+                        'gray-text': '#71717A'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #2C2A28;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Mix blend mode for grid images */
+        .blend-multiply {
+            mix-blend-mode: multiply;
+        }
+
+        /* Slider Transitions */
+        .slide {
+            transition: opacity 0.8s ease-in-out;
+            opacity: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .slide.active {
+            opacity: 1;
+            z-index: 10;
+            pointer-events: auto;
+        }
+
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-vintage-ink selection:bg-terracotta selection:text-warm-cream">
+
+    <!-- Promo Bar -->
+    <div
+        class="bg-vintage-ink text-warm-cream w-full py-2 px-4 flex justify-center items-center text-[10px] md:text-xs font-medium tracking-wide text-center">
+        <span>Free shipping on orders over €150 | Nicosia, Cyprus</span>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white border-b border-vintage-ink/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 h-16 md:h-20 flex justify-between items-center">
+
+            <!-- Left: Mobile Menu Toggle & Desktop Links -->
+            <div class="flex items-center gap-6 flex-1">
+                <button id="menu-toggle" class="md:hidden p-1 -ml-1 text-vintage-ink focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+                <nav class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
+                    <a href="#" class="border-b-2 border-vintage-ink pb-1">New Arrivals</a>
+                    <a href="#" class="text-gray-text hover:text-vintage-ink transition-colors pb-1">Women</a>
+                    <a href="#" class="text-gray-text hover:text-vintage-ink transition-colors pb-1">Men</a>
+                    <a href="#" class="text-gray-text hover:text-vintage-ink transition-colors pb-1">Archives</a>
+                </nav>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="flex-shrink-0 text-center">
+                <a href="#" class="font-serif text-2xl md:text-4xl tracking-wide font-medium">Vintage Life</a>
+            </div>
+
+            <!-- Right: Icons -->
+            <div class="flex items-center justify-end gap-4 md:gap-5 flex-1 text-vintage-ink">
+                <button class="hidden md:block hover:text-terracotta transition-colors"><i data-lucide="search"
+                        class="w-5 h-5"></i></button>
+                <button class="hover:text-terracotta transition-colors hidden sm:block"><i data-lucide="user"
+                        class="w-5 h-5"></i></button>
+                <button class="hover:text-terracotta transition-colors"><i data-lucide="heart"
+                        class="w-5 h-5"></i></button>
+                <button class="hover:text-terracotta transition-colors relative">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    <span
+                        class="absolute -top-1.5 -right-2 bg-terracotta text-white text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col md:hidden">
+        <div class="h-16 flex items-center justify-between px-4 border-b border-vintage-ink/10">
+            <span class="font-serif text-2xl tracking-wide font-medium">Menu</span>
+            <button id="menu-close" class="p-1 text-vintage-ink focus:outline-none">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col px-6 py-8 gap-6 text-xl font-serif">
+            <a href="#" class="border-b border-vintage-ink/10 pb-4 text-vintage-ink">New Arrivals</a>
+            <a href="#" class="border-b border-vintage-ink/10 pb-4 text-gray-text hover:text-vintage-ink">Women</a>
+            <a href="#" class="border-b border-vintage-ink/10 pb-4 text-gray-text hover:text-vintage-ink">Men</a>
+            <a href="#" class="border-b border-vintage-ink/10 pb-4 text-gray-text hover:text-vintage-ink">Archives</a>
+            <a href="#" class="border-b border-vintage-ink/10 pb-4 text-gray-text hover:text-vintage-ink">Account</a>
+            <a href="#" class="pb-4 text-gray-text hover:text-vintage-ink">Search</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- 1. Hero Slider (Full Background & Massive Prices) -->
+        <section class="relative w-full h-[85vh] md:h-[90vh] bg-vintage-ink overflow-hidden text-white">
+
+            <!-- Slide 1 -->
+            <div class="slide active absolute inset-0 w-full h-full">
+                <!-- Background Image -->
+                <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1778089671/markus-spiske-dWsDMwStoog-unsplash_yrqola.jpg"
+                    class="absolute inset-0 w-full h-full object-cover object-center" alt="">
+
+                <!-- Gradient Overlay for Text Readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10"></div>
+
+                <!-- Content -->
+                <div
+                    class="relative z-20 h-full flex flex-col justify-end pb-24 md:pb-32 px-6 md:px-16 max-w-7xl mx-auto">
+                    <span class="text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-white/80 mb-2">Unique
+                        Piece • Current Drop</span>
+
+                    <!-- Massive Price -->
+                    <div
+                        class="font-serif text-7xl md:text-[12rem] leading-none tracking-tighter mb-2 md:-ml-2 text-white">
+                        € 125</div>
+
+                    <div class="flex flex-col md:flex-row md:items-end gap-6 md:gap-12 mt-2">
+                        <div>
+                            <h2 class="font-serif text-3xl md:text-5xl mb-2">80s Wool Overcoat</h2>
+                            <p class="text-sm md:text-base text-white/70 font-light max-w-md">Restored to perfection.
+                                Original fibers preserved from the late 80s European surplus.</p>
+                        </div>
+                        <a href="#"
+                            class="bg-white text-vintage-ink px-8 py-4 text-xs md:text-sm font-bold tracking-widest uppercase hover:bg-terracotta hover:text-white transition-colors inline-block w-fit">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide absolute inset-0 w-full h-full">
+                <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1778089671/cristofer-maximilian-AqLIkOzWDAk-unsplash_rksk3s.jpg"
+                    class="absolute inset-0 w-full h-full object-cover object-top" alt="">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10"></div>
+
+                <div
+                    class="relative z-20 h-full flex flex-col justify-end pb-24 md:pb-32 px-6 md:px-16 max-w-7xl mx-auto">
+                    <span
+                        class="text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-white/80 mb-2">Exclusive
+                        Archive • 1 of 1</span>
+
+                    <div
+                        class="font-serif text-7xl md:text-[12rem] leading-none tracking-tighter mb-2 md:-ml-2 text-white">
+                        € 180</div>
+
+                    <div class="flex flex-col md:flex-row md:items-end gap-6 md:gap-12 mt-2">
+                        <div>
+                            <h2 class="font-serif text-3xl md:text-5xl mb-2">Leather Moto Jacket</h2>
+                            <p class="text-sm md:text-base text-white/70 font-light max-w-md">Natural patina and
+                                original heavy-duty hardware from 90s underground culture.</p>
+                        </div>
+                        <a href="#"
+                            class="bg-white text-vintage-ink px-8 py-4 text-xs md:text-sm font-bold tracking-widest uppercase hover:bg-terracotta hover:text-white transition-colors inline-block w-fit">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide absolute inset-0 w-full h-full">
+                <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1778089671/markus-spiske-oEoe-qfymZQ-unsplash_ol5pal.jpg"
+                    class="absolute inset-0 w-full h-full object-cover object-center" alt="">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10"></div>
+
+                <div
+                    class="relative z-20 h-full flex flex-col justify-end pb-24 md:pb-32 px-6 md:px-16 max-w-7xl mx-auto">
+                    <span class="text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-white/80 mb-2">Summer
+                        Curation</span>
+
+                    <div
+                        class="font-serif text-7xl md:text-[12rem] leading-none tracking-tighter mb-2 md:-ml-2 text-white">
+                        € 65</div>
+
+                    <div class="flex flex-col md:flex-row md:items-end gap-6 md:gap-12 mt-2">
+                        <div>
+                            <h2 class="font-serif text-3xl md:text-5xl mb-2">Pure Silk Shirt</h2>
+                            <p class="text-sm md:text-base text-white/70 font-light max-w-md">Fluid texture, classic
+                                1995 pattern sourced directly from vintage boutiques in Italy.</p>
+                        </div>
+                        <a href="#"
+                            class="bg-white text-vintage-ink px-8 py-4 text-xs md:text-sm font-bold tracking-widest uppercase hover:bg-terracotta hover:text-white transition-colors inline-block w-fit">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls (Dots) -->
+            <div class="absolute bottom-6 md:bottom-12 left-6 md:left-16 flex gap-3 z-30">
+                <button class="w-12 h-1 md:w-16 md:h-1.5 bg-white transition-colors dot"
+                    onclick="goToSlide(0)"></button>
+                <button class="w-12 h-1 md:w-16 md:h-1.5 bg-white/30 transition-colors dot"
+                    onclick="goToSlide(1)"></button>
+                <button class="w-12 h-1 md:w-16 md:h-1.5 bg-white/30 transition-colors dot"
+                    onclick="goToSlide(2)"></button>
+            </div>
+
+            <!-- Slider Controls (Arrows) -->
+            <div class="absolute bottom-6 md:bottom-12 right-6 md:right-16 flex gap-4 z-30">
+                <button
+                    class="p-2 border border-white/30 rounded-full text-white hover:bg-white hover:text-vintage-ink transition-all"
+                    onclick="prevSlide()">
+                    <i data-lucide="chevron-left" class="w-6 h-6 md:w-8 md:h-8"></i>
+                </button>
+                <button
+                    class="p-2 border border-white/30 rounded-full text-white hover:bg-white hover:text-vintage-ink transition-all"
+                    onclick="nextSlide()">
+                    <i data-lucide="chevron-right" class="w-6 h-6 md:w-8 md:h-8"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- 2. Grid of 8 Products -->
+        <section class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+            <div class="flex justify-between items-end mb-8">
+                <h2 class="font-serif text-3xl md:text-4xl">Latest Arrivals</h2>
+                <a href="#"
+                    class="text-sm font-medium border-b border-vintage-ink pb-0.5 hover:text-terracotta hover:border-terracotta transition-colors hidden md:inline-block">View
+                    All Collection</a>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-x-6 gap-y-8 md:gap-y-12">
+
+                <!-- Product 1 -->
+                <div class="cursor-pointer group">
+                    <div class="relative bg-soft-sand aspect-[3/4] mb-3 md:mb-4 overflow-hidden rounded-sm">
+                        <i data-lucide="heart"
+                            class="absolute top-3 right-3 w-5 h-5 text-vintage-ink/30 hover:fill-terracotta hover:text-terracotta transition-colors z-10"></i>
+                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=400"
+                            class="w-full h-full object-cover blend-multiply transition-transform duration-500 group-hover:scale-105"
+                            alt="">
+                        <div
+                            class="absolute bottom-2 left-2 bg-vintage-ink/80 text-white text-[10px] font-medium px-2 py-1 flex items-center gap-1 rounded-sm">
+                            Price Drop</div>
+                    </div>
+                    <p class="text-[10px] md:text-xs text-gray-text font-medium uppercase tracking-wider mb-1">Prada
+                        Archive</p>
+                    <h3 class="font-medium text-xs md:text-sm text-vintage-ink mb-1 truncate">90s Wool Overcoat</h3>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-terracotta font-bold text-sm md:text-base">€ 260.00</span>
+                        <span class="text-[10px] md:text-xs text-gray-400 line-through">€ 350.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="cursor-pointer group">
+                    <div class="relative bg-soft-sand aspect-[3/4] mb-3 md:mb-4 overflow-hidden rounded-sm">
+                        <i data-lucide="heart"
+                            class="absolute top-3 right-3 w-5 h-5 text-vintage-ink/30 hover:fill-terracotta hover:text-terracotta transition-colors z-10"></i>
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=400"
+                            class="w-full h-full object-cover blend-multiply transition-transform duration-500 group-hover:scale-105"
+                            alt="">
+                        <div
+                            class="absolute bottom-2 left-2 bg-white text-vintage-ink text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm border border-vintage-ink/5">
+                            1 of 1</div>
+                    </div>
+                    <p class="text-[10px] md:text-xs text-gray-text font-medium uppercase tracking-wider mb-1">Armani
+                        Vintage</p>
+                    <h3 class="font-medium text-xs md:text-sm text-vintage-ink mb-1 truncate">Pure Silk Shirt</h3>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-vintage-ink font-bold text-sm md:text-base">€ 65.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="cursor-pointer group">
+                    <div class="relative bg-soft-sand aspect-[3/4] mb-3 md:mb-4 overflow-hidden rounded-sm">
+                        <i data-lucide="heart"
+                            class="absolute top-3 right-3 w-5 h-5 text-vintage-ink/30 hover:fill-terracotta hover:text-terracotta transition-colors z-10"></i>
+                        <img src="https://res.cloudinary.com/dnxoz9alm/image/upload/v1778089671/cristofer-maximilian-AqLIkOzWDAk-unsplash_rksk3s.jpg"
+                            class="w-full h-full object-cover blend-multiply transition-transform duration-500 group-hover:scale-105"
+                            alt="">
+                    </div>
+                    <p class="text-[10px] md:text-xs text-gray-text font-medium uppercase tracking-wider mb-1">Schott
+                        NYC</p>
+                    <h3 class="font-medium text-xs md:text-sm text-vintage-ink mb-1 truncate">Leather Moto Jacket</h3>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-vintage-ink font-bold text-sm md:text-base">€ 180.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="cursor-pointer group">
+                    <div class="relative bg-soft-sand aspect-[3/4] mb-3 md:mb-4 overflow-hidden rounded-sm">
+                        <i data-lucide="heart"
+                            class="absolute top-3 right-3 w-5 h-5 text-vintage-ink/30 hover:fill-terracotta hover:text-terracotta transition-colors z-10"></i>
+                        <img src="https://images.unsplash.com/photo-1618354691438-25bc04584c23?auto=format&fit=crop&q=80&w=400"
+                            class="w-full h-full object-cover blend-multiply transition-transform duration-500 group-hover:scale-105"
+                            alt="">
+                    </div>
+                    <p class="text-[10px] md:text-xs text-gray-text font-medium uppercase tracking-wider mb-1">Bottega
+                        Veneta</p>
+                    <h3 class="font-medium text-xs md:text-sm text-vintage-ink mb-1 truncate">Leather Crossbody Bag</h3>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-terracotta font-bold text-sm md:text-base">€ 400.00</span>
+                        <span class="text-[10px] md:text-xs text-gray-400 line-through">€ 450.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="cursor-pointer group">
+                    <div class="relative bg-soft-sand aspect-[3/4] mb-3 md:mb-4 overflow-hidden rounded-sm">
+                        <i data-lucide="heart"
+                            class="absolute top-3 right-3 w-5 h-5 text-vintage-ink/30 hover:fill-terracotta hover:text-terracotta transition-colors z-10"></i>
+                        <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&q=80&w=400"
+                            class="w-full h-full object-cover blend-multiply transition-transform duration-500 group-hover:scale-105"
+                            alt="">
+                        <div
+                            class="absolute bottom-2 left-2 bg-white text-vintage-ink text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm border border-vintage-ink/5">
+                            1 of 1</div>
+                    </div>
+                    <p class="text-[10px] md:text-xs text-gray-text font-medium uppercase tracking-wider mb-1">Dior
+                        Vintage</p>
+                    <h3 class="font-medium text-xs md:text-sm text-vintage-ink mb-1 truncate">Raw Silk Blouse</h3>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-vintage-ink font-bold text-sm md:text-base">€ 154.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="cursor-pointer group">
+                    <div class="relative bg-soft-sand aspect-[3/4] mb-3 md:mb-4 overflow-hidden rounded-sm">
+                        <i data-lucide="heart"
+                            class="absolute top-3 right-3 w-5 h-5 text-vintage-ink/30 hover:fill-terracotta hover:text-terracotta transition-colors z-10"></i>
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80&w=400"
+                            class="w-full h-full object-cover blend-multiply transition-transform duration-500 group-hover:scale-105"
+                            alt="">
+                    </div>
+                    <p class="text-[10px] md:text-xs text-gray-text font-medium uppercase tracking-wider mb-1">Loro
+                        Piana</p>
+                    <h3 class="font-medium text-xs md:text-sm text-vintage-ink mb-1 truncate">Fine Linen Shirt</h3>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-vintage-ink font-bold text-sm md:text-base">€ 110.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="cursor-pointer group">
+                    <div class="relative bg-soft-sand aspect-[3/4] mb-3 md:mb-4 overflow-hidden rounded-sm">
+                        <i data-lucide="heart"
+                            class="absolute top-3 right-3 w-5 h-5 text-vintage-ink/30 hover:fill-terracotta hover:text-terracotta transition-colors z-10"></i>
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&q=80&w=400"
+                            class="w-full h-full object-cover blend-multiply transition-transform duration-500 group-hover:scale-105"
+                            alt="">
+                        <div
+                            class="absolute bottom-2 left-2 bg-vintage-ink/80 text-white text-[10px] font-medium px-2 py-1 flex items-center gap-1 rounded-sm">
+                            Price Drop</div>
+                    </div>
+                    <p class="text-[10px] md:text-xs text-gray-text font-medium uppercase tracking-wider mb-1">YSL
+                        Archive</p>
+                    <h3 class="font-medium text-xs md:text-sm text-vintage-ink mb-1 truncate">Wool Tailored Trousers
+                    </h3>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-terracotta font-bold text-sm md:text-base">€ 85.00</span>
+                        <span class="text-[10px] md:text-xs text-gray-400 line-through">€ 120.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="cursor-pointer group">
+                    <div class="relative bg-soft-sand aspect-[3/4] mb-3 md:mb-4 overflow-hidden rounded-sm">
+                        <i data-lucide="heart"
+                            class="absolute top-3 right-3 w-5 h-5 text-vintage-ink/30 hover:fill-terracotta hover:text-terracotta transition-colors z-10"></i>
+                        <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&q=80&w=400"
+                            class="w-full h-full object-cover blend-multiply transition-transform duration-500 group-hover:scale-105"
+                            alt="">
+                    </div>
+                    <p class="text-[10px] md:text-xs text-gray-text font-medium uppercase tracking-wider mb-1">Levi's
+                        Vintage</p>
+                    <h3 class="font-medium text-xs md:text-sm text-vintage-ink mb-1 truncate">70s Denim Jacket</h3>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-vintage-ink font-bold text-sm md:text-base">€ 120.00</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-10 text-center md:hidden">
+                <a href="#"
+                    class="text-sm font-medium border-b border-vintage-ink pb-0.5 hover:text-terracotta hover:border-terracotta transition-colors">View
+                    All Collection</a>
+            </div>
+        </section>
+
+        <!-- 3. About Us Section -->
+        <section class="bg-soft-sand border-y border-vintage-ink/5">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row">
+
+                <!-- Image -->
+                <div class="w-full lg:w-1/2 min-h-[300px] md:min-h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80&w=1200"
+                        class="w-full h-full object-cover" alt="">
+                </div>
+
+                <!-- Text -->
+                <div class="w-full lg:w-1/2 p-6 py-12 md:p-16 lg:p-24 flex flex-col justify-center">
+                    <span
+                        class="text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-sage mb-4 flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i> Nicosia, Cyprus
+                    </span>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl mb-6 text-vintage-ink leading-tight">Saving
+                        the planet from waste, <span class="italic">one hanger at a time.</span></h2>
+
+                    <div class="space-y-4 text-gray-text font-light text-sm md:text-base leading-relaxed mb-8">
+                        <p>Vintage Life is not just a clothing store; it's a manifesto against disposable culture. We
+                            were born in Nicosia with a clear mission: to give clothes a second life and actively combat
+                            the pollution generated by fast fashion.</p>
+                        <p>We believe true exclusivity doesn't come from an assembly line. It's in the history of a
+                            piece, the flawless quality of vintage fabrics, and the art of restoration. We source unique
+                            pieces globally and carefully restore them by hand in our studio, preserving their essence
+                            and character.</p>
+                        <p class="font-medium text-vintage-ink">What you see is what you get. No piece is ordinary. No
+                            restocks.</p>
+                    </div>
+
+                    <a href="#"
+                        class="inline-flex items-center gap-2 text-xs md:text-sm font-semibold uppercase tracking-widest text-vintage-ink hover:text-terracotta transition-colors group">
+                        Read our Manifesto
+                        <i data-lucide="arrow-right"
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-12 md:pt-16 pb-8 px-4 md:px-8 border-t border-vintage-ink/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
+
+            <!-- Brand Info -->
+            <div class="col-span-1">
+                <h3 class="font-serif text-2xl font-medium mb-4 md:mb-6">Vintage Life</h3>
+                <p class="text-sm text-gray-text font-light mb-6">Giving a second life to clothes in Nicosia, Cyprus.
+                    Sourced globally.</p>
+                <div class="flex gap-4 text-vintage-ink">
+                    <a href="#" class="hover:text-terracotta"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-terracotta"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-terracotta"><i data-lucide="mail" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+
+            <!-- Shop Links -->
+            <div>
+                <h4 class="text-xs uppercase tracking-widest font-bold text-vintage-ink mb-4 md:mb-6">Shop</h4>
+                <ul class="space-y-3 text-sm text-gray-text">
+                    <li><a href="#" class="hover:text-vintage-ink transition-colors">New Arrivals</a></li>
+                    <li><a href="#" class="hover:text-vintage-ink transition-colors">Women</a></li>
+                    <li><a href="#" class="hover:text-vintage-ink transition-colors">Men</a></li>
+                    <li><a href="#" class="hover:text-vintage-ink transition-colors">Accessories</a></li>
+                    <li><a href="#" class="hover:text-vintage-ink transition-colors">Archives & Editorials</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Care -->
+            <div>
+                <h4 class="text-xs uppercase tracking-widest font-bold text-vintage-ink mb-4 md:mb-6">Customer Care</h4>
+                <ul class="space-y-3 text-sm text-gray-text">
+                    <li><a href="#" class="hover:text-vintage-ink transition-colors">My Account</a></li>
+                    <li><a href="#" class="hover:text-vintage-ink transition-colors">Shipping & Returns</a></li>
+                    <li><a href="#" class="hover:text-vintage-ink transition-colors">Size Guide</a></li>
+                    <li><a href="#" class="hover:text-vintage-ink transition-colors">FAQ</a></li>
+                    <li><a href="#" class="hover:text-vintage-ink transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h4 class="text-xs uppercase tracking-widest font-bold text-vintage-ink mb-4 md:mb-6">Newsletter</h4>
+                <p class="text-sm text-gray-text mb-4">Sign up for early access to our weekly drops.</p>
+                <form class="flex border-b border-vintage-ink/30 pb-2">
+                    <input type="email" placeholder="Your email address"
+                        class="bg-transparent w-full outline-none text-sm placeholder:text-gray-400">
+                    <button type="submit"
+                        class="text-xs font-bold uppercase tracking-wider hover:text-terracotta transition-colors">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto pt-8 border-t border-vintage-ink/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 text-center md:text-left">
+            <p>© 2026 Vintage Life Nicosia. All rights reserved.</p>
+            <div class="flex gap-4 md:gap-6">
+                <a href="#" class="hover:text-vintage-ink">Terms & Conditions</a>
+                <a href="#" class="hover:text-vintage-ink">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('menu-toggle');
+        const closeBtn = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        // Hero Slider Logic
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => {
+                dot.classList.remove('bg-white');
+                dot.classList.add('bg-white/30');
+            });
+
+            slides[index].classList.add('active');
+            dots[index].classList.remove('bg-white/30');
+            dots[index].classList.add('bg-white');
+
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+            resetInterval();
+        }
+
+        function prevSlide() {
+            let prev = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prev);
+            resetInterval();
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetInterval();
+        }
+
+        function startInterval() {
+            slideInterval = setInterval(nextSlide, 5000); // Changes every 5 seconds
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            startInterval();
+        }
+
+        // Initialize slider
+        startInterval();
+    </script>
+</body>
+
+</html>
